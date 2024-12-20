@@ -9,15 +9,7 @@
 First create a folder containing the workspace
 ```bash
 mkdir -p road/to/the/workspace/src
-cd road/to/the/workspace/src
-```
-
-or (using catkin)
-
-```bash
-mkdir -p road/to/the/workspace/src
-cd road/to/the/workspace/src
-catkin_init_workspace
+cd road/to/the/workspace
 ```
 
 
@@ -27,12 +19,6 @@ catkin_init_workspace
 colcon build
 ```
 
-or (using catkin)
-
-```bash
-cd road/to/the/workspace
-catkin_make
-```
 
 ## Source the environment
 
@@ -40,23 +26,13 @@ catkin_make
 source install/setup.bash
 ```
 
-or (using catkin)
-
-```bash
-source devel/setup.bash
-```
-
 
 ## Create a package to manage the codes
 
 ```bash
+cd ./src
+source /opt/ros/foxy/setup.bash
 ros2 pkg create [package_name] --build-type ament_python --dependencies [depend1] [depend2] [depend3]
-```
-
-or (using catkin)
-
-```bash
-catkin_create_pkg <package_name> [depend1] [depend2] [depend3]
 ```
 
 
