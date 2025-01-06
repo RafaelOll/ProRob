@@ -1,0 +1,25 @@
+[33mcommit fc98be5bb93855b2788ee542476cb6eb4ad8244e[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Fabian Ganzer <fabianganzer@yahoo.com>
+Date:   Fri Dec 20 17:09:52 2024 +0100
+
+    Description of calibration
+
+[33mcommit 59a6e3c010a8a20791c505c2018ca891e6d8319b[m
+Author: RafaelOll <122568396+RafaelOll@users.noreply.github.com>
+Date:   Fri Dec 20 16:46:52 2024 +0100
+
+    Create crazyflie_setup.md
+
+[33mcommit 26ab39d446b58f2724bffc006dc64d64b791a0a8[m
+Author: RafaelOll <122568396+RafaelOll@users.noreply.github.com>
+Date:   Thu Dec 19 21:36:28 2024 +0100
+
+    Create Setting_up_the_structure.md
+    
+    Creation of a doc to implement the main computer structure
+
+[33mcommit cb360e25670fd4156e9eccd4fe18cf0f867f1bb5[m
+Author: RafaelOll <122568396+RafaelOll@users.noreply.github.com>
+Date:   Thu Dec 19 21:27:59 2024 +0100
+
+    Initial commit
