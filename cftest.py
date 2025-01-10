@@ -10,6 +10,7 @@ sys.path.append(os.path.abspath("crazyflie-lib-python"))
 import cflib.crtp
 from cflib.crazyflie.swarm import CachedCfFactory
 from cflib.crazyflie.swarm import Swarm
+from cflib.crazyflie.log import LogConfig
 
 
 def activate_led_bit_mask(scf):
@@ -45,7 +46,7 @@ def hover_sequence(scf):
 
 
 def run_square_sequence(scf):
-    box_size = 1
+    box_size = 0.5
     flight_time = 2
 
     commander= scf.cf.high_level_commander
@@ -65,9 +66,30 @@ def run_square_sequence(scf):
 
 
 
+def log_callback(uri, timestamp, data, logconf):
+    x = data['stateEstimate.x']
+    y = data['stateEstimate.y']
+    z = data['stateEstimate.z']
+    with open("cf_log.txt", "a") as f:
+        f.write(f"{timestamp} {uri} {x} {y} {z}\n")
+        f.close()
+
+
+def start_states_log(scf):
+    log_conf = LogConfig(name="pos", period_in_ms=100)
+    log_conf.add_variable("stateEstimate.x", "float")
+    log_conf.add_variable("stateEstimate.y", "float")
+    log_conf.add_variable("stateEstimate.z", "float")
+    
+    uri = scf.cf.link_uri
+    scf.cf.log.add_config(log_conf)
+    log_conf.data_received_cb.add_callback(lambda timestamp, data, logconf: log_callback(uri, timestamp, data, logconf))
+    log_conf.start()
+
 
 uris = {
     'radio://0/80/2M/8',
+    'radio://0/80/2M/3',
     'radio://0/80/2M/2'
     # Add more URIs if you want more copters in the swarm
 }
@@ -86,15 +108,18 @@ if __name__ == '__main__':
 
     print("create Swarm")
     with Swarm(uris, factory=factory) as swarm:
-            print("\nStarting light check")
-            swarm.sequential(light_check)            # parallel_safe will execute the function given to it as an argument for all crazyflies in the swarm
+            #print("\nStarting light check")
+            #swarm.sequential(light_check)            # parallel_safe will execute the function given to it as an argument for all crazyflies in the swarm
             
             print("\nreset estimators")
             swarm.reset_estimators()
 
-            print("\nsequential take off and landing")
-            swarm.parallel_safe(hover_sequence)
+            #print("\nsequential take off and landing")
+            #swarm.parallel_safe(hover_sequence)
 
+            print("Initialize logging")
+            open("cf_log.txt", "w").close()
+            swarm.parallel_safe(start_states_log)
 
             print("square sequence")
             swarm.parallel_safe(take_off)
