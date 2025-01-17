@@ -137,7 +137,37 @@ def position(t, r_i, r_f, t_i, t_f):
     return r_i + (r_f-r_i)*(t-t_i)/(t_f-t_i)
 
 
-def construct_sequences(r_i, r_f, T, epsilon):
+def straight_line(r_i, r_f, alpha):
+    """computes a point on a straight line"""
+    return r_i + (r_f-r_i)*alpha
+
+
+def check_geometric_intersections(r_i1, r_f1, r_i2, r_f2, epsilon, verbose=False):
+    """checks if two straight lines have a geometric intersection"""
+    N_pts_alpha = 100
+    alpha1 = np.linspace(0, 1, N_pts_alpha)
+    alpha2 = np.linspace(0, 1, N_pts_alpha)
+
+    # find distances delta of points of lines 
+    delta = np.zeros(shape=(len(alpha1), len(alpha2)))
+    for i in range(len(alpha1)):
+        for j in range(len(alpha2)):
+            v = straight_line(r_i1, r_f1, alpha1[i]) - straight_line(r_i2, r_f2, alpha2[j])
+            delta[i, j] = np.sqrt(v[0]**2 + v[1]**2)
+
+    # judge whether we have an intersection
+    where_isc = np.where(delta < epsilon)
+
+    if verbose:
+        print(f"alpha1 at intersections= {alpha1[where_isc[0]]}")
+        print(f"alpha2 at intersections= {alpha2[where_isc[1]]}")
+
+    if len(where_isc[0]) > 0:
+        return True
+    return False
+
+
+def construct_2_sequences(r_i, r_f, T, epsilon):
     """constructs a pair of sequences that avoid a crash"""
     t_i0 = 0
     t_f0 = T
@@ -174,6 +204,49 @@ def construct_sequences(r_i, r_f, T, epsilon):
     
     return sequence0, sequence1
         
+
+def construct_sequences(r_i, r_f, T, epsilon):
+    sequence0, sequence1 = construct_2_sequences(r_i, r_f, T, epsilon)
+
+    if np.shape(r_i)[0] == 2:
+        return (sequence0, sequence1)
+
+    elif np.shape(r_i)[0] == 3:
+        isc_values = []
+        for k in range(2):
+            if check_geometric_intersections(r_i[2], r_f[2], r_i[k], r_f[k], epsilon):
+                isc_values.append(k)
+
+            if len(isc_values) == 0:
+                dx2, dy2 = r_f[2]-r_i[2]
+                sequence2 = [
+                    (dx2, dy2, 0, T)
+                ]
+            
+            if len(isc_values) == 1:
+                if 0 in isc_values:
+                    _, sequence2 = construct_2_sequences([r_i[0], r_i[2]], [r_f[0], r_f[2]], T, epsilon)
+
+                if 1 in isc_values:
+                    if len(sequence1) == 1:
+                        _, sequence2 = construct_2_sequences([r_i[0], r_i[1]], [r_f[0], r_f[1]], T, epsilon)
+                    elif len(sequence1) == 2:
+    
+                        _, sequence2 = construct_2_sequences([r_i[0], r_i[1]], [r_f[0], r_f[1]], T, epsilon)
+                        #if len(sequence2) == 1:
+                        #    _, sequence2 = construct_2_sequences([r_i[0], r_i[1]], [r_f[0], r_f[1]], T, epsilon)
+
+                    else: 
+                        print("shouldn't happen")
+
+
+        sequence2 = []
+        return (sequence0, sequence1, sequence2)
+
+    else:
+        print(f"invalid case in function construct_sequence. np.shape(r_i): {np.shape(r_i)}.")
+        return None
+
 
 sequence0 = [
     (0, u, 0, dt),              # dx, dy, dz, dt
@@ -243,13 +316,27 @@ def flight():
                 ]
             )
 
-            seq0, seq1 = construct_sequences(r_i, r_f, T, epsilon)
-            seq_args = {
-                uris[0]: [seq0],
-                uris[1]: [seq1],
-            }
-            print(seq0)
-            print(seq1)
+            sequences = construct_sequences(r_i, r_f, T, epsilon)
+            if len(sequences) == 2:
+                seq_args = {
+                    uris[0]: [sequences[0]],
+                    uris[1]: [sequences[1]],
+                }
+                print("2 sequences constructed: ")
+                print(sequences[0])
+                print(sequences[1])
+
+            elif len(sequences) == 3:
+                seq_args = {
+                    uris[0]: [sequences[0]],
+                    uris[1]: [sequences[1]],
+                    uris[2]: [sequences[2]]
+                }
+                print("3 sequences constructed:")
+                print(sequences[0])
+                print(sequences[1])
+                print(sequences[2])
+            
             time.sleep(10)
             print("It goes on!")
 
@@ -262,13 +349,17 @@ def seq_constr_test():
     r_i1 = np.array([0, -1])
     r_f1 = np.array([0, 1])
     r_i2 = np.array([-1, 0])
-    r_f2 = np.array([1, 0])
+    r_f2 = np.array([-1, 2])
     #t_i1 = 0
     #t_f1 = 10
     #t_i2 = 5
     #t_f2 = 10
     epsilon = 0.25
     T = 10
+
+    r_isc1, r_isc2 = check_geometric_intersections(r_i1, r_f1, r_i2, r_f2, epsilon)
+    print(r_isc1)
+    print(r_isc2)
 
     #t_coll = check_collision_linear_segment(t_i1, t_f1, r_i1, r_f1, t_i2, t_f2, r_i2, r_f2, epsilon)
     #print(t_coll)
@@ -288,6 +379,6 @@ def seq_constr_test():
 
 
 if __name__ == "__main__":
-    flight()
+    seq_constr_test()
 
     
