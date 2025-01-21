@@ -27,9 +27,11 @@ find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Num.msg"
+  "msg/SequenceElement.msg"
   "srv/AddThreeInts.srv"
   "srv/RobotPositions.srv"
   "srv/SendPositions.srv"
+  "srv/DroneTrajectories.srv"
  )
 
 ament_package()
