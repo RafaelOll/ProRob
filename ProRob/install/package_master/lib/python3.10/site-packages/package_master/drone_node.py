@@ -64,7 +64,7 @@ class GetPosService(Node):
         self.srv = self.create_service(SendPositions, 'send_positions', self.send_positions_callback)
         self.destroy_after_response = False
 
-    def send_positions_callback(self, *args):
+    def send_positions_callback(self, request, response):
         response.ack = True
         global position_dict
         position_dict = {
