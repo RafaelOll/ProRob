@@ -43,10 +43,10 @@ class SendPosClient(Node):
 
     def send_request(self, pos_dict):
         for name, position in pos_dict.items():
-            request.robot_names.append(name)
-            request.positions_x.append(position[0])
-            request.positions_y.append(position[1])
-            request.positions_z.append(position[2])
+            self.request.robot_names.append(name)
+            self.request.positions_x.append(position[0])
+            self.request.positions_y.append(position[1])
+            self.request.positions_z.append(position[2])
         self.future = self.client.call_async(self.request)
 
     def check_response(self):
