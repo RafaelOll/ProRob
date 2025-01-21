@@ -1,0 +1,5 @@
+  File "/home/rouillon/ProRob/install/package_master/lib/python3.10/site-packages/package_master/drone_node.py", line 100
+    Lancer IsReadyService après SendPosService
+           ^^^^^^^^^^^^^^
+SyntaxError: invalid syntax
+

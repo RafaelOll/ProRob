@@ -1,0 +1,4 @@
+Invoking command in '/home/rouillon/ProRob/build/package_master_interfaces': /usr/bin/cmake --build /home/rouillon/ProRob/build/package_master_interfaces -- -j4 -l4
+Invoked command in '/home/rouillon/ProRob/build/package_master_interfaces' returned '0': /usr/bin/cmake --build /home/rouillon/ProRob/build/package_master_interfaces -- -j4 -l4
+Invoking command in '/home/rouillon/ProRob/build/package_master_interfaces': /usr/bin/cmake --install /home/rouillon/ProRob/build/package_master_interfaces
+Invoked command in '/home/rouillon/ProRob/build/package_master_interfaces' returned '0': /usr/bin/cmake --install /home/rouillon/ProRob/build/package_master_interfaces

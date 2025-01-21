@@ -1,0 +1,32 @@
+[3.222s] Invoking command in '/home/rouillon/ProRob/src/package_master': PYTHONPATH=/home/rouillon/ProRob/build/package_master/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rouillon/ProRob/install/package_master/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/package_master build --build-base /home/rouillon/ProRob/build/package_master/build install --record /home/rouillon/ProRob/build/package_master/install.log --single-version-externally-managed install_data
+[4.031s] running egg_info
+[4.033s] writing ../../build/package_master/package_master.egg-info/PKG-INFO
+[4.034s] writing dependency_links to ../../build/package_master/package_master.egg-info/dependency_links.txt
+[4.035s] writing entry points to ../../build/package_master/package_master.egg-info/entry_points.txt
+[4.035s] writing requirements to ../../build/package_master/package_master.egg-info/requires.txt
+[4.036s] writing top-level names to ../../build/package_master/package_master.egg-info/top_level.txt
+[4.041s] reading manifest file '../../build/package_master/package_master.egg-info/SOURCES.txt'
+[4.045s] writing manifest file '../../build/package_master/package_master.egg-info/SOURCES.txt'
+[4.045s] running build
+[4.046s] running build_py
+[4.046s] copying package_master/master_node_tb.py -> /home/rouillon/ProRob/build/package_master/build/lib/package_master
+[4.047s] copying package_master/tb_node.py -> /home/rouillon/ProRob/build/package_master/build/lib/package_master
+[4.050s] running install
+[4.050s] running install_lib
+[4.052s] copying /home/rouillon/ProRob/build/package_master/build/lib/package_master/master_node_tb.py -> /home/rouillon/ProRob/install/package_master/lib/python3.10/site-packages/package_master
+[4.054s] copying /home/rouillon/ProRob/build/package_master/build/lib/package_master/tb_node.py -> /home/rouillon/ProRob/install/package_master/lib/python3.10/site-packages/package_master
+[4.054s] byte-compiling /home/rouillon/ProRob/install/package_master/lib/python3.10/site-packages/package_master/master_node_tb.py to master_node_tb.cpython-310.pyc
+[4.060s] byte-compiling /home/rouillon/ProRob/install/package_master/lib/python3.10/site-packages/package_master/tb_node.py to tb_node.cpython-310.pyc
+[4.061s] running install_data
+[4.062s] running install_egg_info
+[4.068s] removing '/home/rouillon/ProRob/install/package_master/lib/python3.10/site-packages/package_master-0.0.0-py3.10.egg-info' (and everything under it)
+[4.069s] Copying ../../build/package_master/package_master.egg-info to /home/rouillon/ProRob/install/package_master/lib/python3.10/site-packages/package_master-0.0.0-py3.10.egg-info
+[4.071s] running install_scripts
+[4.139s] Installing client script to /home/rouillon/ProRob/install/package_master/lib/package_master
+[4.140s] Installing client_drone script to /home/rouillon/ProRob/install/package_master/lib/package_master
+[4.140s] Installing client_tb script to /home/rouillon/ProRob/install/package_master/lib/package_master
+[4.140s] Installing service_drone script to /home/rouillon/ProRob/install/package_master/lib/package_master
+[4.141s] Installing service_tb script to /home/rouillon/ProRob/install/package_master/lib/package_master
+[4.141s] Installing service_test script to /home/rouillon/ProRob/install/package_master/lib/package_master
+[4.143s] writing list of installed files to '/home/rouillon/ProRob/build/package_master/install.log'
+[4.209s] Invoked command in '/home/rouillon/ProRob/src/package_master' returned '0': PYTHONPATH=/home/rouillon/ProRob/build/package_master/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rouillon/ProRob/install/package_master/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/package_master build --build-base /home/rouillon/ProRob/build/package_master/build install --record /home/rouillon/ProRob/build/package_master/install.log --single-version-externally-managed install_data

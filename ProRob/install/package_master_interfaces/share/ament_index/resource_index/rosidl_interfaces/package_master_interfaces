@@ -1,0 +1,14 @@
+msg/Num.idl
+msg/Num.msg
+srv/AddThreeInts.idl
+srv/AddThreeInts.srv
+srv/AddThreeInts_Request.msg
+srv/AddThreeInts_Response.msg
+srv/RobotPositions.idl
+srv/RobotPositions.srv
+srv/RobotPositions_Request.msg
+srv/RobotPositions_Response.msg
+srv/SendPositions.idl
+srv/SendPositions.srv
+srv/SendPositions_Request.msg
+srv/SendPositions_Response.msg

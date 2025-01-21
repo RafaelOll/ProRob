@@ -1,0 +1,33 @@
+[0.934s] Invoking command in '/home/rouillon/ProRob/src/package_master': PYTHONPATH=/home/rouillon/ProRob/build/package_master/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rouillon/ProRob/install/package_master/lib/python3.10/site-packages: /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/package_master build --build-base /home/rouillon/ProRob/build/package_master/build install --record /home/rouillon/ProRob/build/package_master/install.log --single-version-externally-managed install_data
+[1.289s] running egg_info
+[1.289s] writing ../../build/package_master/package_master.egg-info/PKG-INFO
+[1.290s] writing dependency_links to ../../build/package_master/package_master.egg-info/dependency_links.txt
+[1.290s] writing entry points to ../../build/package_master/package_master.egg-info/entry_points.txt
+[1.290s] writing requirements to ../../build/package_master/package_master.egg-info/requires.txt
+[1.290s] writing top-level names to ../../build/package_master/package_master.egg-info/top_level.txt
+[1.293s] reading manifest file '../../build/package_master/package_master.egg-info/SOURCES.txt'
+[1.294s] writing manifest file '../../build/package_master/package_master.egg-info/SOURCES.txt'
+[1.295s] running build
+[1.295s] running build_py
+[1.295s] copying package_master/service_member_function.py -> /home/rouillon/ProRob/build/package_master/build/lib/package_master
+[1.295s] copying package_master/client_member_function.py -> /home/rouillon/ProRob/build/package_master/build/lib/package_master
+[1.295s] running install
+[1.296s] running install_lib
+[1.297s] copying /home/rouillon/ProRob/build/package_master/build/lib/package_master/service_member_function.py -> /home/rouillon/ProRob/install/package_master/lib/python3.10/site-packages/package_master
+[1.297s] copying /home/rouillon/ProRob/build/package_master/build/lib/package_master/client_member_function.py -> /home/rouillon/ProRob/install/package_master/lib/python3.10/site-packages/package_master
+[1.298s] byte-compiling /home/rouillon/ProRob/install/package_master/lib/python3.10/site-packages/package_master/service_member_function.py to service_member_function.cpython-310.pyc
+[1.299s] byte-compiling /home/rouillon/ProRob/install/package_master/lib/python3.10/site-packages/package_master/client_member_function.py to client_member_function.cpython-310.pyc
+[1.299s]   File "/home/rouillon/ProRob/install/package_master/lib/python3.10/site-packages/package_master/client_member_function.py", line 33
+[1.299s]     minimal_client.get_logger().info(
+[1.300s]                                     ^
+[1.300s] SyntaxError: '(' was never closed
+[1.300s] 
+[1.300s] running install_data
+[1.300s] running install_egg_info
+[1.302s] removing '/home/rouillon/ProRob/install/package_master/lib/python3.10/site-packages/package_master-0.0.0-py3.10.egg-info' (and everything under it)
+[1.302s] Copying ../../build/package_master/package_master.egg-info to /home/rouillon/ProRob/install/package_master/lib/python3.10/site-packages/package_master-0.0.0-py3.10.egg-info
+[1.303s] running install_scripts
+[1.336s] Installing client script to /home/rouillon/ProRob/install/package_master/lib/package_master
+[1.336s] Installing service script to /home/rouillon/ProRob/install/package_master/lib/package_master
+[1.336s] writing list of installed files to '/home/rouillon/ProRob/build/package_master/install.log'
+[1.377s] Invoked command in '/home/rouillon/ProRob/src/package_master' returned '0': PYTHONPATH=/home/rouillon/ProRob/build/package_master/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rouillon/ProRob/install/package_master/lib/python3.10/site-packages: /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/package_master build --build-base /home/rouillon/ProRob/build/package_master/build install --record /home/rouillon/ProRob/build/package_master/install.log --single-version-externally-managed install_data

@@ -1,0 +1,26 @@
+[3.595s] Invoking command in '/home/rouillon/ProRob/src/package_master': PYTHONPATH=/home/rouillon/ProRob/build/package_master/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rouillon/ProRob/install/package_master/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/package_master build --build-base /home/rouillon/ProRob/build/package_master/build install --record /home/rouillon/ProRob/build/package_master/install.log --single-version-externally-managed install_data
+[4.558s] running egg_info
+[4.560s] writing ../../build/package_master/package_master.egg-info/PKG-INFO
+[4.561s] writing dependency_links to ../../build/package_master/package_master.egg-info/dependency_links.txt
+[4.562s] writing entry points to ../../build/package_master/package_master.egg-info/entry_points.txt
+[4.563s] writing requirements to ../../build/package_master/package_master.egg-info/requires.txt
+[4.564s] writing top-level names to ../../build/package_master/package_master.egg-info/top_level.txt
+[4.570s] reading manifest file '../../build/package_master/package_master.egg-info/SOURCES.txt'
+[4.574s] writing manifest file '../../build/package_master/package_master.egg-info/SOURCES.txt'
+[4.575s] running build
+[4.575s] running build_py
+[4.576s] copying package_master/drone_node.py -> /home/rouillon/ProRob/build/package_master/build/lib/package_master
+[4.577s] running install
+[4.578s] running install_lib
+[4.590s] copying /home/rouillon/ProRob/build/package_master/build/lib/package_master/drone_node.py -> /home/rouillon/ProRob/install/package_master/lib/python3.10/site-packages/package_master
+[4.591s] byte-compiling /home/rouillon/ProRob/install/package_master/lib/python3.10/site-packages/package_master/drone_node.py to drone_node.cpython-310.pyc
+[4.592s] running install_data
+[4.592s] running install_egg_info
+[4.602s] removing '/home/rouillon/ProRob/install/package_master/lib/python3.10/site-packages/package_master-0.0.0-py3.10.egg-info' (and everything under it)
+[4.602s] Copying ../../build/package_master/package_master.egg-info to /home/rouillon/ProRob/install/package_master/lib/python3.10/site-packages/package_master-0.0.0-py3.10.egg-info
+[4.602s] running install_scripts
+[4.672s] Installing client script to /home/rouillon/ProRob/install/package_master/lib/package_master
+[4.673s] Installing service_node script to /home/rouillon/ProRob/install/package_master/lib/package_master
+[4.674s] Installing service_test script to /home/rouillon/ProRob/install/package_master/lib/package_master
+[4.675s] writing list of installed files to '/home/rouillon/ProRob/build/package_master/install.log'
+[4.744s] Invoked command in '/home/rouillon/ProRob/src/package_master' returned '0': PYTHONPATH=/home/rouillon/ProRob/build/package_master/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rouillon/ProRob/install/package_master/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/package_master build --build-base /home/rouillon/ProRob/build/package_master/build install --record /home/rouillon/ProRob/build/package_master/install.log --single-version-externally-managed install_data

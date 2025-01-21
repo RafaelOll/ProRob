@@ -1,0 +1,20 @@
+[3.430s] Invoking command in '/home/rouillon/ProRob/src/py_srvcli': PYTHONPATH=/home/rouillon/ProRob/build/py_srvcli/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rouillon/ProRob/install/py_srvcli/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/py_srvcli build --build-base /home/rouillon/ProRob/build/py_srvcli/build install --record /home/rouillon/ProRob/build/py_srvcli/install.log --single-version-externally-managed install_data
+[4.418s] running egg_info
+[4.418s] writing ../../build/py_srvcli/py_srvcli.egg-info/PKG-INFO
+[4.421s] writing dependency_links to ../../build/py_srvcli/py_srvcli.egg-info/dependency_links.txt
+[4.421s] writing entry points to ../../build/py_srvcli/py_srvcli.egg-info/entry_points.txt
+[4.421s] writing requirements to ../../build/py_srvcli/py_srvcli.egg-info/requires.txt
+[4.422s] writing top-level names to ../../build/py_srvcli/py_srvcli.egg-info/top_level.txt
+[4.429s] reading manifest file '../../build/py_srvcli/py_srvcli.egg-info/SOURCES.txt'
+[4.433s] writing manifest file '../../build/py_srvcli/py_srvcli.egg-info/SOURCES.txt'
+[4.433s] running build
+[4.433s] running build_py
+[4.434s] running install
+[4.434s] running install_lib
+[4.438s] running install_data
+[4.438s] running install_egg_info
+[4.450s] removing '/home/rouillon/ProRob/install/py_srvcli/lib/python3.10/site-packages/py_srvcli-0.0.0-py3.10.egg-info' (and everything under it)
+[4.450s] Copying ../../build/py_srvcli/py_srvcli.egg-info to /home/rouillon/ProRob/install/py_srvcli/lib/python3.10/site-packages/py_srvcli-0.0.0-py3.10.egg-info
+[4.451s] running install_scripts
+[4.525s] writing list of installed files to '/home/rouillon/ProRob/build/py_srvcli/install.log'
+[4.594s] Invoked command in '/home/rouillon/ProRob/src/py_srvcli' returned '0': PYTHONPATH=/home/rouillon/ProRob/build/py_srvcli/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rouillon/ProRob/install/py_srvcli/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/py_srvcli build --build-base /home/rouillon/ProRob/build/py_srvcli/build install --record /home/rouillon/ProRob/build/py_srvcli/install.log --single-version-externally-managed install_data

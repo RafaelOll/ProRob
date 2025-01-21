@@ -1,0 +1,5 @@
+  File "/home/rouillon/ProRob/install/package_master/lib/python3.10/site-packages/package_master/client_member_function.py", line 33
+    minimal_client.get_logger().info(
+                                    ^
+SyntaxError: '(' was never closed
+

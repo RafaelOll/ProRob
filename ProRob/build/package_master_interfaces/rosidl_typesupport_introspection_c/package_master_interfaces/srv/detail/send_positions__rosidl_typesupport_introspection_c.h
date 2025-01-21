@@ -1,0 +1,47 @@
+// generated from rosidl_typesupport_introspection_c/resource/idl__rosidl_typesupport_introspection_c.h.em
+// with input from package_master_interfaces:srv/SendPositions.idl
+// generated code does not contain a copyright notice
+
+#ifndef PACKAGE_MASTER_INTERFACES__SRV__DETAIL__SEND_POSITIONS__ROSIDL_TYPESUPPORT_INTROSPECTION_C_H_
+#define PACKAGE_MASTER_INTERFACES__SRV__DETAIL__SEND_POSITIONS__ROSIDL_TYPESUPPORT_INTROSPECTION_C_H_
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+
+#include "rosidl_runtime_c/message_type_support_struct.h"
+#include "rosidl_typesupport_interface/macros.h"
+#include "package_master_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h"
+
+ROSIDL_TYPESUPPORT_INTROSPECTION_C_PUBLIC_package_master_interfaces
+const rosidl_message_type_support_t *
+ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, package_master_interfaces, srv, SendPositions_Request)();
+
+// already included above
+// #include "rosidl_runtime_c/message_type_support_struct.h"
+// already included above
+// #include "rosidl_typesupport_interface/macros.h"
+// already included above
+// #include "package_master_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h"
+
+ROSIDL_TYPESUPPORT_INTROSPECTION_C_PUBLIC_package_master_interfaces
+const rosidl_message_type_support_t *
+ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, package_master_interfaces, srv, SendPositions_Response)();
+
+#include "rosidl_runtime_c/service_type_support_struct.h"
+// already included above
+// #include "rosidl_typesupport_interface/macros.h"
+// already included above
+// #include "package_master_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h"
+
+ROSIDL_TYPESUPPORT_INTROSPECTION_C_PUBLIC_package_master_interfaces
+const rosidl_service_type_support_t *
+ROSIDL_TYPESUPPORT_INTERFACE__SERVICE_SYMBOL_NAME(rosidl_typesupport_introspection_c, package_master_interfaces, srv, SendPositions)();
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif  // PACKAGE_MASTER_INTERFACES__SRV__DETAIL__SEND_POSITIONS__ROSIDL_TYPESUPPORT_INTROSPECTION_C_H_

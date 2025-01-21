@@ -1,0 +1,28 @@
+[1.918s] Invoking command in '/home/rouillon/ProRob/src/package_master': PYTHONPATH=/home/rouillon/ProRob/src/package_master/build/package_master/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rouillon/ProRob/src/package_master/install/package_master/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/package_master build --build-base /home/rouillon/ProRob/src/package_master/build/package_master/build install --record /home/rouillon/ProRob/src/package_master/build/package_master/install.log --single-version-externally-managed install_data
+[2.628s] running egg_info
+[2.629s] writing build/package_master/package_master.egg-info/PKG-INFO
+[2.630s] writing dependency_links to build/package_master/package_master.egg-info/dependency_links.txt
+[2.630s] writing entry points to build/package_master/package_master.egg-info/entry_points.txt
+[2.631s] writing requirements to build/package_master/package_master.egg-info/requires.txt
+[2.631s] writing top-level names to build/package_master/package_master.egg-info/top_level.txt
+[2.637s] reading manifest file 'build/package_master/package_master.egg-info/SOURCES.txt'
+[2.642s] writing manifest file 'build/package_master/package_master.egg-info/SOURCES.txt'
+[2.642s] running build
+[2.642s] running build_py
+[2.642s] copying package_master/drone_node.py -> /home/rouillon/ProRob/src/package_master/build/package_master/build/lib/package_master
+[2.643s] copying package_master/master_node.py -> /home/rouillon/ProRob/src/package_master/build/package_master/build/lib/package_master
+[2.644s] running install
+[2.645s] running install_lib
+[2.647s] copying /home/rouillon/ProRob/src/package_master/build/package_master/build/lib/package_master/drone_node.py -> /home/rouillon/ProRob/src/package_master/install/package_master/lib/python3.10/site-packages/package_master
+[2.649s] copying /home/rouillon/ProRob/src/package_master/build/package_master/build/lib/package_master/master_node.py -> /home/rouillon/ProRob/src/package_master/install/package_master/lib/python3.10/site-packages/package_master
+[2.650s] byte-compiling /home/rouillon/ProRob/src/package_master/install/package_master/lib/python3.10/site-packages/package_master/drone_node.py to drone_node.cpython-310.pyc
+[2.651s] byte-compiling /home/rouillon/ProRob/src/package_master/install/package_master/lib/python3.10/site-packages/package_master/master_node.py to master_node.cpython-310.pyc
+[2.654s] running install_data
+[2.654s] running install_egg_info
+[2.661s] removing '/home/rouillon/ProRob/src/package_master/install/package_master/lib/python3.10/site-packages/package_master-0.0.0-py3.10.egg-info' (and everything under it)
+[2.668s] Copying build/package_master/package_master.egg-info to /home/rouillon/ProRob/src/package_master/install/package_master/lib/python3.10/site-packages/package_master-0.0.0-py3.10.egg-info
+[2.668s] running install_scripts
+[2.735s] Installing client script to /home/rouillon/ProRob/src/package_master/install/package_master/lib/package_master
+[2.736s] Installing service script to /home/rouillon/ProRob/src/package_master/install/package_master/lib/package_master
+[2.738s] writing list of installed files to '/home/rouillon/ProRob/src/package_master/build/package_master/install.log'
+[2.789s] Invoked command in '/home/rouillon/ProRob/src/package_master' returned '0': PYTHONPATH=/home/rouillon/ProRob/src/package_master/build/package_master/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rouillon/ProRob/src/package_master/install/package_master/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/package_master build --build-base /home/rouillon/ProRob/src/package_master/build/package_master/build install --record /home/rouillon/ProRob/src/package_master/build/package_master/install.log --single-version-externally-managed install_data

@@ -1,0 +1,5 @@
+[console_scripts]
+client = package_master.master_node:main
+service_node = package_master.drone_node:main
+service_test = package_master.service_member_function:main
+

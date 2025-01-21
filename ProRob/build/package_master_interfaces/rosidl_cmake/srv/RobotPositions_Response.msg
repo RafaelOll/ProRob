@@ -1,0 +1,5 @@
+
+string[] robot_names  # Noms des robots (réponse)
+float64[] positions_x  # Coordonnées X
+float64[] positions_y  # Coordonnées Y
+float64[] positions_z  # Coordonnées Z

@@ -1,0 +1,53 @@
+[0.000000] (-) TimerEvent: {}
+[0.000194] (-) JobUnselected: {'identifier': 'package_master_interfaces'}
+[0.000232] (-) JobUnselected: {'identifier': 'py_srvcli'}
+[0.000270] (package_master) JobQueued: {'identifier': 'package_master', 'dependencies': OrderedDict()}
+[0.000306] (package_master) JobStarted: {'identifier': 'package_master'}
+[0.098547] (-) TimerEvent: {}
+[0.201121] (-) TimerEvent: {}
+[0.301400] (-) TimerEvent: {}
+[0.401807] (-) TimerEvent: {}
+[0.503256] (-) TimerEvent: {}
+[0.603797] (-) TimerEvent: {}
+[0.705676] (-) TimerEvent: {}
+[0.806031] (-) TimerEvent: {}
+[0.906447] (-) TimerEvent: {}
+[0.929718] (package_master) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/package_master', 'build', '--build-base', '/home/rouillon/ProRob/build/package_master/build', 'install', '--record', '/home/rouillon/ProRob/build/package_master/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/rouillon/ProRob/src/package_master', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'rouillon', 'LC_TIME': 'fr_FR.UTF-8', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'HOME': '/home/rouillon', 'OLDPWD': '/home/rouillon/ProRob/src/package_master', 'DESKTOP_SESSION': 'ubuntu', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'fr_FR.UTF-8', 'SYSTEMD_EXEC_PID': '3435', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'LOGNAME': 'rouillon', '_': '/usr/bin/colcon', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'rouillon', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/home/rouillon/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/rouillon:@/tmp/.ICE-unix/2155,unix/rouillon:/tmp/.ICE-unix/2155', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'fr_FR.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/31a55eb0_2147_498a_80b1_edd8b7067357', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'fr_FR.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.JFU5Z2', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.103', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'SHELL': '/bin/bash', 'LC_NAME': 'fr_FR.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'fr_FR.UTF-8', 'LC_IDENTIFICATION': 'fr_FR.UTF-8', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/rouillon/ProRob/build/package_master', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'LC_NUMERIC': 'fr_FR.UTF-8', 'LC_PAPER': 'fr_FR.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6800', 'PYTHONPATH': '/home/rouillon/ProRob/build/package_master/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rouillon/ProRob/install/package_master/lib/python3.10/site-packages:'}, 'shell': False}
+[1.006782] (-) TimerEvent: {}
+[1.107638] (-) TimerEvent: {}
+[1.208734] (-) TimerEvent: {}
+[1.289391] (package_master) StdoutLine: {'line': b'running egg_info\n'}
+[1.289669] (package_master) StdoutLine: {'line': b'writing ../../build/package_master/package_master.egg-info/PKG-INFO\n'}
+[1.289848] (package_master) StdoutLine: {'line': b'writing dependency_links to ../../build/package_master/package_master.egg-info/dependency_links.txt\n'}
+[1.290009] (package_master) StdoutLine: {'line': b'writing entry points to ../../build/package_master/package_master.egg-info/entry_points.txt\n'}
+[1.290188] (package_master) StdoutLine: {'line': b'writing requirements to ../../build/package_master/package_master.egg-info/requires.txt\n'}
+[1.290287] (package_master) StdoutLine: {'line': b'writing top-level names to ../../build/package_master/package_master.egg-info/top_level.txt\n'}
+[1.293690] (package_master) StdoutLine: {'line': b"reading manifest file '../../build/package_master/package_master.egg-info/SOURCES.txt'\n"}
+[1.294415] (package_master) StdoutLine: {'line': b"writing manifest file '../../build/package_master/package_master.egg-info/SOURCES.txt'\n"}
+[1.294787] (package_master) StdoutLine: {'line': b'running build\n'}
+[1.295010] (package_master) StdoutLine: {'line': b'running build_py\n'}
+[1.295191] (package_master) StdoutLine: {'line': b'copying package_master/service_member_function.py -> /home/rouillon/ProRob/build/package_master/build/lib/package_master\n'}
+[1.295297] (package_master) StdoutLine: {'line': b'copying package_master/client_member_function.py -> /home/rouillon/ProRob/build/package_master/build/lib/package_master\n'}
+[1.295563] (package_master) StdoutLine: {'line': b'running install\n'}
+[1.296103] (package_master) StdoutLine: {'line': b'running install_lib\n'}
+[1.297010] (package_master) StdoutLine: {'line': b'copying /home/rouillon/ProRob/build/package_master/build/lib/package_master/service_member_function.py -> /home/rouillon/ProRob/install/package_master/lib/python3.10/site-packages/package_master\n'}
+[1.297223] (package_master) StdoutLine: {'line': b'copying /home/rouillon/ProRob/build/package_master/build/lib/package_master/client_member_function.py -> /home/rouillon/ProRob/install/package_master/lib/python3.10/site-packages/package_master\n'}
+[1.297949] (package_master) StdoutLine: {'line': b'byte-compiling /home/rouillon/ProRob/install/package_master/lib/python3.10/site-packages/package_master/service_member_function.py to service_member_function.cpython-310.pyc\n'}
+[1.298722] (package_master) StdoutLine: {'line': b'byte-compiling /home/rouillon/ProRob/install/package_master/lib/python3.10/site-packages/package_master/client_member_function.py to client_member_function.cpython-310.pyc\n'}
+[1.299415] (package_master) StderrLine: {'line': b'  File "/home/rouillon/ProRob/install/package_master/lib/python3.10/site-packages/package_master/client_member_function.py", line 33\n'}
+[1.299606] (package_master) StderrLine: {'line': b'    minimal_client.get_logger().info(\n'}
+[1.299829] (package_master) StderrLine: {'line': b'                                    ^\n'}
+[1.299932] (package_master) StderrLine: {'line': b"SyntaxError: '(' was never closed\n"}
+[1.300026] (package_master) StderrLine: {'line': b'\n'}
+[1.300127] (package_master) StdoutLine: {'line': b'running install_data\n'}
+[1.300228] (package_master) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.302009] (package_master) StdoutLine: {'line': b"removing '/home/rouillon/ProRob/install/package_master/lib/python3.10/site-packages/package_master-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[1.302435] (package_master) StdoutLine: {'line': b'Copying ../../build/package_master/package_master.egg-info to /home/rouillon/ProRob/install/package_master/lib/python3.10/site-packages/package_master-0.0.0-py3.10.egg-info\n'}
+[1.303551] (package_master) StdoutLine: {'line': b'running install_scripts\n'}
+[1.310143] (-) TimerEvent: {}
+[1.335632] (package_master) StdoutLine: {'line': b'Installing client script to /home/rouillon/ProRob/install/package_master/lib/package_master\n'}
+[1.336182] (package_master) StdoutLine: {'line': b'Installing service script to /home/rouillon/ProRob/install/package_master/lib/package_master\n'}
+[1.336670] (package_master) StdoutLine: {'line': b"writing list of installed files to '/home/rouillon/ProRob/build/package_master/install.log'\n"}
+[1.377151] (package_master) CommandEnded: {'returncode': 0}
+[1.396647] (package_master) JobEnded: {'identifier': 'package_master', 'rc': 0}
+[1.397834] (-) EventReactorShutdown: {}

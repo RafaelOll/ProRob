@@ -1,0 +1,26 @@
+running egg_info
+writing build/package_master/package_master.egg-info/PKG-INFO
+writing dependency_links to build/package_master/package_master.egg-info/dependency_links.txt
+writing entry points to build/package_master/package_master.egg-info/entry_points.txt
+writing requirements to build/package_master/package_master.egg-info/requires.txt
+writing top-level names to build/package_master/package_master.egg-info/top_level.txt
+reading manifest file 'build/package_master/package_master.egg-info/SOURCES.txt'
+writing manifest file 'build/package_master/package_master.egg-info/SOURCES.txt'
+running build
+running build_py
+copying package_master/drone_node.py -> /home/rouillon/ProRob/src/package_master/build/package_master/build/lib/package_master
+copying package_master/master_node.py -> /home/rouillon/ProRob/src/package_master/build/package_master/build/lib/package_master
+running install
+running install_lib
+copying /home/rouillon/ProRob/src/package_master/build/package_master/build/lib/package_master/drone_node.py -> /home/rouillon/ProRob/src/package_master/install/package_master/lib/python3.10/site-packages/package_master
+copying /home/rouillon/ProRob/src/package_master/build/package_master/build/lib/package_master/master_node.py -> /home/rouillon/ProRob/src/package_master/install/package_master/lib/python3.10/site-packages/package_master
+byte-compiling /home/rouillon/ProRob/src/package_master/install/package_master/lib/python3.10/site-packages/package_master/drone_node.py to drone_node.cpython-310.pyc
+byte-compiling /home/rouillon/ProRob/src/package_master/install/package_master/lib/python3.10/site-packages/package_master/master_node.py to master_node.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/home/rouillon/ProRob/src/package_master/install/package_master/lib/python3.10/site-packages/package_master-0.0.0-py3.10.egg-info' (and everything under it)
+Copying build/package_master/package_master.egg-info to /home/rouillon/ProRob/src/package_master/install/package_master/lib/python3.10/site-packages/package_master-0.0.0-py3.10.egg-info
+running install_scripts
+Installing client script to /home/rouillon/ProRob/src/package_master/install/package_master/lib/package_master
+Installing service script to /home/rouillon/ProRob/src/package_master/install/package_master/lib/package_master
+writing list of installed files to '/home/rouillon/ProRob/src/package_master/build/package_master/install.log'

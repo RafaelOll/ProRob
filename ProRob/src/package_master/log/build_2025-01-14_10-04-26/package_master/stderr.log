@@ -1,0 +1,5 @@
+  File "/home/rouillon/ProRob/src/package_master/install/package_master/lib/python3.10/site-packages/package_master/client_member_function.py", line 4
+    rom package_master.msg import Num
+        ^^^^^^^^^^^^^^
+SyntaxError: invalid syntax
+

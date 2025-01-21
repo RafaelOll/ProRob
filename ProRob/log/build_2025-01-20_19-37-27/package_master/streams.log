@@ -1,0 +1,23 @@
+[1.876s] Invoking command in '/home/rouillon/ProRob/src/package_master': PYTHONPATH=/home/rouillon/ProRob/build/package_master/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rouillon/ProRob/install/package_master/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/package_master build --build-base /home/rouillon/ProRob/build/package_master/build install --record /home/rouillon/ProRob/build/package_master/install.log --single-version-externally-managed install_data
+[2.349s] running egg_info
+[2.354s] writing ../../build/package_master/package_master.egg-info/PKG-INFO
+[2.354s] writing dependency_links to ../../build/package_master/package_master.egg-info/dependency_links.txt
+[2.354s] writing entry points to ../../build/package_master/package_master.egg-info/entry_points.txt
+[2.354s] writing requirements to ../../build/package_master/package_master.egg-info/requires.txt
+[2.354s] writing top-level names to ../../build/package_master/package_master.egg-info/top_level.txt
+[2.356s] reading manifest file '../../build/package_master/package_master.egg-info/SOURCES.txt'
+[2.359s] writing manifest file '../../build/package_master/package_master.egg-info/SOURCES.txt'
+[2.359s] running build
+[2.359s] running build_py
+[2.361s] running install
+[2.361s] running install_lib
+[2.364s] running install_data
+[2.364s] running install_egg_info
+[2.369s] removing '/home/rouillon/ProRob/install/package_master/lib/python3.10/site-packages/package_master-0.0.0-py3.10.egg-info' (and everything under it)
+[2.369s] Copying ../../build/package_master/package_master.egg-info to /home/rouillon/ProRob/install/package_master/lib/python3.10/site-packages/package_master-0.0.0-py3.10.egg-info
+[2.371s] running install_scripts
+[2.411s] Installing client script to /home/rouillon/ProRob/install/package_master/lib/package_master
+[2.412s] Installing service_node script to /home/rouillon/ProRob/install/package_master/lib/package_master
+[2.412s] Installing service_test script to /home/rouillon/ProRob/install/package_master/lib/package_master
+[2.413s] writing list of installed files to '/home/rouillon/ProRob/build/package_master/install.log'
+[2.461s] Invoked command in '/home/rouillon/ProRob/src/package_master' returned '0': PYTHONPATH=/home/rouillon/ProRob/build/package_master/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rouillon/ProRob/install/package_master/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/package_master build --build-base /home/rouillon/ProRob/build/package_master/build install --record /home/rouillon/ProRob/build/package_master/install.log --single-version-externally-managed install_data

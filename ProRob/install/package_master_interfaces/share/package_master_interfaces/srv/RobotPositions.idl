@@ -1,0 +1,31 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from package_master_interfaces/srv/RobotPositions.srv
+// generated code does not contain a copyright notice
+
+
+module package_master_interfaces {
+  module srv {
+    struct RobotPositions_Request {
+      @verbatim (language="comment", text=
+        "Liste des noms de robots")
+      sequence<string> robot_names;
+    };
+    struct RobotPositions_Response {
+      @verbatim (language="comment", text=
+        "Noms des robots (réponse)")
+      sequence<string> robot_names;
+
+      @verbatim (language="comment", text=
+        "Coordonnées X")
+      sequence<double> positions_x;
+
+      @verbatim (language="comment", text=
+        "Coordonnées Y")
+      sequence<double> positions_y;
+
+      @verbatim (language="comment", text=
+        "Coordonnées Z")
+      sequence<double> positions_z;
+    };
+  };
+};

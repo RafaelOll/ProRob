@@ -1,0 +1,2 @@
+Invoking command in '/home/rouillon/ProRob/build/package_master_interfaces': /usr/bin/cmake /home/rouillon/ProRob/src/package_master_interfaces -DCMAKE_INSTALL_PREFIX=/home/rouillon/ProRob/install/package_master_interfaces
+Invoked command in '/home/rouillon/ProRob/build/package_master_interfaces' returned '1': /usr/bin/cmake /home/rouillon/ProRob/src/package_master_interfaces -DCMAKE_INSTALL_PREFIX=/home/rouillon/ProRob/install/package_master_interfaces

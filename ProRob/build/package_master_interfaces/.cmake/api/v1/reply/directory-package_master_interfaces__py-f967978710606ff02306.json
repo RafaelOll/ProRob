@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "package_master_interfaces__py",
+		"source" : "/home/rouillon/ProRob/build/package_master_interfaces/package_master_interfaces__py"
+	}
+}
