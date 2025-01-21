@@ -4,7 +4,7 @@ from example_interfaces.srv import Trigger, SetBool
 from geometry_msgs.msg import Point
 from example_interfaces.srv import AddTwoInts, SetBool  # Adapter aux services requis
 from std_msgs.msg import Bool
-from package_master_interfaces.srv import AddThreeInts, RobotPositions
+from package_master_interfaces.srv import SendPositions, RobotPositions
 from package_master_interfaces.msg import Num
 
 
@@ -61,9 +61,9 @@ class SendPosClient(Node):
 
 
 
-class IsReadyClient(Node):
+class TakeOffClient(Node):
     def __init__(self):
-        super().__init__('is_ready_client')
+        super().__init__('take_off_client')
         self.client = self.create_client(SetBool, 'check_ready')
         self.request = SetBool.Request()
         #self.future = None
@@ -115,7 +115,8 @@ def main(args=None):
     rclpy.init(args=args)
 
     first_client = GetPosClient()
-    second_client = IsReadyClient()
+    second_client = TakeOffClient()
+    third_client = SendPosClient()
 
     position_dict = first_client.send_request()
     while rclpy.ok():
@@ -130,6 +131,27 @@ def main(args=None):
         second_client.check_response()
         if second_client.response:
             print(f"Réponse reçue : {second_client.response.success}")
+
+
+            robot_position_map = { #a changer (récuperer les positions reelles)
+            "tb1": (1.0, 2.0, 3.0),
+            "tb2": (4.0, 5.0, 6.0),
+            "tb3": (7.0, 8.0, 9.0)
+            }
+            position_dict = {
+                name: robot_position_map.get(name, (0.0, 0.0, 0.0))
+                for name in ["tb1", "tb2", "tb3"]
+            }
+            third_client.send_request(position_dict)
+
+
+            break
+
+    while rclpy.ok():
+        rclpy.spin_once(third_client)
+        third_client.check_response()
+        if third_client.completed:
+            print("done")
             break
 
     first_client.destroy_node()

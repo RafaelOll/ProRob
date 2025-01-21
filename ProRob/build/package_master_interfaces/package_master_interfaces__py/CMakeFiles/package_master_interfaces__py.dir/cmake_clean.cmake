@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/package_master_interfaces/msg/__init__.py"
   "../rosidl_generator_py/package_master_interfaces/msg/_num.py"
   "../rosidl_generator_py/package_master_interfaces/msg/_num_s.c"
+  "../rosidl_generator_py/package_master_interfaces/msg/_sequence_elments.py"
+  "../rosidl_generator_py/package_master_interfaces/msg/_sequence_elments_s.c"
   "../rosidl_generator_py/package_master_interfaces/srv/__init__.py"
   "../rosidl_generator_py/package_master_interfaces/srv/_add_three_ints.py"
   "../rosidl_generator_py/package_master_interfaces/srv/_add_three_ints_s.c"

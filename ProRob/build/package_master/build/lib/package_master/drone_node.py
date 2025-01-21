@@ -1,23 +1,7 @@
 import rclpy
 from rclpy.node import Node
 from example_interfaces.srv import SetBool
-from package_master_interfaces.srv import AddThreeInts, RobotPositions
-from package_master_interfaces.msg import Num 
-
-
-class MinimalService(Node):
-
-    def __init__(self):
-        super().__init__('minimal_service')
-        self.srv = self.create_service(AddThreeInts, 'add_three_ints', self.add_three_ints_callback)
-        self.destroy_after_response = False
-        print("init")
-        
-    def add_three_ints_callback(self, request, response):
-        response.sum = request.a + request.b + request.c
-        self.get_logger().info('Incoming request\na: %d b: %d c: %d'  % (request.a, request.b, request.c))
-        self.destroy_after_response = True        
-        return response
+from package_master_interfaces.srv import RobotPositions, SendPositions
 
 
 
@@ -28,8 +12,8 @@ class SendPosService(Node):
         self.destroy_after_response = False
         print("init")
 
-    def get_position(self, request):
-        robot_position_map = { #a changer (récuperer les positions reelles)
+    def get_position(self, request):  #a changer (récuperer les positions reelles)
+        robot_position_map = {
             "drone1": (1.0, 2.0, 3.0),
             "drone2": (4.0, 5.0, 6.0),
             "drone3": (7.0, 8.0, 9.0)
@@ -53,15 +37,15 @@ class SendPosService(Node):
 
 
 
-class IsReadyService(Node):
+class TakeOffService(Node):
     def __init__(self):
-        super().__init__('is_ready_service')
+        super().__init__('take_off_service')
         self.service = self.create_service(SetBool, 'check_ready', self.handle_request)
         self.destroy_after_response = False
         print("init")
 
-    def is_ready(self):
-        return True  # Par exemple, une condition sur un capteur ou un autre nœud
+    def is_ready(self):   # a changer, faire décoller les drones
+        return True
 
     def handle_request(self, request, response):
         self.get_logger().info('Incoming request')
@@ -73,39 +57,57 @@ class IsReadyService(Node):
 
 
 
+class GetPosService(Node):
+    def __init__(self):
+        super().__init__('ask_for_pos_client')
+        self.srv = self.create_service(SendPositions, 'send_positions', self.send_positions_callback)
+        self.destroy_after_response = False
+
+    def send_positions_callback(self):
+        response.ack = True
+        global position_dict
+        position_dict = {
+                name: (x, y, z)
+                for name, x, y, z in zip(request.robot_names, request.positions_x, request.positions_y, request.positions_z)
+            }
+        self.destroy_after_response = True
+        return response
+
+
+
 def main(args=None):
     rclpy.init(args=args)
-
-    # Lancer MinimalService
-    minimal_service = MinimalService()
-    while rclpy.ok():
-        print("1")
-        rclpy.spin_once(minimal_service)
-        if minimal_service.destroy_after_response:
-            minimal_service.destroy_node()
-            
-            break
-    print("stage 1 done")
 
     # Lancer SendPosService
     send_pos_service = SendPosService()
     while rclpy.ok():
-        print("2")
+        print("1")
         rclpy.spin_once(send_pos_service)
         if send_pos_service.destroy_after_response:
             send_pos_service.destroy_node()
             break
-    print("stage 2 done")
+    print("stage 1 done")
 
     #Lancer IsReadyService après SendPosService
-    node = IsReadyService()
+    node = TakeOffService()
     while rclpy.ok():
-        print("3")
+        print("2")
         rclpy.spin_once(node)
         if node.destroy_after_response:
             node.destroy_node()
             break
+    print("stage 2 done")
+
+    get_pos_service = GetPosService()
+    while rclpy.ok():
+        print("3")
+        rclpy.spin_once(get_pos_service)
+        if get_pos_service.destroy_after_response:
+            get_pos_service.destroy_node()
+            
+            break
     print("stage 3 done")
+    print(position_dict)
 
     rclpy.shutdown()
 

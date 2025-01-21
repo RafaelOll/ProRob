@@ -1,9 +1,10 @@
 {
   "package_name": "package_master_interfaces",
   "non_idl_tuples": [
-    "/home/rouillon/ProRob/src/package_master_interfaces:msg/Num.msg",
-    "/home/rouillon/ProRob/src/package_master_interfaces:srv/AddThreeInts.srv",
-    "/home/rouillon/ProRob/src/package_master_interfaces:srv/RobotPositions.srv",
-    "/home/rouillon/ProRob/src/package_master_interfaces:srv/SendPositions.srv"
+    "/home/rouillon/Documents/ProDroneTB/ProRob/src/package_master_interfaces:msg/Num.msg",
+    "/home/rouillon/Documents/ProDroneTB/ProRob/src/package_master_interfaces:msg/SequenceElments.msg",
+    "/home/rouillon/Documents/ProDroneTB/ProRob/src/package_master_interfaces:srv/AddThreeInts.srv",
+    "/home/rouillon/Documents/ProDroneTB/ProRob/src/package_master_interfaces:srv/RobotPositions.srv",
+    "/home/rouillon/Documents/ProDroneTB/ProRob/src/package_master_interfaces:srv/SendPositions.srv"
   ]
 }

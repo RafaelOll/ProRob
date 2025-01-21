@@ -1,0 +1,7 @@
+string[] robot_name
+float64[] ri_x
+float64[] ri_y
+float64[] rf_x
+float64[] rf_y
+float64[] time
+float64[] epsilon

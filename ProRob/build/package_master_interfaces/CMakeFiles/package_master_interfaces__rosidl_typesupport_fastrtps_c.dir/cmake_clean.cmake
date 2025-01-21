@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/package_master_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/package_master_interfaces/msg/detail/num__type_support_c.cpp.o"
   "CMakeFiles/package_master_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/package_master_interfaces/msg/detail/num__type_support_c.cpp.o.d"
+  "CMakeFiles/package_master_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/package_master_interfaces/msg/detail/sequence_elments__type_support_c.cpp.o"
+  "CMakeFiles/package_master_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/package_master_interfaces/msg/detail/sequence_elments__type_support_c.cpp.o.d"
   "CMakeFiles/package_master_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/package_master_interfaces/srv/detail/add_three_ints__type_support_c.cpp.o"
   "CMakeFiles/package_master_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/package_master_interfaces/srv/detail/add_three_ints__type_support_c.cpp.o.d"
   "CMakeFiles/package_master_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/package_master_interfaces/srv/detail/robot_positions__type_support_c.cpp.o"
@@ -11,6 +13,8 @@ file(REMOVE_RECURSE
   "libpackage_master_interfaces__rosidl_typesupport_fastrtps_c.so"
   "rosidl_typesupport_fastrtps_c/package_master_interfaces/msg/detail/num__rosidl_typesupport_fastrtps_c.h"
   "rosidl_typesupport_fastrtps_c/package_master_interfaces/msg/detail/num__type_support_c.cpp"
+  "rosidl_typesupport_fastrtps_c/package_master_interfaces/msg/detail/sequence_elments__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/package_master_interfaces/msg/detail/sequence_elments__type_support_c.cpp"
   "rosidl_typesupport_fastrtps_c/package_master_interfaces/srv/detail/add_three_ints__rosidl_typesupport_fastrtps_c.h"
   "rosidl_typesupport_fastrtps_c/package_master_interfaces/srv/detail/add_three_ints__type_support_c.cpp"
   "rosidl_typesupport_fastrtps_c/package_master_interfaces/srv/detail/robot_positions__rosidl_typesupport_fastrtps_c.h"

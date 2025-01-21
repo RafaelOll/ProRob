@@ -1,0 +1,62 @@
+[1.648s] Invoking command in '/home/rouillon/Documents/ProDroneTB/ProRob/src/package_master': PYTHONPATH=/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/package_master build --build-base /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build install --record /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/install.log --single-version-externally-managed install_data
+[2.109s] running egg_info
+[2.110s] creating ../../build/package_master/package_master.egg-info
+[2.110s] writing ../../build/package_master/package_master.egg-info/PKG-INFO
+[2.111s] writing dependency_links to ../../build/package_master/package_master.egg-info/dependency_links.txt
+[2.111s] writing entry points to ../../build/package_master/package_master.egg-info/entry_points.txt
+[2.111s] writing requirements to ../../build/package_master/package_master.egg-info/requires.txt
+[2.111s] writing top-level names to ../../build/package_master/package_master.egg-info/top_level.txt
+[2.111s] writing manifest file '../../build/package_master/package_master.egg-info/SOURCES.txt'
+[2.114s] reading manifest file '../../build/package_master/package_master.egg-info/SOURCES.txt'
+[2.116s] writing manifest file '../../build/package_master/package_master.egg-info/SOURCES.txt'
+[2.116s] running build
+[2.116s] running build_py
+[2.116s] creating /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build
+[2.117s] creating /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib
+[2.117s] creating /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master
+[2.117s] copying package_master/service_member_function.py -> /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master
+[2.117s] copying package_master/master_node_tb.py -> /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master
+[2.117s] copying package_master/drone_node.py -> /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master
+[2.117s] copying package_master/client_member_function.py -> /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master
+[2.117s] copying package_master/tb_node.py -> /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master
+[2.118s] copying package_master/service_pos.py -> /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master
+[2.118s] copying package_master/master_node_drone.py -> /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master
+[2.118s] copying package_master/master_node.py -> /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master
+[2.118s] copying package_master/__init__.py -> /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master
+[2.118s] running install
+[2.119s] running install_lib
+[2.120s] creating /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master
+[2.120s] copying /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master/service_member_function.py -> /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master
+[2.121s] copying /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master/master_node_tb.py -> /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master
+[2.121s] copying /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master/drone_node.py -> /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master
+[2.121s] copying /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master/client_member_function.py -> /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master
+[2.121s] copying /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master/tb_node.py -> /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master
+[2.121s] copying /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master/service_pos.py -> /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master
+[2.121s] copying /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master/master_node_drone.py -> /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master
+[2.121s] copying /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master/master_node.py -> /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master
+[2.122s] copying /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master/__init__.py -> /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master
+[2.122s] byte-compiling /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master/service_member_function.py to service_member_function.cpython-310.pyc
+[2.123s] byte-compiling /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master/master_node_tb.py to master_node_tb.cpython-310.pyc
+[2.124s] byte-compiling /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master/drone_node.py to drone_node.cpython-310.pyc
+[2.125s] byte-compiling /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master/client_member_function.py to client_member_function.cpython-310.pyc
+[2.126s] byte-compiling /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master/tb_node.py to tb_node.cpython-310.pyc
+[2.127s] byte-compiling /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master/service_pos.py to service_pos.cpython-310.pyc
+[2.128s] byte-compiling /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master/master_node_drone.py to master_node_drone.cpython-310.pyc
+[2.129s] byte-compiling /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master/master_node.py to master_node.cpython-310.pyc
+[2.130s] byte-compiling /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master/__init__.py to __init__.cpython-310.pyc
+[2.131s] running install_data
+[2.131s] creating /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/share/ament_index
+[2.131s] creating /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/share/ament_index/resource_index
+[2.131s] creating /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/share/ament_index/resource_index/packages
+[2.132s] copying resource/package_master -> /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/share/ament_index/resource_index/packages
+[2.132s] copying package.xml -> /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/share/package_master
+[2.132s] running install_egg_info
+[2.135s] Copying ../../build/package_master/package_master.egg-info to /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master-0.0.0-py3.10.egg-info
+[2.136s] running install_scripts
+[2.174s] Installing client script to /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/package_master
+[2.174s] Installing client_drone script to /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/package_master
+[2.175s] Installing client_tb script to /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/package_master
+[2.175s] Installing service_drone script to /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/package_master
+[2.175s] Installing service_tb script to /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/package_master
+[2.175s] Installing service_test script to /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/package_master
+[2.175s] writing list of installed files to '/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/install.log'

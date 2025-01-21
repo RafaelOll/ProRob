@@ -4,9 +4,3 @@ package_master_interfaces.egg-info/PKG-INFO
 package_master_interfaces.egg-info/SOURCES.txt
 package_master_interfaces.egg-info/dependency_links.txt
 package_master_interfaces.egg-info/top_level.txt
-package_master_interfaces/msg/__init__.py
-package_master_interfaces/msg/_num.py
-package_master_interfaces/srv/__init__.py
-package_master_interfaces/srv/_add_three_ints.py
-package_master_interfaces/srv/_robot_positions.py
-package_master_interfaces/srv/_send_positions.py

@@ -1,8 +1,8 @@
-# Install script for directory: /home/rouillon/ProRob/build/package_master_interfaces/package_master_interfaces__py
+# Install script for directory: /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master_interfaces/package_master_interfaces__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/rouillon/ProRob/install/package_master_interfaces")
+  set(CMAKE_INSTALL_PREFIX "/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

@@ -1,0 +1,51 @@
+[0.504s] Invoking command in '/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rouillon/Documents/ProDroneTB/ProRob/install/py_srvcli:/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master:/home/rouillon/ProRob/install/py_srvcli:/home/rouillon/ProRob/install/package_master:/opt/ros/humble /usr/bin/cmake /home/rouillon/Documents/ProDroneTB/ProRob/src/package_master_interfaces -DCMAKE_INSTALL_PREFIX=/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces
+[0.524s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.765s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.884s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.886s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.891s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.950s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.321s] [31mCMake Error at /opt/ros/humble/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:59 (message):
+[1.321s]   execute_process(/usr/bin/python3 -m rosidl_adapter --package-name
+[1.321s]   package_master_interfaces --arguments-file
+[1.322s]   /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master_interfaces/rosidl_adapter__arguments__package_master_interfaces.json
+[1.322s]   --output-dir
+[1.322s]   /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master_interfaces/rosidl_adapter/package_master_interfaces
+[1.322s]   --output-file
+[1.322s]   /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master_interfaces/rosidl_adapter/package_master_interfaces.idls)
+[1.322s]   returned error code 1:
+[1.322s] 
+[1.322s]   Error processing 'float64 T' of
+[1.322s]   'package_master_interfaces/SequenceElments': ''T' is an invalid field name.
+[1.323s]   It should have the pattern '^(?!.*__)(?!.*_$)[a-z][a-z0-9_]*$''
+[1.323s] 
+[1.323s]   Traceback (most recent call last):
+[1.323s] 
+[1.323s]     File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[1.323s]       return _run_code(code, main_globals, None,
+[1.323s]     File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+[1.323s]       exec(code, run_globals)
+[1.323s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[1.323s]       sys.exit(main())
+[1.324s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/main.py", line 53, in main
+[1.325s]       abs_idl_file = convert_to_idl(
+[1.325s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/__init__.py", line 19, in convert_to_idl
+[1.325s]       return convert_msg_to_idl(
+[1.325s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/msg/__init__.py", line 28, in convert_msg_to_idl
+[1.325s]       msg = parse_message_string(package_name, input_file.stem, content)
+[1.325s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/parser.py", line 519, in parse_message_string
+[1.326s]       fields.append(Field(
+[1.326s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/parser.py", line 354, in __init__
+[1.326s]       raise NameError(
+[1.326s] 
+[1.326s]   NameError: 'T' is an invalid field name.  It should have the pattern
+[1.326s]   '^(?!.*__)(?!.*_$)[a-z][a-z0-9_]*$'
+[1.327s] 
+[1.327s] Call Stack (most recent call first):
+[1.327s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)
+[1.327s]   CMakeLists.txt:28 (rosidl_generate_interfaces)
+[1.328s] 
+[1.328s] [0m
+[1.328s] -- Configuring incomplete, errors occurred!
+[1.328s] See also "/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master_interfaces/CMakeFiles/CMakeOutput.log".
+[1.330s] Invoked command in '/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master_interfaces' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rouillon/Documents/ProDroneTB/ProRob/install/py_srvcli:/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master:/home/rouillon/ProRob/install/py_srvcli:/home/rouillon/ProRob/install/package_master:/opt/ros/humble /usr/bin/cmake /home/rouillon/Documents/ProDroneTB/ProRob/src/package_master_interfaces -DCMAKE_INSTALL_PREFIX=/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces

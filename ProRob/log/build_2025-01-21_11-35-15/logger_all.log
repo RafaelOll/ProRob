@@ -1,0 +1,219 @@
+[0.202s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.202s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7bda4d8d7c10>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7bda4da79150>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7bda4da79150>>, mixin_verb=('build',))
+[0.525s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.525s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.525s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.525s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.525s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.525s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.525s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/rouillon/Documents/ProDroneTB/ProRob'
+[0.525s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.525s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.525s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.526s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.526s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.526s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.526s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.526s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.526s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.544s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.544s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.544s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.544s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.544s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.545s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.545s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.545s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.545s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.545s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.545s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.546s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.546s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.546s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.546s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.546s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.546s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.546s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.546s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.546s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.546s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(src/package_master) by extensions ['ignore', 'ignore_ament_install']
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(src/package_master) by extension 'ignore'
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(src/package_master) by extension 'ignore_ament_install'
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(src/package_master) by extensions ['colcon_pkg']
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(src/package_master) by extension 'colcon_pkg'
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(src/package_master) by extensions ['colcon_meta']
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(src/package_master) by extension 'colcon_meta'
+[0.548s] Level 1:colcon.colcon_core.package_identification:_identify(src/package_master) by extensions ['ros']
+[0.548s] Level 1:colcon.colcon_core.package_identification:_identify(src/package_master) by extension 'ros'
+[0.552s] DEBUG:colcon.colcon_core.package_identification:Package 'src/package_master' with type 'ros.ament_python' and name 'package_master'
+[0.552s] Level 1:colcon.colcon_core.package_identification:_identify(src/package_master_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.552s] Level 1:colcon.colcon_core.package_identification:_identify(src/package_master_interfaces) by extension 'ignore'
+[0.553s] Level 1:colcon.colcon_core.package_identification:_identify(src/package_master_interfaces) by extension 'ignore_ament_install'
+[0.553s] Level 1:colcon.colcon_core.package_identification:_identify(src/package_master_interfaces) by extensions ['colcon_pkg']
+[0.553s] Level 1:colcon.colcon_core.package_identification:_identify(src/package_master_interfaces) by extension 'colcon_pkg'
+[0.553s] Level 1:colcon.colcon_core.package_identification:_identify(src/package_master_interfaces) by extensions ['colcon_meta']
+[0.553s] Level 1:colcon.colcon_core.package_identification:_identify(src/package_master_interfaces) by extension 'colcon_meta'
+[0.553s] Level 1:colcon.colcon_core.package_identification:_identify(src/package_master_interfaces) by extensions ['ros']
+[0.553s] Level 1:colcon.colcon_core.package_identification:_identify(src/package_master_interfaces) by extension 'ros'
+[0.554s] DEBUG:colcon.colcon_core.package_identification:Package 'src/package_master_interfaces' with type 'ros.ament_cmake' and name 'package_master_interfaces'
+[0.554s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_srvcli) by extensions ['ignore', 'ignore_ament_install']
+[0.554s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_srvcli) by extension 'ignore'
+[0.554s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_srvcli) by extension 'ignore_ament_install'
+[0.554s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_srvcli) by extensions ['colcon_pkg']
+[0.555s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_srvcli) by extension 'colcon_pkg'
+[0.555s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_srvcli) by extensions ['colcon_meta']
+[0.555s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_srvcli) by extension 'colcon_meta'
+[0.555s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_srvcli) by extensions ['ros']
+[0.555s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_srvcli) by extension 'ros'
+[0.556s] DEBUG:colcon.colcon_core.package_identification:Package 'src/py_srvcli' with type 'ros.ament_python' and name 'py_srvcli'
+[0.556s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.556s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.556s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.556s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.556s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.604s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.605s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.608s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/rouillon/Documents/ProDroneTB/ProRob/install
+[0.609s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/rouillon/ProRob/install
+[0.611s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 270 installed packages in /opt/ros/humble
+[0.614s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.691s] Level 5:colcon.colcon_core.verb:set package 'package_master' build argument 'cmake_args' from command line to 'None'
+[0.691s] Level 5:colcon.colcon_core.verb:set package 'package_master' build argument 'cmake_target' from command line to 'None'
+[0.691s] Level 5:colcon.colcon_core.verb:set package 'package_master' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.691s] Level 5:colcon.colcon_core.verb:set package 'package_master' build argument 'cmake_clean_cache' from command line to 'False'
+[0.691s] Level 5:colcon.colcon_core.verb:set package 'package_master' build argument 'cmake_clean_first' from command line to 'False'
+[0.691s] Level 5:colcon.colcon_core.verb:set package 'package_master' build argument 'cmake_force_configure' from command line to 'False'
+[0.691s] Level 5:colcon.colcon_core.verb:set package 'package_master' build argument 'ament_cmake_args' from command line to 'None'
+[0.691s] Level 5:colcon.colcon_core.verb:set package 'package_master' build argument 'catkin_cmake_args' from command line to 'None'
+[0.691s] Level 5:colcon.colcon_core.verb:set package 'package_master' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.691s] DEBUG:colcon.colcon_core.verb:Building package 'package_master' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master', 'merge_install': False, 'path': '/home/rouillon/Documents/ProDroneTB/ProRob/src/package_master', 'symlink_install': False, 'test_result_base': None}
+[0.692s] Level 5:colcon.colcon_core.verb:set package 'package_master_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.692s] Level 5:colcon.colcon_core.verb:set package 'package_master_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.692s] Level 5:colcon.colcon_core.verb:set package 'package_master_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.692s] Level 5:colcon.colcon_core.verb:set package 'package_master_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.692s] Level 5:colcon.colcon_core.verb:set package 'package_master_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.692s] Level 5:colcon.colcon_core.verb:set package 'package_master_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.692s] Level 5:colcon.colcon_core.verb:set package 'package_master_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.692s] Level 5:colcon.colcon_core.verb:set package 'package_master_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.692s] Level 5:colcon.colcon_core.verb:set package 'package_master_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.692s] DEBUG:colcon.colcon_core.verb:Building package 'package_master_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces', 'merge_install': False, 'path': '/home/rouillon/Documents/ProDroneTB/ProRob/src/package_master_interfaces', 'symlink_install': False, 'test_result_base': None}
+[0.693s] Level 5:colcon.colcon_core.verb:set package 'py_srvcli' build argument 'cmake_args' from command line to 'None'
+[0.693s] Level 5:colcon.colcon_core.verb:set package 'py_srvcli' build argument 'cmake_target' from command line to 'None'
+[0.693s] Level 5:colcon.colcon_core.verb:set package 'py_srvcli' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.693s] Level 5:colcon.colcon_core.verb:set package 'py_srvcli' build argument 'cmake_clean_cache' from command line to 'False'
+[0.693s] Level 5:colcon.colcon_core.verb:set package 'py_srvcli' build argument 'cmake_clean_first' from command line to 'False'
+[0.693s] Level 5:colcon.colcon_core.verb:set package 'py_srvcli' build argument 'cmake_force_configure' from command line to 'False'
+[0.693s] Level 5:colcon.colcon_core.verb:set package 'py_srvcli' build argument 'ament_cmake_args' from command line to 'None'
+[0.693s] Level 5:colcon.colcon_core.verb:set package 'py_srvcli' build argument 'catkin_cmake_args' from command line to 'None'
+[0.693s] Level 5:colcon.colcon_core.verb:set package 'py_srvcli' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.693s] DEBUG:colcon.colcon_core.verb:Building package 'py_srvcli' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rouillon/Documents/ProDroneTB/ProRob/build/py_srvcli', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rouillon/Documents/ProDroneTB/ProRob/install/py_srvcli', 'merge_install': False, 'path': '/home/rouillon/Documents/ProDroneTB/ProRob/src/py_srvcli', 'symlink_install': False, 'test_result_base': None}
+[0.694s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.695s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.696s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/rouillon/Documents/ProDroneTB/ProRob/src/package_master' with build type 'ament_python'
+[0.696s] Level 1:colcon.colcon_core.shell:create_environment_hook('package_master', 'ament_prefix_path')
+[0.699s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.700s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/share/package_master/hook/ament_prefix_path.ps1'
+[0.701s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/share/package_master/hook/ament_prefix_path.dsv'
+[0.701s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/share/package_master/hook/ament_prefix_path.sh'
+[0.703s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.703s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.709s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/rouillon/Documents/ProDroneTB/ProRob/src/package_master_interfaces' with build type 'ament_cmake'
+[0.710s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/rouillon/Documents/ProDroneTB/ProRob/src/package_master_interfaces'
+[0.710s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.710s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.716s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/rouillon/Documents/ProDroneTB/ProRob/src/py_srvcli' with build type 'ament_python'
+[0.716s] Level 1:colcon.colcon_core.shell:create_environment_hook('py_srvcli', 'ament_prefix_path')
+[0.717s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rouillon/Documents/ProDroneTB/ProRob/install/py_srvcli/share/py_srvcli/hook/ament_prefix_path.ps1'
+[0.717s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rouillon/Documents/ProDroneTB/ProRob/install/py_srvcli/share/py_srvcli/hook/ament_prefix_path.dsv'
+[0.718s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rouillon/Documents/ProDroneTB/ProRob/install/py_srvcli/share/py_srvcli/hook/ament_prefix_path.sh'
+[0.720s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.720s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.212s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/rouillon/Documents/ProDroneTB/ProRob/src/package_master'
+[1.213s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.213s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.225s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rouillon/Documents/ProDroneTB/ProRob/install/py_srvcli:/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master:/home/rouillon/ProRob/install/py_srvcli:/home/rouillon/ProRob/install/package_master:/opt/ros/humble /usr/bin/cmake /home/rouillon/Documents/ProDroneTB/ProRob/src/package_master_interfaces -DCMAKE_INSTALL_PREFIX=/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces
+[1.714s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/rouillon/Documents/ProDroneTB/ProRob/src/py_srvcli'
+[1.715s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.715s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.409s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rouillon/Documents/ProDroneTB/ProRob/src/package_master': PYTHONPATH=/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/package_master build --build-base /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build install --record /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/install.log --single-version-externally-managed install_data
+[2.420s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rouillon/Documents/ProDroneTB/ProRob/src/py_srvcli': PYTHONPATH=/home/rouillon/Documents/ProDroneTB/ProRob/build/py_srvcli/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rouillon/Documents/ProDroneTB/ProRob/install/py_srvcli/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/py_srvcli build --build-base /home/rouillon/Documents/ProDroneTB/ProRob/build/py_srvcli/build install --record /home/rouillon/Documents/ProDroneTB/ProRob/build/py_srvcli/install.log --single-version-externally-managed install_data
+[2.973s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rouillon/Documents/ProDroneTB/ProRob/src/package_master' returned '0': PYTHONPATH=/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/package_master build --build-base /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build install --record /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/install.log --single-version-externally-managed install_data
+[2.978s] Level 1:colcon.colcon_core.environment:checking '/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master' for CMake module files
+[2.979s] Level 1:colcon.colcon_core.environment:checking '/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master' for CMake config files
+[2.980s] Level 1:colcon.colcon_core.environment:checking '/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib'
+[2.981s] Level 1:colcon.colcon_core.environment:checking '/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/bin'
+[2.981s] Level 1:colcon.colcon_core.environment:checking '/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/pkgconfig/package_master.pc'
+[2.982s] Level 1:colcon.colcon_core.environment:checking '/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages'
+[2.982s] Level 1:colcon.colcon_core.shell:create_environment_hook('package_master', 'pythonpath')
+[2.982s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/share/package_master/hook/pythonpath.ps1'
+[2.983s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/share/package_master/hook/pythonpath.dsv'
+[2.984s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/share/package_master/hook/pythonpath.sh'
+[2.984s] Level 1:colcon.colcon_core.environment:checking '/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/bin'
+[2.984s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(package_master)
+[2.985s] INFO:colcon.colcon_core.shell:Creating package script '/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/share/package_master/package.ps1'
+[2.986s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/share/package_master/package.dsv'
+[2.987s] INFO:colcon.colcon_core.shell:Creating package script '/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/share/package_master/package.sh'
+[2.989s] INFO:colcon.colcon_core.shell:Creating package script '/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/share/package_master/package.bash'
+[2.990s] INFO:colcon.colcon_core.shell:Creating package script '/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/share/package_master/package.zsh'
+[2.992s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/share/colcon-core/packages/package_master)
+[2.994s] Level 1:colcon.colcon_core.environment:checking '/home/rouillon/Documents/ProDroneTB/ProRob/install/py_srvcli' for CMake module files
+[2.995s] Level 1:colcon.colcon_core.environment:checking '/home/rouillon/Documents/ProDroneTB/ProRob/install/py_srvcli' for CMake config files
+[2.995s] Level 1:colcon.colcon_core.environment:checking '/home/rouillon/Documents/ProDroneTB/ProRob/install/py_srvcli/lib'
+[2.996s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rouillon/Documents/ProDroneTB/ProRob/src/py_srvcli' returned '0': PYTHONPATH=/home/rouillon/Documents/ProDroneTB/ProRob/build/py_srvcli/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rouillon/Documents/ProDroneTB/ProRob/install/py_srvcli/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/py_srvcli build --build-base /home/rouillon/Documents/ProDroneTB/ProRob/build/py_srvcli/build install --record /home/rouillon/Documents/ProDroneTB/ProRob/build/py_srvcli/install.log --single-version-externally-managed install_data
+[2.996s] Level 1:colcon.colcon_core.environment:checking '/home/rouillon/Documents/ProDroneTB/ProRob/install/py_srvcli/bin'
+[2.996s] Level 1:colcon.colcon_core.environment:checking '/home/rouillon/Documents/ProDroneTB/ProRob/install/py_srvcli/lib/pkgconfig/py_srvcli.pc'
+[2.997s] Level 1:colcon.colcon_core.environment:checking '/home/rouillon/Documents/ProDroneTB/ProRob/install/py_srvcli/lib/python3.10/site-packages'
+[2.997s] Level 1:colcon.colcon_core.shell:create_environment_hook('py_srvcli', 'pythonpath')
+[2.998s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rouillon/Documents/ProDroneTB/ProRob/install/py_srvcli/share/py_srvcli/hook/pythonpath.ps1'
+[2.999s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rouillon/Documents/ProDroneTB/ProRob/install/py_srvcli/share/py_srvcli/hook/pythonpath.dsv'
+[2.999s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rouillon/Documents/ProDroneTB/ProRob/install/py_srvcli/share/py_srvcli/hook/pythonpath.sh'
+[3.000s] Level 1:colcon.colcon_core.environment:checking '/home/rouillon/Documents/ProDroneTB/ProRob/install/py_srvcli/bin'
+[3.001s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(py_srvcli)
+[3.002s] INFO:colcon.colcon_core.shell:Creating package script '/home/rouillon/Documents/ProDroneTB/ProRob/install/py_srvcli/share/py_srvcli/package.ps1'
+[3.003s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rouillon/Documents/ProDroneTB/ProRob/install/py_srvcli/share/py_srvcli/package.dsv'
+[3.004s] INFO:colcon.colcon_core.shell:Creating package script '/home/rouillon/Documents/ProDroneTB/ProRob/install/py_srvcli/share/py_srvcli/package.sh'
+[3.004s] INFO:colcon.colcon_core.shell:Creating package script '/home/rouillon/Documents/ProDroneTB/ProRob/install/py_srvcli/share/py_srvcli/package.bash'
+[3.005s] INFO:colcon.colcon_core.shell:Creating package script '/home/rouillon/Documents/ProDroneTB/ProRob/install/py_srvcli/share/py_srvcli/package.zsh'
+[3.006s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rouillon/Documents/ProDroneTB/ProRob/install/py_srvcli/share/colcon-core/packages/py_srvcli)
+[3.498s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rouillon/Documents/ProDroneTB/ProRob/install/py_srvcli:/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master:/home/rouillon/ProRob/install/py_srvcli:/home/rouillon/ProRob/install/package_master:/opt/ros/humble /usr/bin/cmake /home/rouillon/Documents/ProDroneTB/ProRob/src/package_master_interfaces -DCMAKE_INSTALL_PREFIX=/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces
+[3.499s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rouillon/Documents/ProDroneTB/ProRob/install/py_srvcli:/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master:/home/rouillon/ProRob/install/py_srvcli:/home/rouillon/ProRob/install/package_master:/opt/ros/humble /usr/bin/cmake --build /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master_interfaces -- -j4 -l4
+[9.924s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(package_master_interfaces)
+[9.924s] Level 1:colcon.colcon_core.environment:checking '/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces' for CMake module files
+[9.925s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master_interfaces' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rouillon/Documents/ProDroneTB/ProRob/install/py_srvcli:/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master:/home/rouillon/ProRob/install/py_srvcli:/home/rouillon/ProRob/install/package_master:/opt/ros/humble /usr/bin/cmake --build /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master_interfaces -- -j4 -l4
+[9.927s] Level 1:colcon.colcon_core.environment:checking '/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces' for CMake config files
+[9.927s] Level 1:colcon.colcon_core.environment:checking '/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/bin'
+[9.927s] Level 1:colcon.colcon_core.environment:checking '/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/lib/pkgconfig/package_master_interfaces.pc'
+[9.927s] Level 1:colcon.colcon_core.environment:checking '/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/lib/python3.10/site-packages'
+[9.928s] Level 1:colcon.colcon_core.environment:checking '/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/bin'
+[9.928s] INFO:colcon.colcon_core.shell:Creating package script '/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/package.ps1'
+[9.929s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/package.dsv'
+[9.930s] INFO:colcon.colcon_core.shell:Creating package script '/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/package.sh'
+[9.930s] INFO:colcon.colcon_core.shell:Creating package script '/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/package.bash'
+[9.931s] INFO:colcon.colcon_core.shell:Creating package script '/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/package.zsh'
+[9.931s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/colcon-core/packages/package_master_interfaces)
+[9.948s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[9.948s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[9.948s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '2'
+[9.948s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[9.956s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[9.956s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[9.956s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[9.979s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[9.980s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rouillon/Documents/ProDroneTB/ProRob/install/local_setup.ps1'
+[9.981s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/rouillon/Documents/ProDroneTB/ProRob/install/_local_setup_util_ps1.py'
+[9.985s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rouillon/Documents/ProDroneTB/ProRob/install/setup.ps1'
+[9.987s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rouillon/Documents/ProDroneTB/ProRob/install/local_setup.sh'
+[9.988s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/rouillon/Documents/ProDroneTB/ProRob/install/_local_setup_util_sh.py'
+[9.989s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rouillon/Documents/ProDroneTB/ProRob/install/setup.sh'
+[9.991s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rouillon/Documents/ProDroneTB/ProRob/install/local_setup.bash'
+[9.993s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rouillon/Documents/ProDroneTB/ProRob/install/setup.bash'
+[9.995s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rouillon/Documents/ProDroneTB/ProRob/install/local_setup.zsh'
+[9.996s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rouillon/Documents/ProDroneTB/ProRob/install/setup.zsh'

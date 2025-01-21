@@ -1,0 +1,35 @@
+In file included from [01m[K/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master_interfaces/rosidl_generator_c/package_master_interfaces/srv/detail/drone_trajectories__functions.h:19[m[K,
+                 from [01m[K/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master_interfaces/rosidl_generator_c/package_master_interfaces/srv/detail/drone_trajectories__functions.c:4[m[K:
+[01m[K/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master_interfaces/rosidl_generator_c/package_master_interfaces/srv/detail/drone_trajectories__struct.h:58:10:[m[K [01;31m[Kfatal error: [m[Kpackage_master_interfaces/msg/detail/sequence_elements__struct.h: No such file or directory
+   58 | #include [01;31m[K"package_master_interfaces/msg/detail/sequence_elements__struct.h"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/package_master_interfaces__rosidl_generator_c.dir/build.make:255: CMakeFiles/package_master_interfaces__rosidl_generator_c.dir/rosidl_generator_c/package_master_interfaces/srv/detail/drone_trajectories__functions.c.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:213: CMakeFiles/package_master_interfaces__rosidl_generator_c.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+In file included from [01m[K/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master_interfaces/rosidl_typesupport_cpp/package_master_interfaces/srv/drone_trajectories__type_support.cpp:7[m[K:
+[01m[K/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master_interfaces/rosidl_generator_cpp/package_master_interfaces/srv/detail/drone_trajectories__struct.hpp:198:10:[m[K [01;31m[Kfatal error: [m[Kpackage_master_interfaces/msg/detail/sequence_elements__struct.hpp: No such file or directory
+  198 | #include [01;31m[K"package_master_interfaces/msg/detail/sequence_elements__struct.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/package_master_interfaces__rosidl_typesupport_cpp.dir/build.make:176: CMakeFiles/package_master_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/package_master_interfaces/srv/drone_trajectories__type_support.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[1]: *** [CMakeFiles/Makefile2:395: CMakeFiles/package_master_interfaces__rosidl_typesupport_cpp.dir/all] Error 2
+In file included from [01m[K/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master_interfaces/rosidl_typesupport_fastrtps_cpp/package_master_interfaces/srv/detail/drone_trajectories__rosidl_typesupport_fastrtps_cpp.hpp:11[m[K,
+                 from [01m[K/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master_interfaces/rosidl_typesupport_fastrtps_cpp/package_master_interfaces/srv/detail/dds_fastrtps/drone_trajectories__type_support.cpp:4[m[K:
+[01m[K/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master_interfaces/rosidl_generator_cpp/package_master_interfaces/srv/detail/drone_trajectories__struct.hpp:198:10:[m[K [01;31m[Kfatal error: [m[Kpackage_master_interfaces/msg/detail/sequence_elements__struct.hpp: No such file or directory
+  198 | #include [01;31m[K"package_master_interfaces/msg/detail/sequence_elements__struct.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/package_master_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make:196: CMakeFiles/package_master_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/package_master_interfaces/srv/detail/dds_fastrtps/drone_trajectories__type_support.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+In file included from [01m[K/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master_interfaces/rosidl_typesupport_introspection_cpp/package_master_interfaces/srv/detail/drone_trajectories__type_support.cpp:12[m[K:
+[01m[K/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master_interfaces/rosidl_generator_cpp/package_master_interfaces/srv/detail/drone_trajectories__struct.hpp:198:10:[m[K [01;31m[Kfatal error: [m[Kpackage_master_interfaces/msg/detail/sequence_elements__struct.hpp: No such file or directory
+  198 | #include [01;31m[K"package_master_interfaces/msg/detail/sequence_elements__struct.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/package_master_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make:196: CMakeFiles/package_master_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/package_master_interfaces/srv/detail/drone_trajectories__type_support.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[1]: *** [CMakeFiles/Makefile2:343: CMakeFiles/package_master_interfaces__rosidl_typesupport_fastrtps_cpp.dir/all] Error 2
+gmake[1]: *** [CMakeFiles/Makefile2:369: CMakeFiles/package_master_interfaces__rosidl_typesupport_introspection_cpp.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

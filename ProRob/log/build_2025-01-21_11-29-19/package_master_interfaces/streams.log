@@ -1,0 +1,18 @@
+[0.528s] Invoking command in '/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rouillon/Documents/ProDroneTB/ProRob/install/py_srvcli:/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master:/home/rouillon/ProRob/install/py_srvcli:/home/rouillon/ProRob/install/package_master:/opt/ros/humble /usr/bin/cmake /home/rouillon/Documents/ProDroneTB/ProRob/src/package_master_interfaces -DCMAKE_INSTALL_PREFIX=/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces
+[0.547s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.768s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.887s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.891s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.896s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.958s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.011s] -- Configuring incomplete, errors occurred!
+[1.011s] See also "/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master_interfaces/CMakeFiles/CMakeOutput.log".
+[1.012s] [31mCMake Error at /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:93 (message):
+[1.012s]   rosidl_generate_interfaces() the passed file 'msg/SequenceElement.msg'
+[1.012s]   doesn't exist relative to the CMAKE_CURRENT_SOURCE_DIR
+[1.012s]   '/home/rouillon/Documents/ProDroneTB/ProRob/src/package_master_interfaces'
+[1.013s] Call Stack (most recent call first):
+[1.013s]   CMakeLists.txt:28 (rosidl_generate_interfaces)
+[1.013s] 
+[1.013s] [0m
+[1.026s] Invoked command in '/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master_interfaces' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rouillon/Documents/ProDroneTB/ProRob/install/py_srvcli:/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master:/home/rouillon/ProRob/install/py_srvcli:/home/rouillon/ProRob/install/package_master:/opt/ros/humble /usr/bin/cmake /home/rouillon/Documents/ProDroneTB/ProRob/src/package_master_interfaces -DCMAKE_INSTALL_PREFIX=/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces
