@@ -116,8 +116,7 @@ dt = 3
 def check_collision_linear_segment(t_i1, t_f1, r_i1, r_f1, t_i2, t_f2, r_i2, r_f2, epsilon):
     """checks if two linear trajectories have a collision.
     returns:
-    - indices at which the collisions occur
-    - times"""
+    - times at which the collisions occur"""
     t_eval_i = np.max([t_i1, t_i2])
     t_eval_f = np.min([t_f1, t_f2])
     t = np.linspace(t_eval_i, t_eval_f, 100)
@@ -163,8 +162,9 @@ def check_geometric_intersections(r_i1, r_f1, r_i2, r_f2, epsilon, verbose=False
         print(f"alpha2 at intersections= {alpha2[where_isc[1]]}")
 
     if len(where_isc[0]) > 0:
-        return True
-    return False
+        return True, alpha1[where_isc[0]], alpha2[where_isc[1]]
+    
+    return False, alpha1[where_isc[0]], alpha2[where_isc[1]]
 
 
 def construct_2_sequences(r_i, r_f, T, epsilon):
@@ -208,37 +208,64 @@ def construct_2_sequences(r_i, r_f, T, epsilon):
 def construct_sequences(r_i, r_f, T, epsilon):
     sequence0, sequence1 = construct_2_sequences(r_i, r_f, T, epsilon)
 
-    if np.shape(r_i)[0] == 2:
+    if np.shape(r_i)[0] == 2:               # if only two drones are used
         return (sequence0, sequence1)
 
     elif np.shape(r_i)[0] == 3:
-        isc_values = []
+        intersection_values = []            # list to track with which other trajectory (0 or 1) there is an intersection with the to-construct trajectory 2
         for k in range(2):
-            if check_geometric_intersections(r_i[2], r_f[2], r_i[k], r_f[k], epsilon):
-                isc_values.append(k)
+            if check_geometric_intersections(r_i[2], r_f[2], r_i[k], r_f[k], epsilon)[0]:
+                intersection_values.append(k)
 
-            if len(isc_values) == 0:
+            if len(intersection_values) == 0:
                 dx2, dy2 = r_f[2]-r_i[2]
                 sequence2 = [
                     (dx2, dy2, 0, T)
                 ]
             
-            if len(isc_values) == 1:
-                if 0 in isc_values:
+            if len(intersection_values) == 1:
+                if 0 in intersection_values:
                     _, sequence2 = construct_2_sequences([r_i[0], r_i[2]], [r_f[0], r_f[2]], T, epsilon)
 
-                if 1 in isc_values:
+                if 1 in intersection_values:
                     if len(sequence1) == 1:
-                        _, sequence2 = construct_2_sequences([r_i[0], r_i[1]], [r_f[0], r_f[1]], T, epsilon)
+                        _, sequence2 = construct_2_sequences([r_i[1], r_i[2]], [r_f[1], r_f[2]], T, epsilon)
                     elif len(sequence1) == 2:
-    
-                        _, sequence2 = construct_2_sequences([r_i[0], r_i[1]], [r_f[0], r_f[1]], T, epsilon)
-                        #if len(sequence2) == 1:
-                        #    _, sequence2 = construct_2_sequences([r_i[0], r_i[1]], [r_f[0], r_f[1]], T, epsilon)
+                        # trajectory 1 is split in 2 parts by 1 waypoint
+
+                        # coordinates at the waypoint of trajectory 1
+                        r_wp1 = r_i[1] + np.array([sequence1[0][0], sequence1[0][1]])
+                        dt = sequence1[2]
+                        t_wp1 = 0 + dt
+
+                        r_2_at_wp1 = r_i[2] + position(dt, r_i[2], r_f[2], 0, T)
+
+                        # test if intersection with first part of trajectory 1
+                        if check_geometric_intersections(r_i[1], r_wp1, r_i[2], r_f[2])[0]:
+                            _, sequence2 = construct_2_sequences([r_i[1], r_i[2]], [r_wp1, r_2_at_wp1], t_wp1, epsilon)
+
+                        # test if intersection with second part of trajectory 1
+                        elif check_geometric_intersections(r_wp1, r_f[1], r_i[2], r_f[2])[0]:
+                            _, sequence2 = construct_2_sequences([r_wp1, r_2_at_wp1], [r_f[1], r_f[2]], T-t_wp1, epsilon)
+                        else:
+                            print("shouldn't happen 1")
 
                     else: 
-                        print("shouldn't happen")
+                        print("shouldn't happen 2")
 
+            if len(intersection_values) == 2:
+                _, alpha20, _ = check_geometric_intersections(r_i[2], r_f[2], r_i[0], r_f[0], epsilon)
+                _, alpha21, _ = check_geometric_intersections(r_i[2], r_f[2], r_i[1], r_f[1], epsilon)
+
+                if alpha21 > alpha20:
+                    if len(sequence1) == 1:
+                        _, sequence2 = construct_2_sequences([r_i[0], r_i[2]], [r_f[0], r_f[2]], T, epsilon)
+                    
+                    
+                    if len(sequence2) == 1:
+                        _, sequence2 = construct_2_sequences([r_i[1], r_i[2]], [r_f[1], r_f[2]], T, epsilon)
+                    elif len(sequence2) == 2:
+                        pass
 
         sequence2 = []
         return (sequence0, sequence1, sequence2)
@@ -357,9 +384,7 @@ def seq_constr_test():
     epsilon = 0.25
     T = 10
 
-    r_isc1, r_isc2 = check_geometric_intersections(r_i1, r_f1, r_i2, r_f2, epsilon)
-    print(r_isc1)
-    print(r_isc2)
+
 
     #t_coll = check_collision_linear_segment(t_i1, t_f1, r_i1, r_f1, t_i2, t_f2, r_i2, r_f2, epsilon)
     #print(t_coll)
