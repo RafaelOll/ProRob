@@ -1,0 +1,4 @@
+Invoking command in '/home/fabian/ProRob/ProRob/build/package_master_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fabian/ProRob/ProRob/build/package_master_interfaces -- -j12 -l12
+Invoked command in '/home/fabian/ProRob/ProRob/build/package_master_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fabian/ProRob/ProRob/build/package_master_interfaces -- -j12 -l12
+Invoking command in '/home/fabian/ProRob/ProRob/build/package_master_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/fabian/ProRob/ProRob/build/package_master_interfaces
+Invoked command in '/home/fabian/ProRob/ProRob/build/package_master_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/fabian/ProRob/ProRob/build/package_master_interfaces

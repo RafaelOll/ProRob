@@ -26,6 +26,7 @@ class SendPosService(Node):
     
     def handle_request(self, request, response):
         self.get_logger().info('Incoming request')
+        print("handle_request")
         pos_dict = self.get_position(request)
         for name, position in pos_dict.items():
             response.robot_names.append(name)
@@ -63,7 +64,7 @@ class GetPosService(Node):
         self.srv = self.create_service(SendPositions, 'send_positions', self.send_positions_callback)
         self.destroy_after_response = False
 
-    def send_positions_callback(self):
+    def send_positions_callback(self, *args):
         response.ack = True
         global position_dict
         position_dict = {
@@ -83,6 +84,7 @@ def main(args=None):
     while rclpy.ok():
         print("1")
         rclpy.spin_once(send_pos_service)
+        print(send_pos_service)
         if send_pos_service.destroy_after_response:
             send_pos_service.destroy_node()
             break
@@ -93,6 +95,7 @@ def main(args=None):
     while rclpy.ok():
         print("2")
         rclpy.spin_once(node)
+        print(node)
         if node.destroy_after_response:
             node.destroy_node()
             break
@@ -102,6 +105,7 @@ def main(args=None):
     while rclpy.ok():
         print("3")
         rclpy.spin_once(get_pos_service)
+        print(get_pos_service)
         if get_pos_service.destroy_after_response:
             get_pos_service.destroy_node()
             

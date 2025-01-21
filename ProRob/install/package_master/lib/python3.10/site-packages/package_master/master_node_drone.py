@@ -6,7 +6,7 @@ from example_interfaces.srv import AddTwoInts, SetBool  # Adapter aux services r
 from std_msgs.msg import Bool
 from package_master_interfaces.srv import SendPositions, RobotPositions
 from package_master_interfaces.msg import Num
-
+import time
 
 
 class GetPosClient(Node):
@@ -16,6 +16,9 @@ class GetPosClient(Node):
         self.request = RobotPositions.Request()
 
     def send_request(self):
+        while not self.client.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info('Service not available, waiting...')
+
         self.request.robot_names = ["drone1", "drone2", "drone3"]
         self.future = self.client.call_async(self.request)
         rclpy.spin_until_future_complete(self, self.future)
@@ -42,6 +45,8 @@ class SendPosClient(Node):
         self.completed = False
 
     def send_request(self, pos_dict):
+        while not self.client.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info('Service not available, waiting...')
         for name, position in pos_dict.items():
             self.request.robot_names.append(name)
             self.request.positions_x.append(position[0])
@@ -71,6 +76,8 @@ class TakeOffClient(Node):
         #self.completed = False
 
     def send_request(self):
+        while not self.client.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info('Service not available, waiting...')
         self.request.data = True
         self.future = self.client.call_async(self.request)
         rclpy.spin_until_future_complete(self, self.future)
