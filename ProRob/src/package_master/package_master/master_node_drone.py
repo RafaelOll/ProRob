@@ -9,33 +9,6 @@ from package_master_interfaces.msg import Num
 
 
 
-
-class AskForPosClient(Node):
-    def __init__(self):
-        super().__init__('ask_for_pos_client')
-        self.client = self.create_client(AddThreeInts, 'add_three_ints') #a changer
-        self.request = AddThreeInts.Request() #a changer
-        self.response = None
-        self.completed = False
-
-    def send_request(self, a, b, c):
-        self.request.a = a
-        self.request.b = b
-        self.request.c = c
-        self.future = self.client.call_async(self.request)
-
-    def check_response(self):
-        if self.future.done():
-            try:
-                self.response = self.future.result()
-                self.get_logger().info(f'Received response from first service: {self.response.sum}')
-                self.completed = True
-            except Exception as e:
-                self.get_logger().error(f'Failed to call first service: {e}')
-                self.completed = True
-
-
-
 class GetPosClient(Node):
     def __init__(self):
         super().__init__('get_pos_client')
@@ -141,18 +114,10 @@ class IsReadyClient(Node):
 def main(args=None):
     rclpy.init(args=args)
 
-    zero_client = AskForPosClient()
     first_client = GetPosClient()
     second_client = IsReadyClient()
 
-    zero_client.send_request(5, 7, 5)
-    while rclpy.ok():
-        rclpy.spin_once(zero_client)
-        zero_client.check_response()
-        if zero_client.completed:
-            position_dict = first_client.send_request()
-            break
-    
+    position_dict = first_client.send_request()
     while rclpy.ok():
         rclpy.spin_once(first_client)
         if position_dict:
@@ -167,7 +132,6 @@ def main(args=None):
             print(f"Réponse reçue : {second_client.response.success}")
             break
 
-    zero_client.destroy_node()
     first_client.destroy_node()
     second_client.destroy_node()
 

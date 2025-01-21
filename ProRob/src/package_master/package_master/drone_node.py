@@ -5,21 +5,6 @@ from package_master_interfaces.srv import AddThreeInts, RobotPositions
 from package_master_interfaces.msg import Num 
 
 
-class MinimalService(Node):
-
-    def __init__(self):
-        super().__init__('minimal_service')
-        self.srv = self.create_service(AddThreeInts, 'add_three_ints', self.add_three_ints_callback)
-        self.destroy_after_response = False
-        print("init")
-        
-    def add_three_ints_callback(self, request, response):
-        response.sum = request.a + request.b + request.c
-        self.get_logger().info('Incoming request\na: %d b: %d c: %d'  % (request.a, request.b, request.c))
-        self.destroy_after_response = True        
-        return response
-
-
 
 class SendPosService(Node):
     def __init__(self):
@@ -76,36 +61,25 @@ class IsReadyService(Node):
 def main(args=None):
     rclpy.init(args=args)
 
-    # Lancer MinimalService
-    minimal_service = MinimalService()
-    while rclpy.ok():
-        print("1")
-        rclpy.spin_once(minimal_service)
-        if minimal_service.destroy_after_response:
-            minimal_service.destroy_node()
-            
-            break
-    print("stage 1 done")
-
     # Lancer SendPosService
     send_pos_service = SendPosService()
     while rclpy.ok():
-        print("2")
+        print("1")
         rclpy.spin_once(send_pos_service)
         if send_pos_service.destroy_after_response:
             send_pos_service.destroy_node()
             break
-    print("stage 2 done")
+    print("stage 1 done")
 
     #Lancer IsReadyService après SendPosService
     node = IsReadyService()
     while rclpy.ok():
-        print("3")
+        print("2")
         rclpy.spin_once(node)
         if node.destroy_after_response:
             node.destroy_node()
             break
-    print("stage 3 done")
+    print("stage 2 done")
 
     rclpy.shutdown()
 
