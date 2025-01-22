@@ -8,6 +8,7 @@ import time
 import sys
 import os
 
+from collision_avoidance import construct_sequences, run_sequence, land
 
 # if the following imports don't work, make sure, ~/ProRob/crazyflie-lib-python exists,
 # navigate to the folder in the terminal and run "pip install .". This will install 
@@ -26,12 +27,50 @@ uris = [
 
 cf_log_path = os.path.expanduser("~/ProRob/cf_log.txt")
 
+
+
+class TrajectoryCalculator():
+    def __init__(self, T, epsilon):
+        """arguments:
+        - T         total duration of flights
+        - epsilon   radius of clearance around a drone
+        """
+        self.N_drones = 3
+        self.r_i = np.zeros(shape=(self.N_drones, 2))
+        self.r_f = np.zeros(shape=(self.N_drones, 2))
+        self.T = T
+        self.epsilon = epsilon
+
+    def set_final_position(self, final_position_dict):
+        for i in range(self.N_drones):
+            self.r_f[i] = final_position_dict[f"tb{i+1}"][:2]
+
+    def set_initial_position(self, initial_position_dict):
+        for i in range(self.N_drones):
+            self.r_i[i] = initial_position_dict[f"drone{i+1}"][:2]
+
+    def calculate_trajectories(self):
+        """calculates trajectories for three drones such that they avoid collisions
+        returns:
+        - sequ_args     dict with the sequences for the drones. 
+                        Can directly be given to a parallel_safe for running a sequence"""
+        sequences = construct_sequences(self.r_i, self.r_f, self.T, self.epsilon)
+        seq_args = {
+            uris[0]: [sequences[0]],
+            uris[1]: [sequences[1]],
+            uris[2]: [sequences[2]]
+        }
+        return seq_args
+
+
+
 class SendPosService(Node):
-    def __init__(self, swarm:Swarm):
+    def __init__(self, swarm:Swarm, trajectory_calculator:TrajectoryCalculator):
         super().__init__('send_pos_service')
         self.service = self.create_service(RobotPositions, 'get_robot_positions', self.handle_request)
         self.destroy_after_response = False
-        
+        self.trajectory_calculator = trajectory_calculator
+
         swarm.parallel_safe(self.start_states_log)
 
     def start_states_log(self, scf):
@@ -92,6 +131,7 @@ class SendPosService(Node):
         self.get_logger().info('Incoming request')
         print("handle_request")
         pos_dict = self.get_position(request)
+        self.trajectory_calculator.set_initial_position(pos_dict)
         for name, position in pos_dict.items():
             response.robot_names.append(name)
             response.positions_x.append(position[0])
@@ -129,10 +169,13 @@ class TakeOffService(Node):
 
 
 class GetPosService(Node):
-    def __init__(self):
+    def __init__(self, swarm:Swarm, trajectory_calculator:TrajectoryCalculator):
         super().__init__('ask_for_pos_client')
         self.srv = self.create_service(SendPositions, 'send_positions', self.send_positions_callback)
         self.destroy_after_response = False
+
+        self.swarm = swarm
+        self.trajectory_calculator = trajectory_calculator
 
     def send_positions_callback(self, request, response):
         response.ack = True # to change send true not when you received the coordinates but all the drones land.
@@ -142,11 +185,26 @@ class GetPosService(Node):
                 for name, x, y, z in zip(request.robot_names, request.positions_x, request.positions_y, request.positions_z)
             }
         self.destroy_after_response = True
+
+        # get trajectories 
+        self.trajectory_calculator.set_final_position(final_position_dict)
+        seq_args = self.trajectory_calculator.calculate_trajectories()
+
+        # follow the trajectories to the destination
+        self.swarm.parallel_safe(run_sequence, args_dict=seq_args)        
+
+        # land
+        self.swarm.parallel_safe(land)
+
         return response
 
 
 
+
+
 def main(args=None):
+    trajectory_calculator = TrajectoryCalculator(T=10, epsilon=0.5)
+
     rclpy.init(args=args)
 
     cflib.crtp.init_drivers()
@@ -156,7 +214,7 @@ def main(args=None):
         swarm.reset_estimators()
 
         # Lancer SendPosService
-        send_pos_service = SendPosService(swarm)
+        send_pos_service = SendPosService(swarm, trajectory_calculator)
         while rclpy.ok():
             rclpy.spin_once(send_pos_service)
             if send_pos_service.destroy_after_response:
@@ -174,7 +232,7 @@ def main(args=None):
                 break
         print("stage 2 done")
 
-        get_pos_service = GetPosService()
+        get_pos_service = GetPosService(swarm, trajectory_calculator)
         while rclpy.ok():
             rclpy.spin_once(get_pos_service)
             print(get_pos_service)
