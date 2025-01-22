@@ -164,16 +164,6 @@ def main(args=None):
     first_client.destroy_node()
     second_client.destroy_node()
 
-    # second_client = IsReadyClient()
-    # second_client.send_request()
-    # while rclpy.ok():
-    #     rclpy.spin_once(second_client)
-    #     second_client.check_response()
-    #     if second_client.response:
-    #         print(f"Réponse reçue : {second_client.response.success}")
-    #         break
-    # second_client.destroy_node()
-
 
     rclpy.shutdown()
 

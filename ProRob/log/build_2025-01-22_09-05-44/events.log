@@ -1,0 +1,754 @@
+[0.000000] (-) TimerEvent: {}
+[0.000902] (package_master) JobQueued: {'identifier': 'package_master', 'dependencies': OrderedDict()}
+[0.000988] (package_master_interfaces) JobQueued: {'identifier': 'package_master_interfaces', 'dependencies': OrderedDict()}
+[0.001027] (py_srvcli) JobQueued: {'identifier': 'py_srvcli', 'dependencies': OrderedDict()}
+[0.001058] (package_master) JobStarted: {'identifier': 'package_master'}
+[0.016254] (package_master_interfaces) JobStarted: {'identifier': 'package_master_interfaces'}
+[0.026676] (py_srvcli) JobStarted: {'identifier': 'py_srvcli'}
+[0.098022] (-) TimerEvent: {}
+[0.199021] (-) TimerEvent: {}
+[0.300101] (-) TimerEvent: {}
+[0.400854] (-) TimerEvent: {}
+[0.501747] (-) TimerEvent: {}
+[0.602509] (-) TimerEvent: {}
+[0.703517] (-) TimerEvent: {}
+[0.800288] (package_master_interfaces) JobProgress: {'identifier': 'package_master_interfaces', 'progress': 'cmake'}
+[0.802870] (package_master_interfaces) Command: {'cmd': ['/usr/bin/cmake', '/home/rouillon/Documents/ProDroneTB/ProRob/src/package_master_interfaces', '-DCMAKE_INSTALL_PREFIX=/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces'], 'cwd': '/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'rouillon'), ('LC_TIME', 'fr_FR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/rouillon'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'fr_FR.UTF-8'), ('SYSTEMD_EXEC_PID', '3527'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'rouillon'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'rouillon'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/rouillon/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/rouillon:@/tmp/.ICE-unix/2159,unix/rouillon:/tmp/.ICE-unix/2159'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'fr_FR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/6aa4427f_a497_419d_9510_0d0e5e1ab77b'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'fr_FR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.6J6X02'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.103'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'fr_FR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'fr_FR.UTF-8'), ('LC_IDENTIFICATION', 'fr_FR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'fr_FR.UTF-8'), ('LC_PAPER', 'fr_FR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.813484] (-) TimerEvent: {}
+[0.914685] (-) TimerEvent: {}
+[1.016361] (-) TimerEvent: {}
+[1.118358] (-) TimerEvent: {}
+[1.123907] (package_master_interfaces) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[1.218444] (-) TimerEvent: {}
+[1.319114] (-) TimerEvent: {}
+[1.419676] (-) TimerEvent: {}
+[1.452863] (package_master_interfaces) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[1.494242] (package_master_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.519862] (-) TimerEvent: {}
+[1.620945] (-) TimerEvent: {}
+[1.719813] (package_master_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.721070] (-) TimerEvent: {}
+[1.760939] (package_master_interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.766516] (package_master_interfaces) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.771394] (package_master_interfaces) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.785045] (package_master_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.821432] (-) TimerEvent: {}
+[1.922846] (-) TimerEvent: {}
+[2.023333] (-) TimerEvent: {}
+[2.043324] (package_master_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[2.086585] (package_master_interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[2.088761] (package_master_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[2.091561] (package_master_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[2.111938] (package_master_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[2.123500] (-) TimerEvent: {}
+[2.224624] (-) TimerEvent: {}
+[2.325245] (-) TimerEvent: {}
+[2.428936] (-) TimerEvent: {}
+[2.529531] (-) TimerEvent: {}
+[2.630197] (-) TimerEvent: {}
+[2.730706] (-) TimerEvent: {}
+[2.744148] (package_master_interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[2.831823] (-) TimerEvent: {}
+[2.932679] (-) TimerEvent: {}
+[3.034370] (-) TimerEvent: {}
+[3.106863] (package_master_interfaces) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[3.134743] (-) TimerEvent: {}
+[3.160097] (py_srvcli) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/py_srvcli', 'build', '--build-base', '/home/rouillon/Documents/ProDroneTB/ProRob/build/py_srvcli/build', 'install', '--record', '/home/rouillon/Documents/ProDroneTB/ProRob/build/py_srvcli/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/rouillon/Documents/ProDroneTB/ProRob/src/py_srvcli', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'rouillon', 'LC_TIME': 'fr_FR.UTF-8', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/rouillon', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'fr_FR.UTF-8', 'SYSTEMD_EXEC_PID': '3527', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'humble', 'LOGNAME': 'rouillon', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'rouillon', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/home/rouillon/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/rouillon:@/tmp/.ICE-unix/2159,unix/rouillon:/tmp/.ICE-unix/2159', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'fr_FR.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/6aa4427f_a497_419d_9510_0d0e5e1ab77b', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'fr_FR.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.6J6X02', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.103', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'fr_FR.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'fr_FR.UTF-8', 'LC_IDENTIFICATION': 'fr_FR.UTF-8', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/rouillon/Documents/ProDroneTB/ProRob/build/py_srvcli', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/rouillon/Documents/ProDroneTB/ProRob/build/py_srvcli/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rouillon/Documents/ProDroneTB/ProRob/install/py_srvcli/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'fr_FR.UTF-8', 'LC_PAPER': 'fr_FR.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6800'}, 'shell': False}
+[3.216918] (package_master) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/package_master', 'build', '--build-base', '/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build', 'install', '--record', '/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/rouillon/Documents/ProDroneTB/ProRob/src/package_master', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'rouillon', 'LC_TIME': 'fr_FR.UTF-8', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/rouillon', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'fr_FR.UTF-8', 'SYSTEMD_EXEC_PID': '3527', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'humble', 'LOGNAME': 'rouillon', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'rouillon', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/home/rouillon/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/rouillon:@/tmp/.ICE-unix/2159,unix/rouillon:/tmp/.ICE-unix/2159', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'fr_FR.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/6aa4427f_a497_419d_9510_0d0e5e1ab77b', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'fr_FR.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.6J6X02', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.103', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'fr_FR.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'fr_FR.UTF-8', 'LC_IDENTIFICATION': 'fr_FR.UTF-8', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'fr_FR.UTF-8', 'LC_PAPER': 'fr_FR.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6800'}, 'shell': False}
+[3.235046] (-) TimerEvent: {}
+[3.335778] (-) TimerEvent: {}
+[3.401076] (package_master_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[3.416302] (package_master_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[3.436833] (-) TimerEvent: {}
+[3.444490] (package_master_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[3.537081] (-) TimerEvent: {}
+[3.638367] (package_master_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[3.638797] (-) TimerEvent: {}
+[3.739888] (-) TimerEvent: {}
+[3.841236] (-) TimerEvent: {}
+[3.942809] (-) TimerEvent: {}
+[4.043459] (-) TimerEvent: {}
+[4.138049] (py_srvcli) StdoutLine: {'line': b'running egg_info\n'}
+[4.138645] (py_srvcli) StdoutLine: {'line': b'creating ../../build/py_srvcli/py_srvcli.egg-info\n'}
+[4.139981] (py_srvcli) StdoutLine: {'line': b'writing ../../build/py_srvcli/py_srvcli.egg-info/PKG-INFO\n'}
+[4.140285] (py_srvcli) StdoutLine: {'line': b'writing dependency_links to ../../build/py_srvcli/py_srvcli.egg-info/dependency_links.txt\n'}
+[4.141212] (py_srvcli) StdoutLine: {'line': b'writing entry points to ../../build/py_srvcli/py_srvcli.egg-info/entry_points.txt\n'}
+[4.141632] (py_srvcli) StdoutLine: {'line': b'writing requirements to ../../build/py_srvcli/py_srvcli.egg-info/requires.txt\n'}
+[4.142063] (py_srvcli) StdoutLine: {'line': b'writing top-level names to ../../build/py_srvcli/py_srvcli.egg-info/top_level.txt\n'}
+[4.142463] (py_srvcli) StdoutLine: {'line': b"writing manifest file '../../build/py_srvcli/py_srvcli.egg-info/SOURCES.txt'\n"}
+[4.143766] (-) TimerEvent: {}
+[4.147769] (py_srvcli) StdoutLine: {'line': b"reading manifest file '../../build/py_srvcli/py_srvcli.egg-info/SOURCES.txt'\n"}
+[4.150983] (py_srvcli) StdoutLine: {'line': b"writing manifest file '../../build/py_srvcli/py_srvcli.egg-info/SOURCES.txt'\n"}
+[4.151462] (py_srvcli) StdoutLine: {'line': b'running build\n'}
+[4.151853] (py_srvcli) StdoutLine: {'line': b'running build_py\n'}
+[4.152691] (py_srvcli) StdoutLine: {'line': b'creating /home/rouillon/Documents/ProDroneTB/ProRob/build/py_srvcli/build\n'}
+[4.153072] (py_srvcli) StdoutLine: {'line': b'creating /home/rouillon/Documents/ProDroneTB/ProRob/build/py_srvcli/build/lib\n'}
+[4.153283] (py_srvcli) StdoutLine: {'line': b'creating /home/rouillon/Documents/ProDroneTB/ProRob/build/py_srvcli/build/lib/py_srvcli\n'}
+[4.153484] (py_srvcli) StdoutLine: {'line': b'copying py_srvcli/__init__.py -> /home/rouillon/Documents/ProDroneTB/ProRob/build/py_srvcli/build/lib/py_srvcli\n'}
+[4.153859] (py_srvcli) StdoutLine: {'line': b'running install\n'}
+[4.154267] (py_srvcli) StdoutLine: {'line': b'running install_lib\n'}
+[4.156394] (py_srvcli) StdoutLine: {'line': b'creating /home/rouillon/Documents/ProDroneTB/ProRob/install/py_srvcli/lib/python3.10/site-packages/py_srvcli\n'}
+[4.156905] (py_srvcli) StdoutLine: {'line': b'copying /home/rouillon/Documents/ProDroneTB/ProRob/build/py_srvcli/build/lib/py_srvcli/__init__.py -> /home/rouillon/Documents/ProDroneTB/ProRob/install/py_srvcli/lib/python3.10/site-packages/py_srvcli\n'}
+[4.158233] (py_srvcli) StdoutLine: {'line': b'byte-compiling /home/rouillon/Documents/ProDroneTB/ProRob/install/py_srvcli/lib/python3.10/site-packages/py_srvcli/__init__.py to __init__.cpython-310.pyc\n'}
+[4.158826] (py_srvcli) StdoutLine: {'line': b'running install_data\n'}
+[4.159213] (py_srvcli) StdoutLine: {'line': b'creating /home/rouillon/Documents/ProDroneTB/ProRob/install/py_srvcli/share/ament_index\n'}
+[4.159561] (py_srvcli) StdoutLine: {'line': b'creating /home/rouillon/Documents/ProDroneTB/ProRob/install/py_srvcli/share/ament_index/resource_index\n'}
+[4.159983] (py_srvcli) StdoutLine: {'line': b'creating /home/rouillon/Documents/ProDroneTB/ProRob/install/py_srvcli/share/ament_index/resource_index/packages\n'}
+[4.160336] (py_srvcli) StdoutLine: {'line': b'copying resource/py_srvcli -> /home/rouillon/Documents/ProDroneTB/ProRob/install/py_srvcli/share/ament_index/resource_index/packages\n'}
+[4.160700] (py_srvcli) StdoutLine: {'line': b'copying package.xml -> /home/rouillon/Documents/ProDroneTB/ProRob/install/py_srvcli/share/py_srvcli\n'}
+[4.160941] (py_srvcli) StdoutLine: {'line': b'running install_egg_info\n'}
+[4.167990] (py_srvcli) StdoutLine: {'line': b'Copying ../../build/py_srvcli/py_srvcli.egg-info to /home/rouillon/Documents/ProDroneTB/ProRob/install/py_srvcli/lib/python3.10/site-packages/py_srvcli-0.0.0-py3.10.egg-info\n'}
+[4.170443] (py_srvcli) StdoutLine: {'line': b'running install_scripts\n'}
+[4.202234] (package_master) StdoutLine: {'line': b'running egg_info\n'}
+[4.203080] (package_master) StdoutLine: {'line': b'creating ../../build/package_master/package_master.egg-info\n'}
+[4.203953] (package_master) StdoutLine: {'line': b'writing ../../build/package_master/package_master.egg-info/PKG-INFO\n'}
+[4.204550] (package_master) StdoutLine: {'line': b'writing dependency_links to ../../build/package_master/package_master.egg-info/dependency_links.txt\n'}
+[4.205200] (package_master) StdoutLine: {'line': b'writing entry points to ../../build/package_master/package_master.egg-info/entry_points.txt\n'}
+[4.205618] (package_master) StdoutLine: {'line': b'writing requirements to ../../build/package_master/package_master.egg-info/requires.txt\n'}
+[4.206018] (package_master) StdoutLine: {'line': b'writing top-level names to ../../build/package_master/package_master.egg-info/top_level.txt\n'}
+[4.206507] (package_master) StdoutLine: {'line': b"writing manifest file '../../build/package_master/package_master.egg-info/SOURCES.txt'\n"}
+[4.214262] (package_master) StdoutLine: {'line': b"reading manifest file '../../build/package_master/package_master.egg-info/SOURCES.txt'\n"}
+[4.218340] (package_master) StdoutLine: {'line': b"writing manifest file '../../build/package_master/package_master.egg-info/SOURCES.txt'\n"}
+[4.218817] (package_master) StdoutLine: {'line': b'running build\n'}
+[4.219004] (package_master) StdoutLine: {'line': b'running build_py\n'}
+[4.221930] (package_master) StdoutLine: {'line': b'creating /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build\n'}
+[4.222288] (package_master) StdoutLine: {'line': b'creating /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib\n'}
+[4.222528] (package_master) StdoutLine: {'line': b'creating /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master\n'}
+[4.222831] (package_master) StdoutLine: {'line': b'copying package_master/service_member_function.py -> /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master\n'}
+[4.223040] (package_master) StdoutLine: {'line': b'copying package_master/master_node_tb.py -> /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master\n'}
+[4.223353] (package_master) StdoutLine: {'line': b'copying package_master/drone_node.py -> /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master\n'}
+[4.223663] (package_master) StdoutLine: {'line': b'copying package_master/client_member_function.py -> /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master\n'}
+[4.224005] (package_master) StdoutLine: {'line': b'copying package_master/tb_node.py -> /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master\n'}
+[4.224352] (package_master) StdoutLine: {'line': b'copying package_master/service_pos.py -> /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master\n'}
+[4.225184] (package_master) StdoutLine: {'line': b'copying package_master/master_node_drone.py -> /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master\n'}
+[4.225613] (package_master) StdoutLine: {'line': b'copying package_master/master_node.py -> /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master\n'}
+[4.226383] (package_master) StdoutLine: {'line': b'copying package_master/__init__.py -> /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master\n'}
+[4.227404] (package_master) StdoutLine: {'line': b'running install\n'}
+[4.228564] (package_master) StdoutLine: {'line': b'running install_lib\n'}
+[4.230900] (package_master) StdoutLine: {'line': b'creating /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master\n'}
+[4.231385] (package_master) StdoutLine: {'line': b'copying /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master/service_member_function.py -> /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master\n'}
+[4.231682] (package_master) StdoutLine: {'line': b'copying /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master/master_node_tb.py -> /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master\n'}
+[4.232041] (package_master) StdoutLine: {'line': b'copying /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master/drone_node.py -> /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master\n'}
+[4.232463] (package_master) StdoutLine: {'line': b'copying /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master/client_member_function.py -> /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master\n'}
+[4.232947] (package_master) StdoutLine: {'line': b'copying /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master/tb_node.py -> /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master\n'}
+[4.233341] (package_master) StdoutLine: {'line': b'copying /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master/service_pos.py -> /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master\n'}
+[4.233605] (package_master) StdoutLine: {'line': b'copying /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master/master_node_drone.py -> /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master\n'}
+[4.234024] (package_master) StdoutLine: {'line': b'copying /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master/master_node.py -> /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master\n'}
+[4.234294] (package_master) StdoutLine: {'line': b'copying /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master/__init__.py -> /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master\n'}
+[4.235446] (package_master) StdoutLine: {'line': b'byte-compiling /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master/service_member_function.py to service_member_function.cpython-310.pyc\n'}
+[4.236772] (package_master) StdoutLine: {'line': b'byte-compiling /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master/master_node_tb.py to master_node_tb.cpython-310.pyc\n'}
+[4.240454] (package_master) StdoutLine: {'line': b'byte-compiling /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master/drone_node.py to drone_node.cpython-310.pyc\n'}
+[4.242995] (package_master) StdoutLine: {'line': b'byte-compiling /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master/client_member_function.py to client_member_function.cpython-310.pyc\n'}
+[4.243881] (py_srvcli) StdoutLine: {'line': b"writing list of installed files to '/home/rouillon/Documents/ProDroneTB/ProRob/build/py_srvcli/install.log'\n"}
+[4.244229] (-) TimerEvent: {}
+[4.244874] (package_master) StdoutLine: {'line': b'byte-compiling /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master/tb_node.py to tb_node.cpython-310.pyc\n'}
+[4.246772] (package_master) StdoutLine: {'line': b'byte-compiling /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master/service_pos.py to service_pos.cpython-310.pyc\n'}
+[4.248207] (package_master) StdoutLine: {'line': b'byte-compiling /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master/master_node_drone.py to master_node_drone.cpython-310.pyc\n'}
+[4.251354] (package_master) StdoutLine: {'line': b'byte-compiling /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master/master_node.py to master_node.cpython-310.pyc\n'}
+[4.254122] (package_master) StdoutLine: {'line': b'byte-compiling /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master/__init__.py to __init__.cpython-310.pyc\n'}
+[4.254606] (package_master) StdoutLine: {'line': b'running install_data\n'}
+[4.256422] (package_master) StdoutLine: {'line': b'creating /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/share/ament_index\n'}
+[4.256812] (package_master) StdoutLine: {'line': b'creating /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/share/ament_index/resource_index\n'}
+[4.257047] (package_master) StdoutLine: {'line': b'creating /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/share/ament_index/resource_index/packages\n'}
+[4.257252] (package_master) StdoutLine: {'line': b'copying resource/package_master -> /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/share/ament_index/resource_index/packages\n'}
+[4.257452] (package_master) StdoutLine: {'line': b'copying package.xml -> /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/share/package_master\n'}
+[4.257785] (package_master) StdoutLine: {'line': b'running install_egg_info\n'}
+[4.263788] (package_master) StdoutLine: {'line': b'Copying ../../build/package_master/package_master.egg-info to /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master-0.0.0-py3.10.egg-info\n'}
+[4.266108] (package_master) StdoutLine: {'line': b'running install_scripts\n'}
+[4.311652] (py_srvcli) CommandEnded: {'returncode': 0}
+[4.340507] (package_master) StdoutLine: {'line': b'Installing client script to /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/package_master\n'}
+[4.340871] (package_master) StdoutLine: {'line': b'Installing client_drone script to /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/package_master\n'}
+[4.341074] (package_master) StdoutLine: {'line': b'Installing client_tb script to /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/package_master\n'}
+[4.341257] (package_master) StdoutLine: {'line': b'Installing service_drone script to /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/package_master\n'}
+[4.341517] (package_master) StdoutLine: {'line': b'Installing service_tb script to /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/package_master\n'}
+[4.341776] (package_master) StdoutLine: {'line': b'Installing service_test script to /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/package_master\n'}
+[4.341952] (package_master) StdoutLine: {'line': b"writing list of installed files to '/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/install.log'\n"}
+[4.355303] (py_srvcli) JobEnded: {'identifier': 'py_srvcli', 'rc': 0}
+[4.356279] (-) TimerEvent: {}
+[4.420505] (package_master) CommandEnded: {'returncode': 0}
+[4.441087] (package_master) JobEnded: {'identifier': 'package_master', 'rc': 0}
+[4.456916] (-) TimerEvent: {}
+[4.558105] (-) TimerEvent: {}
+[4.649720] (package_master_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[4.658349] (-) TimerEvent: {}
+[4.759339] (-) TimerEvent: {}
+[4.860689] (-) TimerEvent: {}
+[4.961463] (-) TimerEvent: {}
+[5.062645] (-) TimerEvent: {}
+[5.163325] (-) TimerEvent: {}
+[5.180642] (package_master_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[5.263593] (-) TimerEvent: {}
+[5.364331] (-) TimerEvent: {}
+[5.464905] (-) TimerEvent: {}
+[5.565483] (-) TimerEvent: {}
+[5.666153] (-) TimerEvent: {}
+[5.767415] (-) TimerEvent: {}
+[5.839993] (package_master_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[5.868072] (-) TimerEvent: {}
+[5.898087] (package_master_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[5.909657] (package_master_interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[5.968688] (-) TimerEvent: {}
+[5.990312] (package_master_interfaces) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[5.990987] (package_master_interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[5.991161] (package_master_interfaces) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[5.991317] (package_master_interfaces) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[6.053768] (package_master_interfaces) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[6.068893] (-) TimerEvent: {}
+[6.169359] (-) TimerEvent: {}
+[6.172853] (package_master_interfaces) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[6.179991] (package_master_interfaces) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[6.202379] (package_master_interfaces) StdoutLine: {'line': b'-- Configuring done\n'}
+[6.269553] (-) TimerEvent: {}
+[6.300193] (package_master_interfaces) StdoutLine: {'line': b'-- Generating done\n'}
+[6.337595] (package_master_interfaces) StdoutLine: {'line': b'-- Build files have been written to: /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master_interfaces\n'}
+[6.353061] (package_master_interfaces) CommandEnded: {'returncode': 0}
+[6.354593] (package_master_interfaces) JobProgress: {'identifier': 'package_master_interfaces', 'progress': 'build'}
+[6.354650] (package_master_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master_interfaces', '--', '-j4', '-l4'], 'cwd': '/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'rouillon'), ('LC_TIME', 'fr_FR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/rouillon'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'fr_FR.UTF-8'), ('SYSTEMD_EXEC_PID', '3527'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'rouillon'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'rouillon'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/rouillon/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/rouillon:@/tmp/.ICE-unix/2159,unix/rouillon:/tmp/.ICE-unix/2159'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'fr_FR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/6aa4427f_a497_419d_9510_0d0e5e1ab77b'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'fr_FR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.6J6X02'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.103'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'fr_FR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'fr_FR.UTF-8'), ('LC_IDENTIFICATION', 'fr_FR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'fr_FR.UTF-8'), ('LC_PAPER', 'fr_FR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[6.369770] (-) TimerEvent: {}
+[6.448925] (package_master_interfaces) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[6.472782] (-) TimerEvent: {}
+[6.475833] (package_master_interfaces) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[6.495487] (package_master_interfaces) StdoutLine: {'line': b'[  3%] Built target ament_cmake_python_copy_package_master_interfaces\n'}
+[6.572977] (-) TimerEvent: {}
+[6.673686] (-) TimerEvent: {}
+[6.776032] (-) TimerEvent: {}
+[6.876600] (-) TimerEvent: {}
+[6.977172] (-) TimerEvent: {}
+[7.078941] (-) TimerEvent: {}
+[7.179467] (-) TimerEvent: {}
+[7.279990] (-) TimerEvent: {}
+[7.381975] (-) TimerEvent: {}
+[7.470647] (package_master_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[7.471075] (package_master_interfaces) StdoutLine: {'line': b'creating package_master_interfaces.egg-info\n'}
+[7.472326] (package_master_interfaces) StdoutLine: {'line': b'writing package_master_interfaces.egg-info/PKG-INFO\n'}
+[7.473263] (package_master_interfaces) StdoutLine: {'line': b'writing dependency_links to package_master_interfaces.egg-info/dependency_links.txt\n'}
+[7.474146] (package_master_interfaces) StdoutLine: {'line': b'writing top-level names to package_master_interfaces.egg-info/top_level.txt\n'}
+[7.475689] (package_master_interfaces) StdoutLine: {'line': b"writing manifest file 'package_master_interfaces.egg-info/SOURCES.txt'\n"}
+[7.481898] (package_master_interfaces) StdoutLine: {'line': b"reading manifest file 'package_master_interfaces.egg-info/SOURCES.txt'\n"}
+[7.482200] (-) TimerEvent: {}
+[7.484993] (package_master_interfaces) StdoutLine: {'line': b"writing manifest file 'package_master_interfaces.egg-info/SOURCES.txt'\n"}
+[7.552144] (package_master_interfaces) StdoutLine: {'line': b'[  3%] Built target ament_cmake_python_build_package_master_interfaces_egg\n'}
+[7.582488] (-) TimerEvent: {}
+[7.683221] (-) TimerEvent: {}
+[7.783759] (-) TimerEvent: {}
+[7.884807] (-) TimerEvent: {}
+[7.985813] (-) TimerEvent: {}
+[8.086339] (-) TimerEvent: {}
+[8.187291] (-) TimerEvent: {}
+[8.287986] (-) TimerEvent: {}
+[8.388624] (-) TimerEvent: {}
+[8.489211] (-) TimerEvent: {}
+[8.589803] (-) TimerEvent: {}
+[8.690433] (-) TimerEvent: {}
+[8.791046] (-) TimerEvent: {}
+[8.891731] (-) TimerEvent: {}
+[8.992193] (-) TimerEvent: {}
+[9.093483] (-) TimerEvent: {}
+[9.194263] (-) TimerEvent: {}
+[9.296873] (-) TimerEvent: {}
+[9.338588] (package_master_interfaces) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding C object CMakeFiles/package_master_interfaces__rosidl_generator_c.dir/rosidl_generator_c/package_master_interfaces/msg/detail/num__functions.c.o\x1b[0m\n'}
+[9.397388] (-) TimerEvent: {}
+[9.420376] (package_master_interfaces) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/package_master_interfaces__rosidl_generator_c.dir/rosidl_generator_c/package_master_interfaces/msg/detail/sequence_elments__functions.c.o\x1b[0m\n'}
+[9.443175] (package_master_interfaces) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/package_master_interfaces__rosidl_generator_c.dir/rosidl_generator_c/package_master_interfaces/srv/detail/add_three_ints__functions.c.o\x1b[0m\n'}
+[9.446707] (package_master_interfaces) StdoutLine: {'line': b'[  7%] Built target package_master_interfaces__cpp\n'}
+[9.473684] (package_master_interfaces) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/package_master_interfaces__rosidl_generator_c.dir/rosidl_generator_c/package_master_interfaces/srv/detail/robot_positions__functions.c.o\x1b[0m\n'}
+[9.497796] (-) TimerEvent: {}
+[9.575684] (package_master_interfaces) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/package_master_interfaces__rosidl_generator_c.dir/rosidl_generator_c/package_master_interfaces/srv/detail/send_positions__functions.c.o\x1b[0m\n'}
+[9.599725] (-) TimerEvent: {}
+[9.604690] (package_master_interfaces) StdoutLine: {'line': b'[ 12%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[9.643032] (package_master_interfaces) StdoutLine: {'line': b'[ 14%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[9.698479] (package_master_interfaces) StdoutLine: {'line': b'[ 15%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[9.702953] (-) TimerEvent: {}
+[9.800736] (package_master_interfaces) StdoutLine: {'line': b'[ 17%] \x1b[32m\x1b[1mLinking C shared library libpackage_master_interfaces__rosidl_generator_c.so\x1b[0m\n'}
+[9.803123] (-) TimerEvent: {}
+[9.903624] (-) TimerEvent: {}
+[9.932841] (package_master_interfaces) StdoutLine: {'line': b'[ 17%] Built target package_master_interfaces__rosidl_generator_c\n'}
+[9.975222] (package_master_interfaces) StdoutLine: {'line': b'[ 19%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[10.006690] (-) TimerEvent: {}
+[10.107261] (-) TimerEvent: {}
+[10.207687] (-) TimerEvent: {}
+[10.308196] (-) TimerEvent: {}
+[10.408789] (-) TimerEvent: {}
+[10.509347] (-) TimerEvent: {}
+[10.609895] (-) TimerEvent: {}
+[10.713695] (-) TimerEvent: {}
+[10.814196] (-) TimerEvent: {}
+[10.914694] (-) TimerEvent: {}
+[11.015264] (-) TimerEvent: {}
+[11.115873] (-) TimerEvent: {}
+[11.216414] (-) TimerEvent: {}
+[11.316989] (-) TimerEvent: {}
+[11.418905] (-) TimerEvent: {}
+[11.519423] (-) TimerEvent: {}
+[11.620093] (-) TimerEvent: {}
+[11.722971] (-) TimerEvent: {}
+[11.823476] (-) TimerEvent: {}
+[11.924003] (-) TimerEvent: {}
+[12.024495] (-) TimerEvent: {}
+[12.104273] (package_master_interfaces) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/package_master_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/package_master_interfaces/msg/num__type_support.cpp.o\x1b[0m\n'}
+[12.125759] (-) TimerEvent: {}
+[12.226354] (-) TimerEvent: {}
+[12.328074] (-) TimerEvent: {}
+[12.429278] (-) TimerEvent: {}
+[12.489471] (package_master_interfaces) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding CXX object CMakeFiles/package_master_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/package_master_interfaces/msg/detail/num__type_support.cpp.o\x1b[0m\n'}
+[12.529477] (-) TimerEvent: {}
+[12.630241] (-) TimerEvent: {}
+[12.711408] (package_master_interfaces) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/package_master_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/package_master_interfaces/msg/detail/dds_fastrtps/num__type_support.cpp.o\x1b[0m\n'}
+[12.732710] (-) TimerEvent: {}
+[12.833397] (-) TimerEvent: {}
+[12.934116] (-) TimerEvent: {}
+[13.034962] (-) TimerEvent: {}
+[13.062877] (package_master_interfaces) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/package_master_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/package_master_interfaces/msg/detail/num__type_support_c.cpp.o\x1b[0m\n'}
+[13.135353] (-) TimerEvent: {}
+[13.236076] (-) TimerEvent: {}
+[13.292127] (package_master_interfaces) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding CXX object CMakeFiles/package_master_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/package_master_interfaces/msg/sequence_elments__type_support.cpp.o\x1b[0m\n'}
+[13.336285] (-) TimerEvent: {}
+[13.436944] (-) TimerEvent: {}
+[13.537714] (-) TimerEvent: {}
+[13.638322] (-) TimerEvent: {}
+[13.741017] (-) TimerEvent: {}
+[13.841643] (-) TimerEvent: {}
+[13.863829] (package_master_interfaces) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/package_master_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/package_master_interfaces/msg/detail/sequence_elments__type_support.cpp.o\x1b[0m\n'}
+[13.941721] (-) TimerEvent: {}
+[14.042316] (-) TimerEvent: {}
+[14.133127] (package_master_interfaces) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/package_master_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/package_master_interfaces/msg/detail/dds_fastrtps/sequence_elments__type_support.cpp.o\x1b[0m\n'}
+[14.142564] (-) TimerEvent: {}
+[14.240361] (package_master_interfaces) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/package_master_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/package_master_interfaces/msg/detail/sequence_elments__type_support_c.cpp.o\x1b[0m\n'}
+[14.242691] (-) TimerEvent: {}
+[14.318670] (package_master_interfaces) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/package_master_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/package_master_interfaces/srv/add_three_ints__type_support.cpp.o\x1b[0m\n'}
+[14.342872] (-) TimerEvent: {}
+[14.443917] (-) TimerEvent: {}
+[14.546006] (-) TimerEvent: {}
+[14.646720] (-) TimerEvent: {}
+[14.747274] (-) TimerEvent: {}
+[14.848963] (-) TimerEvent: {}
+[14.949518] (-) TimerEvent: {}
+[15.050947] (-) TimerEvent: {}
+[15.151543] (-) TimerEvent: {}
+[15.196737] (package_master_interfaces) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/package_master_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/package_master_interfaces/srv/detail/add_three_ints__type_support.cpp.o\x1b[0m\n'}
+[15.251727] (-) TimerEvent: {}
+[15.352287] (-) TimerEvent: {}
+[15.358664] (package_master_interfaces) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/package_master_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/package_master_interfaces/srv/robot_positions__type_support.cpp.o\x1b[0m\n'}
+[15.455782] (-) TimerEvent: {}
+[15.466776] (package_master_interfaces) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/package_master_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/package_master_interfaces/srv/detail/add_three_ints__type_support_c.cpp.o\x1b[0m\n'}
+[15.556726] (-) TimerEvent: {}
+[15.616075] (package_master_interfaces) StdoutLine: {'line': b'[ 39%] \x1b[32mBuilding CXX object CMakeFiles/package_master_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/package_master_interfaces/srv/detail/dds_fastrtps/add_three_ints__type_support.cpp.o\x1b[0m\n'}
+[15.657739] (-) TimerEvent: {}
+[15.761020] (-) TimerEvent: {}
+[15.861706] (-) TimerEvent: {}
+[15.962382] (-) TimerEvent: {}
+[16.064710] (-) TimerEvent: {}
+[16.165381] (-) TimerEvent: {}
+[16.266011] (-) TimerEvent: {}
+[16.366625] (-) TimerEvent: {}
+[16.460342] (package_master_interfaces) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/package_master_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/package_master_interfaces/srv/send_positions__type_support.cpp.o\x1b[0m\n'}
+[16.469708] (-) TimerEvent: {}
+[16.570250] (-) TimerEvent: {}
+[16.587270] (package_master_interfaces) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/package_master_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/package_master_interfaces/srv/detail/robot_positions__type_support.cpp.o\x1b[0m\n'}
+[16.670448] (-) TimerEvent: {}
+[16.718776] (package_master_interfaces) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/package_master_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/package_master_interfaces/srv/detail/robot_positions__type_support_c.cpp.o\x1b[0m\n'}
+[16.770629] (-) TimerEvent: {}
+[16.871223] (-) TimerEvent: {}
+[16.973210] (-) TimerEvent: {}
+[17.073716] (-) TimerEvent: {}
+[17.175995] (-) TimerEvent: {}
+[17.203715] (package_master_interfaces) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/package_master_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/package_master_interfaces/srv/detail/dds_fastrtps/robot_positions__type_support.cpp.o\x1b[0m\n'}
+[17.278718] (-) TimerEvent: {}
+[17.379416] (-) TimerEvent: {}
+[17.480201] (-) TimerEvent: {}
+[17.581132] (-) TimerEvent: {}
+[17.684715] (-) TimerEvent: {}
+[17.785361] (-) TimerEvent: {}
+[17.885985] (-) TimerEvent: {}
+[17.986540] (-) TimerEvent: {}
+[18.089783] (-) TimerEvent: {}
+[18.171544] (package_master_interfaces) StdoutLine: {'line': b'[ 47%] \x1b[32m\x1b[1mLinking CXX shared library libpackage_master_interfaces__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[18.192857] (-) TimerEvent: {}
+[18.293549] (-) TimerEvent: {}
+[18.394145] (-) TimerEvent: {}
+[18.494740] (-) TimerEvent: {}
+[18.560207] (package_master_interfaces) StdoutLine: {'line': b'[ 47%] Built target package_master_interfaces__rosidl_typesupport_cpp\n'}
+[18.595125] (-) TimerEvent: {}
+[18.626873] (package_master_interfaces) StdoutLine: {'line': b'[ 49%] \x1b[32mBuilding CXX object CMakeFiles/package_master_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/package_master_interfaces/srv/detail/send_positions__type_support_c.cpp.o\x1b[0m\n'}
+[18.696714] (-) TimerEvent: {}
+[18.797403] (-) TimerEvent: {}
+[18.901849] (-) TimerEvent: {}
+[18.985942] (package_master_interfaces) StdoutLine: {'line': b'[ 50%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[19.003484] (-) TimerEvent: {}
+[19.041717] (package_master_interfaces) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding CXX object CMakeFiles/package_master_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/package_master_interfaces/srv/detail/send_positions__type_support.cpp.o\x1b[0m\n'}
+[19.104831] (-) TimerEvent: {}
+[19.205366] (-) TimerEvent: {}
+[19.305989] (-) TimerEvent: {}
+[19.408036] (-) TimerEvent: {}
+[19.508563] (-) TimerEvent: {}
+[19.612222] (-) TimerEvent: {}
+[19.712893] (-) TimerEvent: {}
+[19.813429] (-) TimerEvent: {}
+[19.914042] (-) TimerEvent: {}
+[19.920669] (package_master_interfaces) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object CMakeFiles/package_master_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/package_master_interfaces/srv/detail/dds_fastrtps/send_positions__type_support.cpp.o\x1b[0m\n'}
+[20.015130] (-) TimerEvent: {}
+[20.045131] (package_master_interfaces) StdoutLine: {'line': b'[ 55%] \x1b[32m\x1b[1mLinking CXX shared library libpackage_master_interfaces__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[20.115293] (-) TimerEvent: {}
+[20.215871] (-) TimerEvent: {}
+[20.299517] (package_master_interfaces) StdoutLine: {'line': b'[ 55%] Built target package_master_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[20.316081] (-) TimerEvent: {}
+[20.326856] (package_master_interfaces) StdoutLine: {'line': b'[ 57%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[20.416266] (-) TimerEvent: {}
+[20.516851] (-) TimerEvent: {}
+[20.618937] (-) TimerEvent: {}
+[20.719455] (-) TimerEvent: {}
+[20.720521] (package_master_interfaces) StdoutLine: {'line': b'[ 58%] \x1b[32m\x1b[1mLinking CXX shared library libpackage_master_interfaces__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[20.819632] (-) TimerEvent: {}
+[20.920463] (-) TimerEvent: {}
+[20.998873] (package_master_interfaces) StdoutLine: {'line': b'[ 58%] Built target package_master_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[21.020594] (-) TimerEvent: {}
+[21.121160] (-) TimerEvent: {}
+[21.221708] (-) TimerEvent: {}
+[21.322250] (-) TimerEvent: {}
+[21.422754] (-) TimerEvent: {}
+[21.523957] (-) TimerEvent: {}
+[21.628741] (-) TimerEvent: {}
+[21.726897] (package_master_interfaces) StdoutLine: {'line': b'[ 60%] \x1b[32m\x1b[1mLinking CXX shared library libpackage_master_interfaces__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[21.728891] (-) TimerEvent: {}
+[21.829404] (-) TimerEvent: {}
+[21.873698] (package_master_interfaces) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding C object CMakeFiles/package_master_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/package_master_interfaces/msg/detail/sequence_elments__type_support.c.o\x1b[0m\n'}
+[21.887748] (package_master_interfaces) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding C object CMakeFiles/package_master_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/package_master_interfaces/msg/detail/num__type_support.c.o\x1b[0m\n'}
+[21.929597] (-) TimerEvent: {}
+[22.005728] (package_master_interfaces) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding C object CMakeFiles/package_master_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/package_master_interfaces/srv/detail/add_three_ints__type_support.c.o\x1b[0m\n'}
+[22.011140] (package_master_interfaces) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding C object CMakeFiles/package_master_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/package_master_interfaces/srv/detail/robot_positions__type_support.c.o\x1b[0m\n'}
+[22.029798] (-) TimerEvent: {}
+[22.051031] (package_master_interfaces) StdoutLine: {'line': b'[ 66%] Built target package_master_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[22.079694] (package_master_interfaces) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding C object CMakeFiles/package_master_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/package_master_interfaces/srv/detail/send_positions__type_support.c.o\x1b[0m\n'}
+[22.129975] (-) TimerEvent: {}
+[22.231229] (-) TimerEvent: {}
+[22.235859] (package_master_interfaces) StdoutLine: {'line': b'[ 69%] \x1b[32m\x1b[1mLinking C shared library libpackage_master_interfaces__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[22.330316] (package_master_interfaces) StdoutLine: {'line': b'[ 69%] Built target package_master_interfaces__rosidl_typesupport_introspection_c\n'}
+[22.331713] (-) TimerEvent: {}
+[22.424789] (package_master_interfaces) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/package_master_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/package_master_interfaces/msg/sequence_elments__type_support.cpp.o\x1b[0m\n'}
+[22.425340] (package_master_interfaces) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object CMakeFiles/package_master_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/package_master_interfaces/srv/add_three_ints__type_support.cpp.o\x1b[0m\n'}
+[22.427948] (package_master_interfaces) StdoutLine: {'line': b'[ 76%] \x1b[32mBuilding CXX object CMakeFiles/package_master_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/package_master_interfaces/msg/num__type_support.cpp.o\x1b[0m\n'}
+[22.428183] (package_master_interfaces) StdoutLine: {'line': b'[ 76%] \x1b[32mBuilding CXX object CMakeFiles/package_master_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/package_master_interfaces/srv/robot_positions__type_support.cpp.o\x1b[0m\n'}
+[22.432222] (-) TimerEvent: {}
+[22.517978] (package_master_interfaces) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding CXX object CMakeFiles/package_master_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/package_master_interfaces/srv/send_positions__type_support.cpp.o\x1b[0m\n'}
+[22.532367] (-) TimerEvent: {}
+[22.604004] (package_master_interfaces) StdoutLine: {'line': b'[ 79%] \x1b[32m\x1b[1mLinking CXX shared library libpackage_master_interfaces__rosidl_typesupport_c.so\x1b[0m\n'}
+[22.633053] (-) TimerEvent: {}
+[22.714443] (package_master_interfaces) StdoutLine: {'line': b'[ 79%] Built target package_master_interfaces__rosidl_typesupport_c\n'}
+[22.733632] (-) TimerEvent: {}
+[22.759798] (package_master_interfaces) StdoutLine: {'line': b'[ 79%] Built target package_master_interfaces\n'}
+[22.813574] (package_master_interfaces) StdoutLine: {'line': b'[ 80%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[22.834564] (-) TimerEvent: {}
+[22.937118] (-) TimerEvent: {}
+[23.038677] (-) TimerEvent: {}
+[23.140810] (-) TimerEvent: {}
+[23.242636] (-) TimerEvent: {}
+[23.343612] (-) TimerEvent: {}
+[23.444831] (-) TimerEvent: {}
+[23.545193] (-) TimerEvent: {}
+[23.645722] (-) TimerEvent: {}
+[23.747079] (-) TimerEvent: {}
+[23.849315] (-) TimerEvent: {}
+[23.950442] (-) TimerEvent: {}
+[24.050953] (-) TimerEvent: {}
+[24.151520] (-) TimerEvent: {}
+[24.252250] (-) TimerEvent: {}
+[24.352687] (-) TimerEvent: {}
+[24.453217] (-) TimerEvent: {}
+[24.553702] (-) TimerEvent: {}
+[24.654706] (-) TimerEvent: {}
+[24.756069] (-) TimerEvent: {}
+[24.856689] (-) TimerEvent: {}
+[24.957498] (-) TimerEvent: {}
+[25.058326] (-) TimerEvent: {}
+[25.159004] (-) TimerEvent: {}
+[25.260537] (-) TimerEvent: {}
+[25.361449] (-) TimerEvent: {}
+[25.461841] (-) TimerEvent: {}
+[25.562662] (-) TimerEvent: {}
+[25.663464] (-) TimerEvent: {}
+[25.764065] (-) TimerEvent: {}
+[25.864891] (-) TimerEvent: {}
+[25.965664] (-) TimerEvent: {}
+[26.066501] (-) TimerEvent: {}
+[26.168045] (-) TimerEvent: {}
+[26.268943] (-) TimerEvent: {}
+[26.312016] (package_master_interfaces) StdoutLine: {'line': b'[ 80%] Built target package_master_interfaces__py\n'}
+[26.364896] (package_master_interfaces) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding C object CMakeFiles/package_master_interfaces__rosidl_generator_py.dir/rosidl_generator_py/package_master_interfaces/msg/_num_s.c.o\x1b[0m\n'}
+[26.365315] (package_master_interfaces) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding C object CMakeFiles/package_master_interfaces__rosidl_generator_py.dir/rosidl_generator_py/package_master_interfaces/srv/_add_three_ints_s.c.o\x1b[0m\n'}
+[26.365642] (package_master_interfaces) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/package_master_interfaces__rosidl_generator_py.dir/rosidl_generator_py/package_master_interfaces/srv/_robot_positions_s.c.o\x1b[0m\n'}
+[26.365904] (package_master_interfaces) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/package_master_interfaces__rosidl_generator_py.dir/rosidl_generator_py/package_master_interfaces/msg/_sequence_elments_s.c.o\x1b[0m\n'}
+[26.369081] (-) TimerEvent: {}
+[26.469672] (-) TimerEvent: {}
+[26.570741] (-) TimerEvent: {}
+[26.671451] (-) TimerEvent: {}
+[26.772582] (-) TimerEvent: {}
+[26.781436] (package_master_interfaces) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding C object CMakeFiles/package_master_interfaces__rosidl_generator_py.dir/rosidl_generator_py/package_master_interfaces/srv/_send_positions_s.c.o\x1b[0m\n'}
+[26.874727] (-) TimerEvent: {}
+[26.975199] (-) TimerEvent: {}
+[27.075640] (-) TimerEvent: {}
+[27.095302] (package_master_interfaces) StdoutLine: {'line': b'[ 90%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/package_master_interfaces/libpackage_master_interfaces__rosidl_generator_py.so\x1b[0m\n'}
+[27.175861] (-) TimerEvent: {}
+[27.191512] (package_master_interfaces) StdoutLine: {'line': b'[ 90%] Built target package_master_interfaces__rosidl_generator_py\n'}
+[27.251240] (package_master_interfaces) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/package_master_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/package_master_interfaces/_package_master_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[27.252750] (package_master_interfaces) StdoutLine: {'line': b'[ 95%] \x1b[32mBuilding C object CMakeFiles/package_master_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/package_master_interfaces/_package_master_interfaces_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[27.253277] (package_master_interfaces) StdoutLine: {'line': b'[ 95%] \x1b[32mBuilding C object CMakeFiles/package_master_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/package_master_interfaces/_package_master_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[27.280722] (-) TimerEvent: {}
+[27.381747] (-) TimerEvent: {}
+[27.483966] (-) TimerEvent: {}
+[27.584541] (-) TimerEvent: {}
+[27.632030] (package_master_interfaces) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/package_master_interfaces/package_master_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[27.640046] (package_master_interfaces) StdoutLine: {'line': b'[ 98%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/package_master_interfaces/package_master_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[27.657737] (package_master_interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/package_master_interfaces/package_master_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[27.684833] (-) TimerEvent: {}
+[27.737739] (package_master_interfaces) StdoutLine: {'line': b'[100%] Built target package_master_interfaces__rosidl_typesupport_c__pyext\n'}
+[27.749026] (package_master_interfaces) StdoutLine: {'line': b'[100%] Built target package_master_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[27.763116] (package_master_interfaces) StdoutLine: {'line': b'[100%] Built target package_master_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[27.785354] (-) TimerEvent: {}
+[27.793210] (package_master_interfaces) CommandEnded: {'returncode': 0}
+[27.794270] (package_master_interfaces) JobProgress: {'identifier': 'package_master_interfaces', 'progress': 'install'}
+[27.813319] (package_master_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master_interfaces'], 'cwd': '/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'rouillon'), ('LC_TIME', 'fr_FR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/rouillon'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'fr_FR.UTF-8'), ('SYSTEMD_EXEC_PID', '3527'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'rouillon'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'rouillon'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/rouillon/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/rouillon:@/tmp/.ICE-unix/2159,unix/rouillon:/tmp/.ICE-unix/2159'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'fr_FR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/6aa4427f_a497_419d_9510_0d0e5e1ab77b'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'fr_FR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.6J6X02'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.103'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'fr_FR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'fr_FR.UTF-8'), ('LC_IDENTIFICATION', 'fr_FR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'fr_FR.UTF-8'), ('LC_PAPER', 'fr_FR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[27.836805] (package_master_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[27.837821] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/ament_index/resource_index/rosidl_interfaces/package_master_interfaces\n'}
+[27.838978] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces\n'}
+[27.839850] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg\n'}
+[27.840173] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/num.h\n'}
+[27.841045] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/detail\n'}
+[27.841620] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/detail/sequence_elments__functions.c\n'}
+[27.842619] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/detail/num__type_support.h\n'}
+[27.842931] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/detail/sequence_elments__struct.h\n'}
+[27.843237] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/detail/sequence_elments__type_support.h\n'}
+[27.843403] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/detail/num__struct.h\n'}
+[27.843755] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/detail/sequence_elments__functions.h\n'}
+[27.844140] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/detail/num__functions.c\n'}
+[27.844377] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/detail/num__functions.h\n'}
+[27.844868] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[27.845139] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/sequence_elments.h\n'}
+[27.845560] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv\n'}
+[27.845957] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/add_three_ints.h\n'}
+[27.846398] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail\n'}
+[27.846778] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail/robot_positions__type_support.h\n'}
+[27.847228] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail/add_three_ints__type_support.h\n'}
+[27.847506] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail/add_three_ints__struct.h\n'}
+[27.848079] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail/robot_positions__functions.h\n'}
+[27.848384] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail/send_positions__type_support.h\n'}
+[27.848783] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail/add_three_ints__functions.h\n'}
+[27.849066] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail/send_positions__struct.h\n'}
+[27.849680] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail/robot_positions__struct.h\n'}
+[27.850030] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail/send_positions__functions.h\n'}
+[27.850284] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail/send_positions__functions.c\n'}
+[27.850767] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail/add_three_ints__functions.c\n'}
+[27.851091] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail/robot_positions__functions.c\n'}
+[27.851321] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/robot_positions.h\n'}
+[27.851633] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/send_positions.h\n'}
+[27.852043] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/environment/library_path.sh\n'}
+[27.852209] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/environment/library_path.dsv\n'}
+[27.853270] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/lib/libpackage_master_interfaces__rosidl_generator_c.so\n'}
+[27.855117] (package_master_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/lib/libpackage_master_interfaces__rosidl_generator_c.so" to ""\n'}
+[27.855412] (package_master_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces\n'}
+[27.855507] (package_master_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg\n'}
+[27.855595] (package_master_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/detail\n'}
+[27.855683] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/detail/num__rosidl_typesupport_fastrtps_c.h\n'}
+[27.855889] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/detail/sequence_elments__rosidl_typesupport_fastrtps_c.h\n'}
+[27.857766] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[27.857994] (package_master_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv\n'}
+[27.858151] (package_master_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail\n'}
+[27.858283] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail/add_three_ints__rosidl_typesupport_fastrtps_c.h\n'}
+[27.858413] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail/robot_positions__rosidl_typesupport_fastrtps_c.h\n'}
+[27.858671] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail/send_positions__rosidl_typesupport_fastrtps_c.h\n'}
+[27.858845] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/lib/libpackage_master_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[27.859004] (package_master_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/lib/libpackage_master_interfaces__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[27.859130] (package_master_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces\n'}
+[27.859252] (package_master_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg\n'}
+[27.859374] (package_master_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/detail\n'}
+[27.859851] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/detail/sequence_elments__type_support.c\n'}
+[27.860113] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/detail/num__type_support.c\n'}
+[27.860323] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/detail/num__rosidl_typesupport_introspection_c.h\n'}
+[27.860873] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/detail/sequence_elments__rosidl_typesupport_introspection_c.h\n'}
+[27.861210] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[27.861356] (package_master_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv\n'}
+[27.861504] (package_master_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail\n'}
+[27.861717] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail/send_positions__rosidl_typesupport_introspection_c.h\n'}
+[27.861996] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail/add_three_ints__type_support.c\n'}
+[27.862243] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail/robot_positions__type_support.c\n'}
+[27.862542] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail/add_three_ints__rosidl_typesupport_introspection_c.h\n'}
+[27.862873] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail/send_positions__type_support.c\n'}
+[27.863111] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail/robot_positions__rosidl_typesupport_introspection_c.h\n'}
+[27.863585] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/lib/libpackage_master_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[27.864156] (package_master_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/lib/libpackage_master_interfaces__rosidl_typesupport_introspection_c.so" to ""\n'}
+[27.864437] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/lib/libpackage_master_interfaces__rosidl_typesupport_c.so\n'}
+[27.864697] (package_master_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/lib/libpackage_master_interfaces__rosidl_typesupport_c.so" to ""\n'}
+[27.865014] (package_master_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces\n'}
+[27.865279] (package_master_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg\n'}
+[27.865752] (package_master_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/detail\n'}
+[27.866008] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/detail/num__type_support.hpp\n'}
+[27.866287] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/detail/sequence_elments__builder.hpp\n'}
+[27.866587] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/detail/sequence_elments__type_support.hpp\n'}
+[27.867008] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/detail/sequence_elments__traits.hpp\n'}
+[27.867243] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/detail/num__struct.hpp\n'}
+[27.867445] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/detail/sequence_elments__struct.hpp\n'}
+[27.867818] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/detail/num__builder.hpp\n'}
+[27.868096] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/detail/num__traits.hpp\n'}
+[27.868558] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/num.hpp\n'}
+[27.868823] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/sequence_elments.hpp\n'}
+[27.868957] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[27.869093] (package_master_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv\n'}
+[27.869221] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/send_positions.hpp\n'}
+[27.869495] (package_master_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail\n'}
+[27.869795] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail/robot_positions__struct.hpp\n'}
+[27.870095] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail/robot_positions__builder.hpp\n'}
+[27.870391] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail/robot_positions__type_support.hpp\n'}
+[27.870832] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail/add_three_ints__struct.hpp\n'}
+[27.871136] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail/robot_positions__traits.hpp\n'}
+[27.871365] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail/send_positions__traits.hpp\n'}
+[27.871690] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail/add_three_ints__type_support.hpp\n'}
+[27.872137] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail/send_positions__type_support.hpp\n'}
+[27.872388] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail/send_positions__struct.hpp\n'}
+[27.872720] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail/add_three_ints__traits.hpp\n'}
+[27.873135] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail/add_three_ints__builder.hpp\n'}
+[27.873395] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail/send_positions__builder.hpp\n'}
+[27.873630] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/add_three_ints.hpp\n'}
+[27.873953] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/robot_positions.hpp\n'}
+[27.874425] (package_master_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces\n'}
+[27.874763] (package_master_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg\n'}
+[27.875151] (package_master_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/detail\n'}
+[27.875465] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/detail/sequence_elments__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[27.875767] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/detail/num__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[27.876066] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/detail/dds_fastrtps\n'}
+[27.876298] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[27.876525] (package_master_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv\n'}
+[27.876883] (package_master_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail\n'}
+[27.877310] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail/add_three_ints__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[27.877526] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail/robot_positions__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[27.877739] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail/dds_fastrtps\n'}
+[27.877901] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail/send_positions__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[27.878201] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/lib/libpackage_master_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[27.878570] (package_master_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/lib/libpackage_master_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[27.879227] (package_master_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces\n'}
+[27.879455] (package_master_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg\n'}
+[27.879928] (package_master_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/detail\n'}
+[27.880320] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/detail/num__rosidl_typesupport_introspection_cpp.hpp\n'}
+[27.880592] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/detail/num__type_support.cpp\n'}
+[27.880950] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/detail/sequence_elments__type_support.cpp\n'}
+[27.881182] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/msg/detail/sequence_elments__rosidl_typesupport_introspection_cpp.hpp\n'}
+[27.881537] (package_master_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv\n'}
+[27.881882] (package_master_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail\n'}
+[27.882218] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail/robot_positions__rosidl_typesupport_introspection_cpp.hpp\n'}
+[27.882459] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail/add_three_ints__type_support.cpp\n'}
+[27.882819] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail/send_positions__rosidl_typesupport_introspection_cpp.hpp\n'}
+[27.883064] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail/robot_positions__type_support.cpp\n'}
+[27.883468] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail/add_three_ints__rosidl_typesupport_introspection_cpp.hpp\n'}
+[27.883915] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/include/package_master_interfaces/package_master_interfaces/srv/detail/send_positions__type_support.cpp\n'}
+[27.884104] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/lib/libpackage_master_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[27.884768] (package_master_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/lib/libpackage_master_interfaces__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[27.885116] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/lib/libpackage_master_interfaces__rosidl_typesupport_cpp.so\n'}
+[27.885740] (-) TimerEvent: {}
+[27.886178] (package_master_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/lib/libpackage_master_interfaces__rosidl_typesupport_cpp.so" to ""\n'}
+[27.886353] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/environment/pythonpath.sh\n'}
+[27.886680] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/environment/pythonpath.dsv\n'}
+[27.887148] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces-0.0.0-py3.10.egg-info\n'}
+[27.887777] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[27.888337] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[27.888920] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[27.889291] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[27.889816] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces\n'}
+[27.890145] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces/msg\n'}
+[27.890486] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces/msg/_num.py\n'}
+[27.890826] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces/msg/_sequence_elments_s.c\n'}
+[27.891120] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces/msg/_num_s.c\n'}
+[27.891420] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces/msg/_sequence_elments.py\n'}
+[27.891911] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces/msg/__init__.py\n'}
+[27.892323] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces/package_master_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[27.892712] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces/_package_master_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[27.893193] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces/_package_master_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[27.893579] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces/package_master_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[27.894060] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces/srv\n'}
+[27.894472] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces/srv/_add_three_ints_s.c\n'}
+[27.895069] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces/srv/_send_positions_s.c\n'}
+[27.895257] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces/srv/_send_positions.py\n'}
+[27.895600] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces/srv/_robot_positions.py\n'}
+[27.895964] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces/srv/__init__.py\n'}
+[27.896487] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces/srv/_robot_positions_s.c\n'}
+[27.896729] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces/srv/_add_three_ints.py\n'}
+[27.897909] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces/libpackage_master_interfaces__rosidl_generator_py.so\n'}
+[27.898202] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces/package_master_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[27.898323] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces/_package_master_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[27.898406] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces/__init__.py\n'}
+[27.986096] (-) TimerEvent: {}
+[28.005136] (package_master_interfaces) StdoutLine: {'line': b"Listing '/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces'...\n"}
+[28.005371] (package_master_interfaces) StdoutLine: {'line': b"Compiling '/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces/__init__.py'...\n"}
+[28.005478] (package_master_interfaces) StdoutLine: {'line': b"Listing '/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces/msg'...\n"}
+[28.005599] (package_master_interfaces) StdoutLine: {'line': b"Compiling '/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces/msg/__init__.py'...\n"}
+[28.005922] (package_master_interfaces) StdoutLine: {'line': b"Compiling '/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces/msg/_num.py'...\n"}
+[28.006061] (package_master_interfaces) StdoutLine: {'line': b"Compiling '/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces/msg/_sequence_elments.py'...\n"}
+[28.006190] (package_master_interfaces) StdoutLine: {'line': b"Listing '/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces/srv'...\n"}
+[28.006319] (package_master_interfaces) StdoutLine: {'line': b"Compiling '/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces/srv/__init__.py'...\n"}
+[28.006446] (package_master_interfaces) StdoutLine: {'line': b"Compiling '/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces/srv/_add_three_ints.py'...\n"}
+[28.006708] (package_master_interfaces) StdoutLine: {'line': b"Compiling '/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces/srv/_robot_positions.py'...\n"}
+[28.006979] (package_master_interfaces) StdoutLine: {'line': b"Compiling '/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces/srv/_send_positions.py'...\n"}
+[28.015782] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces/package_master_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[28.021644] (package_master_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces/package_master_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[28.022080] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces/package_master_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[28.022361] (package_master_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces/package_master_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[28.022668] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces/package_master_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[28.023218] (package_master_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/local/lib/python3.10/dist-packages/package_master_interfaces/package_master_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[28.023699] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/lib/libpackage_master_interfaces__rosidl_generator_py.so\n'}
+[28.024037] (package_master_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/lib/libpackage_master_interfaces__rosidl_generator_py.so" to ""\n'}
+[28.024369] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/msg/Num.idl\n'}
+[28.024724] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/msg/SequenceElments.idl\n'}
+[28.029795] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/srv/AddThreeInts.idl\n'}
+[28.030105] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/srv/RobotPositions.idl\n'}
+[28.030354] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/srv/SendPositions.idl\n'}
+[28.030744] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/msg/Num.msg\n'}
+[28.031209] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/msg/SequenceElments.msg\n'}
+[28.031502] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/srv/AddThreeInts.srv\n'}
+[28.032033] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/srv/AddThreeInts_Request.msg\n'}
+[28.032397] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/srv/AddThreeInts_Response.msg\n'}
+[28.032913] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/srv/RobotPositions.srv\n'}
+[28.033342] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/srv/RobotPositions_Request.msg\n'}
+[28.033876] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/srv/RobotPositions_Response.msg\n'}
+[28.034274] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/srv/SendPositions.srv\n'}
+[28.034584] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/srv/SendPositions_Request.msg\n'}
+[28.034989] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/srv/SendPositions_Response.msg\n'}
+[28.035400] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/ament_index/resource_index/package_run_dependencies/package_master_interfaces\n'}
+[28.035884] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/ament_index/resource_index/parent_prefix_path/package_master_interfaces\n'}
+[28.036143] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/environment/ament_prefix_path.sh\n'}
+[28.036381] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/environment/ament_prefix_path.dsv\n'}
+[28.036700] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/environment/path.sh\n'}
+[28.036967] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/environment/path.dsv\n'}
+[28.037205] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/local_setup.bash\n'}
+[28.037779] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/local_setup.sh\n'}
+[28.037980] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/local_setup.zsh\n'}
+[28.038218] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/local_setup.dsv\n'}
+[28.038456] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/package.dsv\n'}
+[28.038941] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/ament_index/resource_index/packages/package_master_interfaces\n'}
+[28.039193] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/cmake/export_package_master_interfaces__rosidl_generator_cExport.cmake\n'}
+[28.039445] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/cmake/export_package_master_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[28.040001] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/cmake/export_package_master_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[28.040249] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/cmake/export_package_master_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[28.040482] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/cmake/package_master_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[28.041105] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/cmake/package_master_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[28.041353] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/cmake/package_master_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[28.041822] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/cmake/package_master_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[28.042195] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/cmake/export_package_master_interfaces__rosidl_generator_cppExport.cmake\n'}
+[28.042364] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/cmake/export_package_master_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[28.042942] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/cmake/export_package_master_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[28.043344] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/cmake/package_master_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[28.043736] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/cmake/package_master_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[28.044315] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/cmake/package_master_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[28.044813] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/cmake/package_master_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[28.045218] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/cmake/export_package_master_interfaces__rosidl_generator_pyExport.cmake\n'}
+[28.045522] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/cmake/export_package_master_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[28.046104] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[28.046700] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[28.047337] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[28.047652] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[28.049242] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[28.050102] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[28.050945] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[28.051330] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/cmake/package_master_interfacesConfig.cmake\n'}
+[28.051848] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/cmake/package_master_interfacesConfig-version.cmake\n'}
+[28.052059] (package_master_interfaces) StdoutLine: {'line': b'-- Installing: /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master_interfaces/share/package_master_interfaces/package.xml\n'}
+[28.059064] (package_master_interfaces) CommandEnded: {'returncode': 0}
+[28.089016] (-) TimerEvent: {}
+[28.104048] (package_master_interfaces) JobEnded: {'identifier': 'package_master_interfaces', 'rc': 0}
+[28.106208] (-) EventReactorShutdown: {}
