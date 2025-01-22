@@ -3,19 +3,82 @@ from rclpy.node import Node
 from example_interfaces.srv import SetBool
 from package_master_interfaces.srv import RobotPositions, SendPositions
 
+import numpy as np
+import sys
+import os
 
+
+# if the following imports don't work, make sure, ~/ProRob/crazyflie-lib-python exists,
+# navigate to the folder in the terminal and run "pip install .". This will install 
+# the crazyflie lib as a package which means, that it is no longer necessary
+# to modify the sys.path manually in a program.
+import cflib.crtp
+from cflib.crazyflie.swarm import CachedCfFactory
+from cflib.crazyflie.swarm import Swarm
+from cflib.crazyflie.log import LogConfig
+
+uris = [
+    'radio://0/80/2M/8',
+    'radio://0/80/2M/2',
+    #'radio://0/80/2M/3'
+]
 
 class SendPosService(Node):
-    def __init__(self):
+    def __init__(self, swarm:Swarm):
         super().__init__('send_pos_service')
         self.service = self.create_service(RobotPositions, 'get_robot_positions', self.handle_request)
         self.destroy_after_response = False
+        
+        swarm.parallel_safe(self.start_states_log)
+
+    def start_states_log(self, scf):
+        log_conf = LogConfig(name="pos", period_in_ms=100)
+        log_conf.add_variable("stateEstimate.x", "float")
+        log_conf.add_variable("stateEstimate.y", "float")
+        log_conf.add_variable("stateEstimate.z", "float")
+        
+        uri = scf.cf.link_uri
+        scf.cf.log.add_config(log_conf)
+        log_conf.data_received_cb.add_callback(lambda timestamp, data, logconf: self.log_callback(uri, timestamp, data, logconf))
+        log_conf.start()
+
+    def log_callback(self, uri, timestamp, data, logconf):
+        x = data['stateEstimate.x']
+        y = data['stateEstimate.y']
+        z = data['stateEstimate.z']
+        with open("cf_log.txt", "a") as f:
+            f.write(f"{timestamp} {uri} {x} {y} {z}\n")
+            f.close()
 
     def get_position(self, request):  #a changer (récuperer les positions reelles)
+        """gets the positions of all drones by reading the cf_log.txt file.
+        Attention: if swarm.parallel_safe(start_states_log) has not been called before,
+        no positions are written to the cf_log.txt. The positions that are read by this function
+        correspond in that case to the ones that were written during the last run and are
+        therefore meaningless."""
+
+        file_path = os.path.expanduser("~/ProRob/cf_log.txt")
+        data = np.genfromtxt(file_path, dtype=None, encoding=None)
+        
+        # get the positions from the log file
+        #r = np.zeros(shape=(len(uris), 2))
+        r = np.zeros(shape=(3, 3))
+
+        for i_uri in range(len(uris)):
+            found = False
+            i_data = -1
+            while not found:
+                if data[i_data][1] == uris[i_uri]:
+                    found = True
+                    r[i_uri] = np.array([data[i_data][2], data[i_data][3], data[i_data][4]])
+                i_data -= 1   
+        print(r)
+
+        # construct dictionary
         robot_position_map = {
-            "drone1": (1.0, 2.0, 3.0),
-            "drone2": (4.0, 5.0, 6.0),
-            "drone3": (7.0, 8.0, 9.0)
+            "drone1": r[0],
+            "drone2": r[1],
+            "drone3": r[2]
         }
         pos_dict = {
             name: robot_position_map.get(name, (0.0, 0.0, 0.0))
@@ -77,37 +140,42 @@ class GetPosService(Node):
 def main(args=None):
     rclpy.init(args=args)
 
-    # Lancer SendPosService
-    send_pos_service = SendPosService()
-    while rclpy.ok():
-        rclpy.spin_once(send_pos_service)
-        print(send_pos_service)
-        if send_pos_service.destroy_after_response:
-            send_pos_service.destroy_node()
-            break
-    print("stage 1 done")
+    cflib.crtp.init_drivers()
+    factory = CachedCfFactory(rw_cache='./cache')
 
-    #Lancer IsReadyService après SendPosService
-    node = TakeOffService()
-    while rclpy.ok():
-        rclpy.spin_once(node)
-        print(node)
-        if node.destroy_after_response:
-            node.destroy_node()
-            break
-    print("stage 2 done")
+    with Swarm(uris, factory) as swarm:         # for this line to work, a crazyradio dongle has to be attached to the computer
+        swarm.reset_estimators()
 
-    get_pos_service = GetPosService()
-    while rclpy.ok():
-        rclpy.spin_once(get_pos_service)
-        print(get_pos_service)
-        if get_pos_service.destroy_after_response:
-            get_pos_service.destroy_node()
-            
-            break
-    print("stage 3 done")
+        # Lancer SendPosService
+        send_pos_service = SendPosService(swarm)
+        while rclpy.ok():
+            rclpy.spin_once(send_pos_service)
+            if send_pos_service.destroy_after_response:
+                send_pos_service.destroy_node()
+                break
+        print("stage 1 done")
 
-    rclpy.shutdown()
+        #Lancer IsReadyService après SendPosService
+        node = TakeOffService()
+        while rclpy.ok():
+            rclpy.spin_once(node)
+            print(node)
+            if node.destroy_after_response:
+                node.destroy_node()
+                break
+        print("stage 2 done")
+
+        get_pos_service = GetPosService()
+        while rclpy.ok():
+            rclpy.spin_once(get_pos_service)
+            print(get_pos_service)
+            if get_pos_service.destroy_after_response:
+                get_pos_service.destroy_node()
+                
+                break
+        print("stage 3 done")
+
+        rclpy.shutdown()
 
 if __name__ == '__main__':
     main()

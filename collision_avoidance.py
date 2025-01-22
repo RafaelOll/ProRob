@@ -3,11 +3,11 @@ import sys
 import os
 import numpy as np
 
-# Add crazyflie-lib-python to the system path
-sys.path.append(os.path.abspath("crazyflie-lib-python"))
+
 
 # Import your modules from the library
-
+# (make sure to run "pip install ." in the crazyflie-lib-python directory
+# if the imports don't work.)
 import cflib.crtp
 from cflib.crazyflie.swarm import CachedCfFactory
 from cflib.crazyflie.swarm import Swarm
@@ -92,7 +92,6 @@ uris = [
     'radio://0/80/2M/8',
     'radio://0/80/2M/2',
     #'radio://0/80/2M/3'
-    # Add more URIs if you want more copters in the swarm
 ]
 
 

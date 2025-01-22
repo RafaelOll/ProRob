@@ -1,0 +1,63 @@
+[1.008s] Invoking command in '/home/fabian/ProRob/ProRob/src/package_master': PYTHONPATH=/home/fabian/ProRob/ProRob/build/package_master/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/fabian/ProRob/ProRob/install/package_master/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/package_master build --build-base /home/fabian/ProRob/ProRob/build/package_master/build install --record /home/fabian/ProRob/ProRob/build/package_master/install.log --single-version-externally-managed install_data
+[1.265s] running egg_info
+[1.265s] creating ../../build/package_master/package_master.egg-info
+[1.270s] writing ../../build/package_master/package_master.egg-info/PKG-INFO
+[1.270s] writing dependency_links to ../../build/package_master/package_master.egg-info/dependency_links.txt
+[1.270s] writing entry points to ../../build/package_master/package_master.egg-info/entry_points.txt
+[1.270s] writing requirements to ../../build/package_master/package_master.egg-info/requires.txt
+[1.270s] writing top-level names to ../../build/package_master/package_master.egg-info/top_level.txt
+[1.270s] writing manifest file '../../build/package_master/package_master.egg-info/SOURCES.txt'
+[1.272s] reading manifest file '../../build/package_master/package_master.egg-info/SOURCES.txt'
+[1.272s] writing manifest file '../../build/package_master/package_master.egg-info/SOURCES.txt'
+[1.272s] running build
+[1.272s] running build_py
+[1.273s] creating /home/fabian/ProRob/ProRob/build/package_master/build
+[1.273s] creating /home/fabian/ProRob/ProRob/build/package_master/build/lib
+[1.273s] creating /home/fabian/ProRob/ProRob/build/package_master/build/lib/package_master
+[1.273s] copying package_master/tb_node.py -> /home/fabian/ProRob/ProRob/build/package_master/build/lib/package_master
+[1.273s] copying package_master/__init__.py -> /home/fabian/ProRob/ProRob/build/package_master/build/lib/package_master
+[1.273s] copying package_master/drone_node.py -> /home/fabian/ProRob/ProRob/build/package_master/build/lib/package_master
+[1.273s] copying package_master/service_member_function.py -> /home/fabian/ProRob/ProRob/build/package_master/build/lib/package_master
+[1.274s] copying package_master/master_node_tb.py -> /home/fabian/ProRob/ProRob/build/package_master/build/lib/package_master
+[1.274s] copying package_master/master_node.py -> /home/fabian/ProRob/ProRob/build/package_master/build/lib/package_master
+[1.274s] copying package_master/master_node_drone.py -> /home/fabian/ProRob/ProRob/build/package_master/build/lib/package_master
+[1.274s] copying package_master/client_member_function.py -> /home/fabian/ProRob/ProRob/build/package_master/build/lib/package_master
+[1.274s] copying package_master/service_pos.py -> /home/fabian/ProRob/ProRob/build/package_master/build/lib/package_master
+[1.274s] running install
+[1.274s] running install_lib
+[1.274s] creating /home/fabian/ProRob/ProRob/install/package_master/lib/python3.10/site-packages/package_master
+[1.274s] copying /home/fabian/ProRob/ProRob/build/package_master/build/lib/package_master/tb_node.py -> /home/fabian/ProRob/ProRob/install/package_master/lib/python3.10/site-packages/package_master
+[1.275s] copying /home/fabian/ProRob/ProRob/build/package_master/build/lib/package_master/__init__.py -> /home/fabian/ProRob/ProRob/install/package_master/lib/python3.10/site-packages/package_master
+[1.275s] copying /home/fabian/ProRob/ProRob/build/package_master/build/lib/package_master/drone_node.py -> /home/fabian/ProRob/ProRob/install/package_master/lib/python3.10/site-packages/package_master
+[1.275s] copying /home/fabian/ProRob/ProRob/build/package_master/build/lib/package_master/service_member_function.py -> /home/fabian/ProRob/ProRob/install/package_master/lib/python3.10/site-packages/package_master
+[1.275s] copying /home/fabian/ProRob/ProRob/build/package_master/build/lib/package_master/master_node_tb.py -> /home/fabian/ProRob/ProRob/install/package_master/lib/python3.10/site-packages/package_master
+[1.275s] copying /home/fabian/ProRob/ProRob/build/package_master/build/lib/package_master/master_node.py -> /home/fabian/ProRob/ProRob/install/package_master/lib/python3.10/site-packages/package_master
+[1.275s] copying /home/fabian/ProRob/ProRob/build/package_master/build/lib/package_master/master_node_drone.py -> /home/fabian/ProRob/ProRob/install/package_master/lib/python3.10/site-packages/package_master
+[1.275s] copying /home/fabian/ProRob/ProRob/build/package_master/build/lib/package_master/client_member_function.py -> /home/fabian/ProRob/ProRob/install/package_master/lib/python3.10/site-packages/package_master
+[1.275s] copying /home/fabian/ProRob/ProRob/build/package_master/build/lib/package_master/service_pos.py -> /home/fabian/ProRob/ProRob/install/package_master/lib/python3.10/site-packages/package_master
+[1.276s] byte-compiling /home/fabian/ProRob/ProRob/install/package_master/lib/python3.10/site-packages/package_master/tb_node.py to tb_node.cpython-310.pyc
+[1.276s] byte-compiling /home/fabian/ProRob/ProRob/install/package_master/lib/python3.10/site-packages/package_master/__init__.py to __init__.cpython-310.pyc
+[1.277s] byte-compiling /home/fabian/ProRob/ProRob/install/package_master/lib/python3.10/site-packages/package_master/drone_node.py to drone_node.cpython-310.pyc
+[1.277s] byte-compiling /home/fabian/ProRob/ProRob/install/package_master/lib/python3.10/site-packages/package_master/service_member_function.py to service_member_function.cpython-310.pyc
+[1.278s] byte-compiling /home/fabian/ProRob/ProRob/install/package_master/lib/python3.10/site-packages/package_master/master_node_tb.py to master_node_tb.cpython-310.pyc
+[1.278s] byte-compiling /home/fabian/ProRob/ProRob/install/package_master/lib/python3.10/site-packages/package_master/master_node.py to master_node.cpython-310.pyc
+[1.279s] byte-compiling /home/fabian/ProRob/ProRob/install/package_master/lib/python3.10/site-packages/package_master/master_node_drone.py to master_node_drone.cpython-310.pyc
+[1.280s] byte-compiling /home/fabian/ProRob/ProRob/install/package_master/lib/python3.10/site-packages/package_master/client_member_function.py to client_member_function.cpython-310.pyc
+[1.280s] byte-compiling /home/fabian/ProRob/ProRob/install/package_master/lib/python3.10/site-packages/package_master/service_pos.py to service_pos.cpython-310.pyc
+[1.280s] running install_data
+[1.280s] creating /home/fabian/ProRob/ProRob/install/package_master/share/ament_index
+[1.281s] creating /home/fabian/ProRob/ProRob/install/package_master/share/ament_index/resource_index
+[1.281s] creating /home/fabian/ProRob/ProRob/install/package_master/share/ament_index/resource_index/packages
+[1.281s] copying resource/package_master -> /home/fabian/ProRob/ProRob/install/package_master/share/ament_index/resource_index/packages
+[1.281s] copying package.xml -> /home/fabian/ProRob/ProRob/install/package_master/share/package_master
+[1.281s] running install_egg_info
+[1.283s] Copying ../../build/package_master/package_master.egg-info to /home/fabian/ProRob/ProRob/install/package_master/lib/python3.10/site-packages/package_master-0.0.0-py3.10.egg-info
+[1.283s] running install_scripts
+[1.301s] Installing client script to /home/fabian/ProRob/ProRob/install/package_master/lib/package_master
+[1.301s] Installing client_drone script to /home/fabian/ProRob/ProRob/install/package_master/lib/package_master
+[1.301s] Installing client_tb script to /home/fabian/ProRob/ProRob/install/package_master/lib/package_master
+[1.301s] Installing service_drone script to /home/fabian/ProRob/ProRob/install/package_master/lib/package_master
+[1.301s] Installing service_tb script to /home/fabian/ProRob/ProRob/install/package_master/lib/package_master
+[1.301s] Installing service_test script to /home/fabian/ProRob/ProRob/install/package_master/lib/package_master
+[1.302s] writing list of installed files to '/home/fabian/ProRob/ProRob/build/package_master/install.log'
+[1.352s] Invoked command in '/home/fabian/ProRob/ProRob/src/package_master' returned '0': PYTHONPATH=/home/fabian/ProRob/ProRob/build/package_master/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/fabian/ProRob/ProRob/install/package_master/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/package_master build --build-base /home/fabian/ProRob/ProRob/build/package_master/build install --record /home/fabian/ProRob/ProRob/build/package_master/install.log --single-version-externally-managed install_data
