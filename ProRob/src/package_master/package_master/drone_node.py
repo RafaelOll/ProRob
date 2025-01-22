@@ -4,6 +4,7 @@ from example_interfaces.srv import SetBool
 from package_master_interfaces.srv import RobotPositions, SendPositions
 
 import numpy as np
+import time
 import sys
 import os
 
@@ -22,6 +23,8 @@ uris = [
     'radio://0/80/2M/2',
     #'radio://0/80/2M/3'
 ]
+
+cf_log_path = os.path.expanduser("~/ProRob/cf_log.txt")
 
 class SendPosService(Node):
     def __init__(self, swarm:Swarm):
@@ -46,7 +49,7 @@ class SendPosService(Node):
         x = data['stateEstimate.x']
         y = data['stateEstimate.y']
         z = data['stateEstimate.z']
-        with open("cf_log.txt", "a") as f:
+        with open(cf_log_path, "a") as f:
             f.write(f"{timestamp} {uri} {x} {y} {z}\n")
             f.close()
 
@@ -57,8 +60,7 @@ class SendPosService(Node):
         correspond in that case to the ones that were written during the last run and are
         therefore meaningless."""
 
-        file_path = os.path.expanduser("~/ProRob/cf_log.txt")
-        data = np.genfromtxt(file_path, dtype=None, encoding=None)
+        data = np.genfromtxt(cf_log_path, dtype=None, encoding=None)
         
         # get the positions from the log file
         #r = np.zeros(shape=(len(uris), 2))
@@ -101,13 +103,20 @@ class SendPosService(Node):
 
 
 class TakeOffService(Node):
-    def __init__(self):
+    def __init__(self, swarm:Swarm):
         super().__init__('take_off_service')
         self.service = self.create_service(SetBool, 'check_ready', self.handle_request)
         self.destroy_after_response = False
+        self.swarm = swarm
 
     def is_ready(self):   # to change, make the drone take off and send true when the tbs can move
+        self.swarm.parallel_safe(self.take_off)
         return True
+
+    def take_off(self, scf):
+        commander= scf.cf.high_level_commander
+        commander.takeoff(1.0, 2.0)
+        time.sleep(3)
 
     def handle_request(self, request, response):
         self.get_logger().info('Incoming request')
@@ -151,12 +160,12 @@ def main(args=None):
         while rclpy.ok():
             rclpy.spin_once(send_pos_service)
             if send_pos_service.destroy_after_response:
-                send_pos_service.destroy_node()
+                send_pos_service.destroy_node()             # possible source of problem: When node is destroyed, does the states_log continue or not -> verify once a crazyflie_dongle is available
                 break
         print("stage 1 done")
 
         #Lancer IsReadyService après SendPosService
-        node = TakeOffService()
+        node = TakeOffService(swarm)
         while rclpy.ok():
             rclpy.spin_once(node)
             print(node)
