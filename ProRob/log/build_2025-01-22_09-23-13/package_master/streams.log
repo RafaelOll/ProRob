@@ -1,0 +1,35 @@
+[3.437s] Invoking command in '/home/rouillon/Documents/ProDroneTB/ProRob/src/package_master': PYTHONPATH=/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/package_master build --build-base /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build install --record /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/install.log --single-version-externally-managed install_data
+[4.343s] running egg_info
+[4.345s] writing ../../build/package_master/package_master.egg-info/PKG-INFO
+[4.346s] writing dependency_links to ../../build/package_master/package_master.egg-info/dependency_links.txt
+[4.347s] writing entry points to ../../build/package_master/package_master.egg-info/entry_points.txt
+[4.347s] writing requirements to ../../build/package_master/package_master.egg-info/requires.txt
+[4.348s] writing top-level names to ../../build/package_master/package_master.egg-info/top_level.txt
+[4.353s] reading manifest file '../../build/package_master/package_master.egg-info/SOURCES.txt'
+[4.357s] writing manifest file '../../build/package_master/package_master.egg-info/SOURCES.txt'
+[4.358s] running build
+[4.358s] running build_py
+[4.359s] copying package_master/drone_node.py -> /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master
+[4.360s] copying package_master/master_node_drone.py -> /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master
+[4.360s] copying package_master/master_node.py -> /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master
+[4.361s] running install
+[4.362s] running install_lib
+[4.365s] copying /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master/drone_node.py -> /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master
+[4.366s] copying /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master/master_node_drone.py -> /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master
+[4.366s] copying /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build/lib/package_master/master_node.py -> /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master
+[4.368s] byte-compiling /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master/drone_node.py to drone_node.cpython-310.pyc
+[4.371s] byte-compiling /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master/master_node_drone.py to master_node_drone.cpython-310.pyc
+[4.376s] byte-compiling /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master/master_node.py to master_node.cpython-310.pyc
+[4.380s] running install_data
+[4.380s] running install_egg_info
+[4.391s] removing '/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master-0.0.0-py3.10.egg-info' (and everything under it)
+[4.392s] Copying ../../build/package_master/package_master.egg-info to /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages/package_master-0.0.0-py3.10.egg-info
+[4.392s] running install_scripts
+[4.462s] Installing client script to /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/package_master
+[4.462s] Installing client_drone script to /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/package_master
+[4.463s] Installing client_tb script to /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/package_master
+[4.463s] Installing service_drone script to /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/package_master
+[4.464s] Installing service_tb script to /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/package_master
+[4.465s] Installing service_test script to /home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/package_master
+[4.466s] writing list of installed files to '/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/install.log'
+[4.533s] Invoked command in '/home/rouillon/Documents/ProDroneTB/ProRob/src/package_master' returned '0': PYTHONPATH=/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rouillon/Documents/ProDroneTB/ProRob/install/package_master/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/package_master build --build-base /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/build install --record /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master/install.log --single-version-externally-managed install_data

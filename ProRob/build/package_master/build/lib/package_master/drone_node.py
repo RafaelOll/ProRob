@@ -10,7 +10,6 @@ class SendPosService(Node):
         super().__init__('send_pos_service')
         self.service = self.create_service(RobotPositions, 'get_robot_positions', self.handle_request)
         self.destroy_after_response = False
-        print("init")
 
     def get_position(self, request):  #a changer (récuperer les positions reelles)
         robot_position_map = {
@@ -43,9 +42,8 @@ class TakeOffService(Node):
         super().__init__('take_off_service')
         self.service = self.create_service(SetBool, 'check_ready', self.handle_request)
         self.destroy_after_response = False
-        print("init")
 
-    def is_ready(self):   # a changer, faire décoller les drones
+    def is_ready(self):   # to change, make the drone take off and send true when the tbs can move
         return True
 
     def handle_request(self, request, response):
@@ -65,9 +63,9 @@ class GetPosService(Node):
         self.destroy_after_response = False
 
     def send_positions_callback(self, request, response):
-        response.ack = True
-        global position_dict
-        position_dict = {
+        response.ack = True # to change send true not when you received the coordinates but all the drones land.
+        global final_position_dict
+        final_position_dict = {
                 name: (x, y, z)
                 for name, x, y, z in zip(request.robot_names, request.positions_x, request.positions_y, request.positions_z)
             }
@@ -82,7 +80,6 @@ def main(args=None):
     # Lancer SendPosService
     send_pos_service = SendPosService()
     while rclpy.ok():
-        print("1")
         rclpy.spin_once(send_pos_service)
         print(send_pos_service)
         if send_pos_service.destroy_after_response:
@@ -93,7 +90,6 @@ def main(args=None):
     #Lancer IsReadyService après SendPosService
     node = TakeOffService()
     while rclpy.ok():
-        print("2")
         rclpy.spin_once(node)
         print(node)
         if node.destroy_after_response:
@@ -103,7 +99,6 @@ def main(args=None):
 
     get_pos_service = GetPosService()
     while rclpy.ok():
-        print("3")
         rclpy.spin_once(get_pos_service)
         print(get_pos_service)
         if get_pos_service.destroy_after_response:
@@ -111,7 +106,6 @@ def main(args=None):
             
             break
     print("stage 3 done")
-    print(position_dict)
 
     rclpy.shutdown()
 

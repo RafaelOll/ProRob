@@ -1,0 +1,6 @@
+[0.685s] Invoking command in '/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master_interfaces -- -j4 -l4
+[0.766s] [0mCMake Error: The current CMakeCache.txt directory /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master_interfaces/CMakeCache.txt is different than the directory /home/fabian/ProRob/ProRob/build/package_master_interfaces where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt[0m
+[0.821s] [0mCMake Error: The source directory "/home/fabian/ProRob/ProRob/src/package_master_interfaces" does not exist.
+[0.821s] Specify --help for usage, or press the help button on the CMake GUI.[0m
+[0.829s] gmake: *** [Makefile:1611: cmake_check_build_system] Error 1
+[1.474s] Invoked command in '/home/rouillon/Documents/ProDroneTB/ProRob/build/package_master_interfaces' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master_interfaces -- -j4 -l4

@@ -2,10 +2,9 @@ import rclpy
 from rclpy.node import Node
 from example_interfaces.srv import Trigger, SetBool
 from geometry_msgs.msg import Point
-from example_interfaces.srv import AddTwoInts, SetBool  # Adapter aux services requis
+from example_interfaces.srv import SetBool
 from std_msgs.msg import Bool
 from package_master_interfaces.srv import SendPositions, RobotPositions
-from package_master_interfaces.msg import Num
 import time
 
 
@@ -163,16 +162,6 @@ def main(args=None):
 
     first_client.destroy_node()
     second_client.destroy_node()
-
-    # second_client = IsReadyClient()
-    # second_client.send_request()
-    # while rclpy.ok():
-    #     rclpy.spin_once(second_client)
-    #     second_client.check_response()
-    #     if second_client.response:
-    #         print(f"Réponse reçue : {second_client.response.success}")
-    #         break
-    # second_client.destroy_node()
 
 
     rclpy.shutdown()
