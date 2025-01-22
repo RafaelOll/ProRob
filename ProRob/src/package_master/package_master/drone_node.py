@@ -4,11 +4,13 @@ from example_interfaces.srv import SetBool
 from package_master_interfaces.srv import RobotPositions, SendPositions
 
 import numpy as np
-import time
-import sys
 import os
 
-from collision_avoidance import construct_sequences, run_sequence, land
+from collision_avoidance import (construct_sequences, 
+                                 run_sequence, 
+                                 land, 
+                                 start_states_log,
+                                 take_off)
 
 # if the following imports don't work, make sure, ~/ProRob/crazyflie-lib-python exists,
 # navigate to the folder in the terminal and run "pip install .". This will install 
@@ -17,7 +19,6 @@ from collision_avoidance import construct_sequences, run_sequence, land
 import cflib.crtp
 from cflib.crazyflie.swarm import CachedCfFactory
 from cflib.crazyflie.swarm import Swarm
-from cflib.crazyflie.log import LogConfig
 
 uris = [
     'radio://0/80/2M/8',
@@ -71,26 +72,8 @@ class SendPosService(Node):
         self.destroy_after_response = False
         self.trajectory_calculator = trajectory_calculator
 
-        swarm.parallel_safe(self.start_states_log)
+        swarm.parallel_safe(start_states_log)
 
-    def start_states_log(self, scf):
-        log_conf = LogConfig(name="pos", period_in_ms=100)
-        log_conf.add_variable("stateEstimate.x", "float")
-        log_conf.add_variable("stateEstimate.y", "float")
-        log_conf.add_variable("stateEstimate.z", "float")
-        
-        uri = scf.cf.link_uri
-        scf.cf.log.add_config(log_conf)
-        log_conf.data_received_cb.add_callback(lambda timestamp, data, logconf: self.log_callback(uri, timestamp, data, logconf))
-        log_conf.start()
-
-    def log_callback(self, uri, timestamp, data, logconf):
-        x = data['stateEstimate.x']
-        y = data['stateEstimate.y']
-        z = data['stateEstimate.z']
-        with open(cf_log_path, "a") as f:
-            f.write(f"{timestamp} {uri} {x} {y} {z}\n")
-            f.close()
 
     def get_position(self, request):  #a changer (récuperer les positions reelles)
         """gets the positions of all drones by reading the cf_log.txt file.
@@ -150,13 +133,8 @@ class TakeOffService(Node):
         self.swarm = swarm
 
     def is_ready(self):   # to change, make the drone take off and send true when the tbs can move
-        self.swarm.parallel_safe(self.take_off)
+        self.swarm.parallel_safe(take_off)
         return True
-
-    def take_off(self, scf):
-        commander= scf.cf.high_level_commander
-        commander.takeoff(1.0, 2.0)
-        time.sleep(3)
 
     def handle_request(self, request, response):
         self.get_logger().info('Incoming request')
