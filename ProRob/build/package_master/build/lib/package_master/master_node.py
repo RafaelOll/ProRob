@@ -15,11 +15,11 @@ class GetPosClient(Node):
         self.client = self.create_client(RobotPositions, 'get_robot_positions')
         self.request = RobotPositions.Request()
 
-    def send_request(self):
+    def send_request(self, robot_names):
         while not self.client.wait_for_service(timeout_sec=1.0):
             self.get_logger().info('Service not available, waiting...')
 
-        self.request.robot_names = ["drone1", "drone2", "drone3"]
+        self.request.robot_names = robot_names
         self.future = self.client.call_async(self.request)
         rclpy.spin_until_future_complete(self, self.future)
         response = self.future.result()
@@ -49,10 +49,10 @@ class SendPosClient(Node):
             self.get_logger().info('Service not available, waiting...')
 
         for name, position in pos_dict.items():
-            request.robot_names.append(name)
-            request.positions_x.append(position[0])
-            request.positions_y.append(position[1])
-            request.positions_z.append(position[2])
+            self.request.robot_names.append(name)
+            self.request.positions_x.append(position[0])
+            self.request.positions_y.append(position[1])
+            self.request.positions_z.append(position[2])
         self.future = self.client.call_async(self.request)
 
     def check_response(self):
@@ -67,9 +67,9 @@ class SendPosClient(Node):
 
 
 
-class IsReadyClient(Node):
+class TakeOffClient(Node):
     def __init__(self):
-        super().__init__('is_ready_client')
+        super().__init__('take_off_client')
         self.client = self.create_client(SetBool, 'check_ready')
         self.request = SetBool.Request()
         #self.future = None
@@ -79,7 +79,6 @@ class IsReadyClient(Node):
     def send_request(self):
         while not self.client.wait_for_service(timeout_sec=1.0):
             self.get_logger().info('Service not available, waiting...')
-            
         self.request.data = True
         self.future = self.client.call_async(self.request)
         rclpy.spin_until_future_complete(self, self.future)
@@ -99,64 +98,64 @@ class IsReadyClient(Node):
             self.get_logger().info('No response received yet.')
 
 
-# class StartOrderClient(Node):
-#     def __init__(self):
-#         super().__init__('start_order_client')
-#         self.client = self.create_client(StartMooving, 'start_mooving')
-#         self.request = StartMooving.Request()
-#         self.response = None
-
-#     def send_request(self, condition):
-#         self.request.data = condition
-#         self.future = self.client.call_async(self.request)
-
-#     def check_response(self):
-#         if self.future.done():
-#             try:
-#                 self.response = self.future.result()
-#                 self.get_logger().info(f'Received response from second service: {self.response.success}, message: {self.response.message}')
-#             except Exception as e:
-#                 self.get_logger().error(f'Failed to call second service: {e}')
-
-
 
 def main(args=None):
     rclpy.init(args=args)
 
-    # position_dict = first_client.send_request()
-    # while rclpy.ok():
-    #     rclpy.spin_once(first_client)
-    #     if position_dict:
-    #         print(f"Dictionnaire des positions : {position_dict}")  # Affiche le résultat
-    #         second_client.send_request()
-    #         break
+    drone_names = ["drone1", "drone2", "drone3"]
+    tb_names = ["tb1", "tb2", "tb3"]
 
-    # print("dddddd")
-    # while rclpy.ok():
-    #     rclpy.spin_once(second_client)
-    #     second_client.check_response()
-    #     if second_client.response:
-    #         print(f"Réponse reçue : {second_client.response.success}")
-    #         break
+    first_client = GetPosClient()
+    second_client = SendPosClient()
+    third_client = TakeOffClient()
+    fourth_client = GetPosClient()
+    fifth_client = SendPosClient()
+    
 
-    # first_client.destroy_node()
-    # second_client.destroy_node()
+    position_dict = first_client.send_request(drone_names)
+    while rclpy.ok():
+        rclpy.spin_once(first_client)
+        if position_dict:
+            print(f"Dictionnaire des positions : {position_dict}")  # Affiche le résultat
+            second_client.send_request(position_dict)
+            break
 
-    second_client = IsReadyClient()
-    print(rclpy.ok())
-    second_client.send_request()
-    print(rclpy.ok())
     while rclpy.ok():
         rclpy.spin_once(second_client)
-        print("cccc")
         second_client.check_response()
-        print("bbbbb")
-        if second_client.response:
-            print("aaaaaaaa")
-            print(f"Réponse reçue : {second_client.response.success}")
+        if second_client.completed:
+            third_client.send_request()
             break
-    second_client.destroy_node()
 
+    while rclpy.ok():
+        rclpy.spin_once(third_client)
+        third_client.check_response()
+        if third_client.response:
+            print(f"Réponse reçue : {third_client.response.success}")
+            final_position_dict = fourth_client.send_request(tb_names)
+            break
+
+    while rclpy.ok():
+        rclpy.spin_once(fourth_client)
+        if final_position_dict:
+            print(f"Dictionnaire des positions : {final_position_dict}")  # Affiche le résultat
+            fifth_client.send_request(final_position_dict)
+            break
+    
+    while rclpy.ok():
+        rclpy.spin_once(fifth_client)
+        fifth_client.check_response()
+        if fifth_client.completed:
+            print("done")
+            break
+
+    first_client.destroy_node()
+    second_client.destroy_node()
+    third_client.destroy_node()
+    fourth_client.destroy_node()
+    fifth_client.destroy_node()
+
+    print("operation done")
 
     rclpy.shutdown()
 
