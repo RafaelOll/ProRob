@@ -2,10 +2,9 @@ import rclpy
 from rclpy.node import Node
 from example_interfaces.srv import Trigger, SetBool
 from geometry_msgs.msg import Point
-from example_interfaces.srv import AddTwoInts, SetBool  # Adapter aux services requis
+from example_interfaces.srv import SetBool
 from std_msgs.msg import Bool
 from package_master_interfaces.srv import SendPositions, RobotPositions
-from package_master_interfaces.msg import Num
 import time
 
 
