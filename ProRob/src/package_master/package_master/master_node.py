@@ -2,10 +2,8 @@ import rclpy
 from rclpy.node import Node
 from example_interfaces.srv import Trigger, SetBool
 from geometry_msgs.msg import Point
-from example_interfaces.srv import AddTwoInts, SetBool  # Adapter aux services requis
-from std_msgs.msg import Bool
-from package_master_interfaces.srv import AddThreeInts, RobotPositions, SendPositions
-from package_master_interfaces.msg import Num
+from std_msgs.msg import Bool, String
+from package_master_interfaces.srv import RobotPositions, SendPositions
 
 
 
@@ -99,6 +97,21 @@ class TakeOffClient(Node):
 
 
 
+class MinimalPublisher(Node):
+
+    def __init__(self):
+        super().__init__('minimal_publisher')
+        self.publisher_ = self.create_publisher(String, 'topic', 10)
+        timer_period = 1  # seconds
+        self.timer = self.create_timer(timer_period, self.timer_callback)
+
+    def timer_callback(self):
+        msg = String()
+        msg.data = 'operation done'
+        self.publisher_.publish(msg)
+
+
+
 def main(args=None):
     rclpy.init(args=args)
 
@@ -110,7 +123,8 @@ def main(args=None):
     third_client = TakeOffClient()
     fourth_client = GetPosClient()
     fifth_client = SendPosClient()
-    
+    sixth_client = MinimalPublisher()
+
 
     position_dict = first_client.send_request(drone_names)
     while rclpy.ok():
@@ -146,7 +160,8 @@ def main(args=None):
         rclpy.spin_once(fifth_client)
         fifth_client.check_response()
         if fifth_client.completed:
-            print("done")
+            print('operation done')
+            rclpy.spin(sixth_client)
             break
 
     first_client.destroy_node()
@@ -154,6 +169,7 @@ def main(args=None):
     third_client.destroy_node()
     fourth_client.destroy_node()
     fifth_client.destroy_node()
+    sixth_client.destroy_node()
 
     print("operation done")
 

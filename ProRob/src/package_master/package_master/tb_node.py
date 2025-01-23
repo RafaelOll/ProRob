@@ -2,6 +2,7 @@ import rclpy
 from rclpy.node import Node
 from example_interfaces.srv import SetBool
 from package_master_interfaces.srv import RobotPositions, SendPositions
+from std_msgs.msg import String
 
 
 
@@ -58,6 +59,22 @@ class SendPosService(Node):
 
 
 
+class MinimalSubscriber(Node):
+
+    def __init__(self):
+        super().__init__('minimal_subscriber')
+        self.subscription = self.create_subscription(
+            String,
+            'topic',
+            self.listener_callback,
+            10)
+        self.subscription  # prevent unused variable warning
+
+    def listener_callback(self, msg):
+        self.get_logger().info('%s' % msg.data)
+
+
+
 def main(args=None):
     rclpy.init(args=args)
 
@@ -80,6 +97,10 @@ def main(args=None):
             send_pos_service.destroy_node()
             break
     print("stage 2 done")
+
+    minimal_subscriber = MinimalSubscriber()
+    rclpy.spin_once(minimal_subscriber)
+    minimal_subscriber.destroy_node()
 
     rclpy.shutdown()
 

@@ -2,8 +2,7 @@ import rclpy
 from rclpy.node import Node
 from example_interfaces.srv import Trigger, SetBool
 from geometry_msgs.msg import Point
-from example_interfaces.srv import SetBool
-from std_msgs.msg import Bool
+from std_msgs.msg import Bool, String
 from package_master_interfaces.srv import SendPositions, RobotPositions
 import time
 
@@ -94,6 +93,22 @@ class TakeOffClient(Node):
             self.get_logger().info(f'Response received: {self.response.success}')
         else:
             self.get_logger().info('No response received yet.')
+
+
+
+class MinimalPublisher(Node):
+
+    def __init__(self):
+        super().__init__('minimal_publisher')
+        self.publisher_ = self.create_publisher(String, 'topic', 10)
+        timer_period = 1  # seconds
+        self.timer = self.create_timer(timer_period, self.timer_callback)
+
+    def timer_callback(self):
+        msg = String()
+        msg.data = 'operation done'
+        self.publisher_.publish(msg)
+
 
 
 # class StartOrderClient(Node):
