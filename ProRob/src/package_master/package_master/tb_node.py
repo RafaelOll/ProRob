@@ -33,11 +33,7 @@ class SendPosService(Node):
     #def make_the_move(self): move the turtlebot the send their final location with get_position
 
     def get_position(self, request):
-        robot_position_map = { #a changer (récuperer les positions reelles)
-            "tb1": (1.0, 2.0, 0.0),
-            "tb2": (4.0, 5.0, 0.0),
-            "tb3": (7.0, 8.0, 0.0)
-        }
+        robot_position_map = request.all_robot_pos
         final_pos_dict = {
             name: robot_position_map.get(name, (0.0, 0.0, 0.0))
             for name in request.robot_names
