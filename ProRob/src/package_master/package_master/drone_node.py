@@ -44,7 +44,7 @@ class TrajectoryCalculator():
 
     def set_final_position(self, final_position_dict):
         for i in range(self.N_drones):
-            self.r_f[i] = final_position_dict[f"tb{i+1}"][:2]
+            self.r_f[i] = final_position_dict[f"tb{i+1}"][:2]       # only the (x, y) positions are needed for the trajectory planning => [:2]
 
     def set_initial_position(self, initial_position_dict):
         for i in range(self.N_drones):
@@ -53,7 +53,7 @@ class TrajectoryCalculator():
     def calculate_trajectories(self):
         """calculates trajectories for three drones such that they avoid collisions
         returns:
-        - sequ_args     dict with the sequences for the drones. 
+        - seq_args      dict with the sequences for the drones. 
                         Can directly be given to a parallel_safe for running a sequence"""
         sequences = construct_sequences(self.r_i, self.r_f, self.T, self.epsilon)
         seq_args = {
@@ -133,8 +133,12 @@ class TakeOffService(Node):
         self.swarm = swarm
 
     def is_ready(self):   # to change, make the drone take off and send true when the tbs can move
-        self.swarm.parallel_safe(take_off)
-        return True
+        try:
+            self.swarm.parallel_safe(take_off)
+            return True
+        except:
+            print("takeoff impossible in is_ready")
+            return False
 
     def handle_request(self, request, response):
         self.get_logger().info('Incoming request')
@@ -156,7 +160,7 @@ class GetPosService(Node):
         self.trajectory_calculator = trajectory_calculator
 
     def send_positions_callback(self, request, response):
-        response.ack = True # to change send true not when you received the coordinates but all the drones land.
+        
         global final_position_dict
         final_position_dict = {
                 name: (x, y, z)
@@ -164,15 +168,22 @@ class GetPosService(Node):
             }
         self.destroy_after_response = True
 
-        # get trajectories 
-        self.trajectory_calculator.set_final_position(final_position_dict)
-        seq_args = self.trajectory_calculator.calculate_trajectories()
+        try:
+            # get trajectories 
+            self.trajectory_calculator.set_final_position(final_position_dict)
+            seq_args = self.trajectory_calculator.calculate_trajectories()
 
-        # follow the trajectories to the destination
-        self.swarm.parallel_safe(run_sequence, args_dict=seq_args)        
+            # follow the trajectories to the destination
+            self.swarm.parallel_safe(run_sequence, args_dict=seq_args)        
 
-        # land
-        self.swarm.parallel_safe(land)
+            # land
+            self.swarm.parallel_safe(land)
+            
+            response.ack = True # to change send true not when you received the coordinates but all the drones land.
+        
+        except:
+            print("Could not get and execute the trajectories in send_positions_callback")
+            response.ack = False
 
         return response
 
