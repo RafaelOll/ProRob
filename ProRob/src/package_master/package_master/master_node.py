@@ -99,17 +99,36 @@ class TakeOffClient(Node):
 
 
 
+class SendOrderClient(Node):
+    def __init__(self):
+        super().__init__('bool_client')
+        self.client = self.create_client(SetBool, 'set_bool')
+
+    def send_request(self):
+        while not self.client.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info('Service not available, waiting...')
+
+        # Create and send the request
+        request = SetBool.Request()
+        request.data = True
+        future = self.client.call_async(request)
+        rclpy.spin_until_future_complete(self, future)
+
+        # Process and log the response
+        if future.result() is not None:
+            self.get_logger().info(f'Response: success={future.result().success}, message="{future.result().message}"')
+        else:
+            self.get_logger().error('Service call failed')
+
+
+
 def main(args=None):
-    rclpy.init(args=args)
-
-    drone_names = ["drone1", "drone2", "drone3"]
-    tb_names = ["tb1", "tb2", "tb3"]
-
-    first_client = GetPosClient()
+first_client = GetPosClient()
     second_client = SendPosClient()
     third_client = TakeOffClient()
-    fourth_client = GetPosClient()
-    fifth_client = SendPosClient()
+    fourth_client = SendOrderClient()
+    fifth_client = GetPosClient()
+    sixth_client = SendPosClient()
     
 
     position_dict = first_client.send_request(drone_names)
@@ -132,22 +151,39 @@ def main(args=None):
         third_client.check_response()
         if third_client.response:
             print(f"Réponse reçue : {third_client.response.success}")
-            final_position_dict = fourth_client.send_request(tb_names)
+            fourth_client.send_request()
+            tb_position_dict = fifth_client.send_request(tb_names)
             break
 
     while rclpy.ok():
         rclpy.spin_once(fourth_client)
-        if final_position_dict:
+        tb_position_dict = fifth_client.send_request(tb_names)
+        break
+
+    while rclpy.ok():
+        rclpy.spin_once(fifth_client)
+        if tb_position_dict:
+            final_position_dict = {}
+            for tb_key, tb_pos in tb_position_dict.items():
+                # Récupérer le drone correspondant à partir du numéro (tb1 -> drone1, etc.)
+                drone_key = f"drone{tb_key[-1]}"  # Extraire le dernier caractère de la clé pour créer la clé du drone
+                if drone_key in position_dict:
+                    drone_pos = position_dict[drone_key]
+                    # Faire la somme des tuples
+                    summed_pos = tuple(a + b for a, b in zip(tb_pos, drone_pos))
+                    final_position_dict[tb_key] = summed_pos
+            print(final_position_dict)
             print(f"Dictionnaire des positions : {final_position_dict}")  # Affiche le résultat
-            fifth_client.send_request(final_position_dict)
+            sixth_client.send_request(final_position_dict)
             break
     
     while rclpy.ok():
-        rclpy.spin_once(fifth_client)
-        fifth_client.check_response()
-        if fifth_client.completed:
+        rclpy.spin_once(sixth_client)
+        sixth_client.check_response()
+        if sixth_client.completed:
             print("done")
             break
+
 
     first_client.destroy_node()
     second_client.destroy_node()
