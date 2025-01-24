@@ -132,12 +132,23 @@ def main(args=None):
         third_client.check_response()
         if third_client.response:
             print(f"Réponse reçue : {third_client.response.success}")
-            final_position_dict = fourth_client.send_request(tb_names)
+            tb_position_dict = fourth_client.send_request(tb_names)
+            
             break
 
     while rclpy.ok():
         rclpy.spin_once(fourth_client)
-        if final_position_dict:
+        if tb_position_dict:
+            final_position_dict = {}
+            for tb_key, tb_pos in tb_position_dict.items():
+                # Récupérer le drone correspondant à partir du numéro (tb1 -> drone1, etc.)
+                drone_key = f"drone{tb_key[-1]}"  # Extraire le dernier caractère de la clé pour créer la clé du drone
+                if drone_key in position_dict:
+                    drone_pos = position_dict[drone_key]
+                    # Faire la somme des tuples
+                    summed_pos = tuple(a + b for a, b in zip(tb_pos, drone_pos))
+                    final_position_dict[tb_key] = summed_pos
+            print(final_position_dict)
             print(f"Dictionnaire des positions : {final_position_dict}")  # Affiche le résultat
             fifth_client.send_request(final_position_dict)
             break

@@ -1,0 +1,4 @@
+[0mCMake Error: The current CMakeCache.txt directory /home/rouillon/Documents/ProDroneTB/ProRob/build/package_master_interfaces/CMakeCache.txt is different than the directory /home/fabian/ProRob/ProRob/build/package_master_interfaces where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt[0m
+[0mCMake Error: The source directory "/home/fabian/ProRob/ProRob/src/package_master_interfaces" does not exist.
+Specify --help for usage, or press the help button on the CMake GUI.[0m
+gmake: *** [Makefile:1611: cmake_check_build_system] Error 1

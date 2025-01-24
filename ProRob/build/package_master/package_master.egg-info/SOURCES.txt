@@ -17,6 +17,7 @@ package_master/master_node_tb.py
 package_master/service_member_function.py
 package_master/service_pos.py
 package_master/tb_node.py
+package_master/tb_node2.py
 resource/package_master
 test/test_copyright.py
 test/test_flake8.py

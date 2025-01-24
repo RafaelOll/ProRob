@@ -34,6 +34,29 @@ class GetPosClient(Node):
 
 
 
+class SendOrderClient(Node):
+    def __init__(self):
+        super().__init__('bool_client')
+        self.client = self.create_client(SetBool, 'set_bool')
+
+    def send_request(self):
+        while not self.client.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info('Service not available, waiting...')
+
+        # Create and send the request
+        request = SetBool.Request()
+        request.data = True
+        future = self.client.call_async(request)
+        rclpy.spin_until_future_complete(self, future)
+
+        # Process and log the response
+        if future.result() is not None:
+            self.get_logger().info(f'Response: success={future.result().success}, message="{future.result().message}"')
+        else:
+            self.get_logger().error('Service call failed')
+
+
+
 class SendPosClient(Node):
     def __init__(self):
         super().__init__('send_pos_client')
@@ -69,7 +92,8 @@ def main(args=None):
     rclpy.init(args=args)
 
     zero_client = SendPosClient()
-    first_client = GetPosClient()
+    first_client = SendOrderClient()
+    second_client = GetPosClient()
 
 
     
@@ -87,17 +111,23 @@ def main(args=None):
         rclpy.spin_once(zero_client)
         zero_client.check_response()
         if zero_client.completed:
-            position_dict = first_client.send_request(["tb1", "tb2", "tb3"])
+            first_client.send_request()
             break
-    
+
     while rclpy.ok():
         rclpy.spin_once(first_client)
+        position_dict = second_client.send_request(["tb1", "tb2", "tb3"])
+        break
+    
+    while rclpy.ok():
+        rclpy.spin_once(second_client)
         if position_dict:
             print(f"Dictionnaire des positions : {position_dict}")  # Affiche le résultat
             break
 
 
     zero_client.destroy_node()
+    second_client.destroy_node()
     first_client.destroy_node()
 
     rclpy.shutdown()

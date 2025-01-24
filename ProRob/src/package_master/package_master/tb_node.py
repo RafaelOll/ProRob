@@ -186,6 +186,31 @@ class GetPosService(Node):
 
 
 
+class StartService(Node):
+    def __init__(self):
+        super().__init__('start_service')
+        self.srv = self.create_service(SetBool, 'set_bool', self.handle_set_bool)
+        self.get_logger().info('SetBool service is ready.')
+        self.destroy_after_response = False
+
+    def handle_set_bool(self, request, response):
+        # Log the received request
+        self.get_logger().info(f'Received request: {request.data}')
+        
+        # Process the request and prepare the response
+        if request.data:
+            response.success = True
+            response.message = "The operation was set to True successfully."
+        else:
+            response.success = True
+            response.message = "The operation was set to False successfully."
+        
+        # Return the response
+        self.destroy_after_response = True
+        return response
+
+
+
 class SendPosService(Node):
     def __init__(self):
         super().__init__('send_pos__service')
@@ -243,8 +268,16 @@ def main(args=None):
     dict_wp[0] = [Vector2(2,0.0)]
     dict_wp[1] = [Vector2(1,-1)]
     dict_wp[2] = [Vector2(2,0)]
-    
-    turtle_controller = TurtleController(dict_wp, robot_count)
+
+    start_service = StartService()
+    while rclpy.ok():
+        rclpy.spin_once(start_service)
+        if start_service.destroy_after_response:
+            start_service.destroy_node()
+            break
+    print("stage 2 done")
+
+    #turtle_controller = TurtleController(dict_wp, robot_count)
 
     while rclpy.ok():
         rclpy.spin_once(turtle_controller)
@@ -261,7 +294,7 @@ def main(args=None):
         if send_pos_service.destroy_after_response:
             send_pos_service.destroy_node()
             break
-    print("stage 2 done")
+    print("stage 3 done")
 
     rclpy.shutdown()
 
