@@ -138,11 +138,11 @@ def main(args=None):
         if second_client.response:
             print(f"Réponse reçue : {second_client.response.success}")
 
-
+            u = 0.6
             robot_position_map = { #a changer (récuperer les positions reelles)
-            "tb1": (1.0, 2.0, 3.0),
-            "tb2": (4.0, 5.0, 6.0),
-            "tb3": (7.0, 8.0, 9.0)
+            "tb1": (u, -u, 0),
+            "tb2": (u, u, 0),
+            "tb3": (0, u, 0)
             }
             position_dict = {
                 name: robot_position_map.get(name, (0.0, 0.0, 0.0))

@@ -1,0 +1,263 @@
+[0.090s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.090s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x75dff046d1b0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x75dff05c27d0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x75dff05c27d0>>, mixin_verb=('build',))
+[0.285s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.285s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.285s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.285s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.285s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.285s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.285s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/fabian/ProRob/ProRob'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(cache) by extensions ['ignore', 'ignore_ament_install']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(cache) by extension 'ignore'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(cache) by extension 'ignore_ament_install'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(cache) by extensions ['colcon_pkg']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(cache) by extension 'colcon_pkg'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(cache) by extensions ['colcon_meta']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(cache) by extension 'colcon_meta'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(cache) by extensions ['ros']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(cache) by extension 'ros'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(cache) by extensions ['cmake', 'python']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(cache) by extension 'cmake'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(cache) by extension 'python'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(cache) by extensions ['python_setup_py']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(cache) by extension 'python_setup_py'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/package_master) by extensions ['ignore', 'ignore_ament_install']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/package_master) by extension 'ignore'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/package_master) by extension 'ignore_ament_install'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/package_master) by extensions ['colcon_pkg']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/package_master) by extension 'colcon_pkg'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/package_master) by extensions ['colcon_meta']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/package_master) by extension 'colcon_meta'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/package_master) by extensions ['ros']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/package_master) by extension 'ros'
+[0.305s] DEBUG:colcon.colcon_core.package_identification:Package 'src/package_master' with type 'ros.ament_python' and name 'package_master'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/package_master_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/package_master_interfaces) by extension 'ignore'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/package_master_interfaces) by extension 'ignore_ament_install'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/package_master_interfaces) by extensions ['colcon_pkg']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/package_master_interfaces) by extension 'colcon_pkg'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/package_master_interfaces) by extensions ['colcon_meta']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/package_master_interfaces) by extension 'colcon_meta'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/package_master_interfaces) by extensions ['ros']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/package_master_interfaces) by extension 'ros'
+[0.306s] DEBUG:colcon.colcon_core.package_identification:Package 'src/package_master_interfaces' with type 'ros.ament_cmake' and name 'package_master_interfaces'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_srvcli) by extensions ['ignore', 'ignore_ament_install']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_srvcli) by extension 'ignore'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_srvcli) by extension 'ignore_ament_install'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_srvcli) by extensions ['colcon_pkg']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_srvcli) by extension 'colcon_pkg'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_srvcli) by extensions ['colcon_meta']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_srvcli) by extension 'colcon_meta'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_srvcli) by extensions ['ros']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_srvcli) by extension 'ros'
+[0.307s] DEBUG:colcon.colcon_core.package_identification:Package 'src/py_srvcli' with type 'ros.ament_python' and name 'py_srvcli'
+[0.307s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.307s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.307s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.307s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.307s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.322s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.322s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.323s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/fabian/ProRob/ProRob/install
+[0.324s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 294 installed packages in /opt/ros/humble
+[0.325s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.353s] Level 5:colcon.colcon_core.verb:set package 'package_master' build argument 'cmake_args' from command line to 'None'
+[0.353s] Level 5:colcon.colcon_core.verb:set package 'package_master' build argument 'cmake_target' from command line to 'None'
+[0.353s] Level 5:colcon.colcon_core.verb:set package 'package_master' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.353s] Level 5:colcon.colcon_core.verb:set package 'package_master' build argument 'cmake_clean_cache' from command line to 'False'
+[0.353s] Level 5:colcon.colcon_core.verb:set package 'package_master' build argument 'cmake_clean_first' from command line to 'False'
+[0.353s] Level 5:colcon.colcon_core.verb:set package 'package_master' build argument 'cmake_force_configure' from command line to 'False'
+[0.353s] Level 5:colcon.colcon_core.verb:set package 'package_master' build argument 'ament_cmake_args' from command line to 'None'
+[0.353s] Level 5:colcon.colcon_core.verb:set package 'package_master' build argument 'catkin_cmake_args' from command line to 'None'
+[0.353s] Level 5:colcon.colcon_core.verb:set package 'package_master' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.354s] DEBUG:colcon.colcon_core.verb:Building package 'package_master' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/fabian/ProRob/ProRob/build/package_master', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/fabian/ProRob/ProRob/install/package_master', 'merge_install': False, 'path': '/home/fabian/ProRob/ProRob/src/package_master', 'symlink_install': False, 'test_result_base': None}
+[0.354s] Level 5:colcon.colcon_core.verb:set package 'package_master_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.354s] Level 5:colcon.colcon_core.verb:set package 'package_master_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.354s] Level 5:colcon.colcon_core.verb:set package 'package_master_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.354s] Level 5:colcon.colcon_core.verb:set package 'package_master_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.354s] Level 5:colcon.colcon_core.verb:set package 'package_master_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.354s] Level 5:colcon.colcon_core.verb:set package 'package_master_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.354s] Level 5:colcon.colcon_core.verb:set package 'package_master_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.354s] Level 5:colcon.colcon_core.verb:set package 'package_master_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.354s] Level 5:colcon.colcon_core.verb:set package 'package_master_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.354s] DEBUG:colcon.colcon_core.verb:Building package 'package_master_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/fabian/ProRob/ProRob/build/package_master_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/fabian/ProRob/ProRob/install/package_master_interfaces', 'merge_install': False, 'path': '/home/fabian/ProRob/ProRob/src/package_master_interfaces', 'symlink_install': False, 'test_result_base': None}
+[0.354s] Level 5:colcon.colcon_core.verb:set package 'py_srvcli' build argument 'cmake_args' from command line to 'None'
+[0.354s] Level 5:colcon.colcon_core.verb:set package 'py_srvcli' build argument 'cmake_target' from command line to 'None'
+[0.354s] Level 5:colcon.colcon_core.verb:set package 'py_srvcli' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.354s] Level 5:colcon.colcon_core.verb:set package 'py_srvcli' build argument 'cmake_clean_cache' from command line to 'False'
+[0.354s] Level 5:colcon.colcon_core.verb:set package 'py_srvcli' build argument 'cmake_clean_first' from command line to 'False'
+[0.354s] Level 5:colcon.colcon_core.verb:set package 'py_srvcli' build argument 'cmake_force_configure' from command line to 'False'
+[0.354s] Level 5:colcon.colcon_core.verb:set package 'py_srvcli' build argument 'ament_cmake_args' from command line to 'None'
+[0.354s] Level 5:colcon.colcon_core.verb:set package 'py_srvcli' build argument 'catkin_cmake_args' from command line to 'None'
+[0.354s] Level 5:colcon.colcon_core.verb:set package 'py_srvcli' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.354s] DEBUG:colcon.colcon_core.verb:Building package 'py_srvcli' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/fabian/ProRob/ProRob/build/py_srvcli', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/fabian/ProRob/ProRob/install/py_srvcli', 'merge_install': False, 'path': '/home/fabian/ProRob/ProRob/src/py_srvcli', 'symlink_install': False, 'test_result_base': None}
+[0.354s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.355s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.356s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/fabian/ProRob/ProRob/src/package_master' with build type 'ament_python'
+[0.356s] Level 1:colcon.colcon_core.shell:create_environment_hook('package_master', 'ament_prefix_path')
+[0.357s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.358s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fabian/ProRob/ProRob/install/package_master/share/package_master/hook/ament_prefix_path.ps1'
+[0.358s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fabian/ProRob/ProRob/install/package_master/share/package_master/hook/ament_prefix_path.dsv'
+[0.359s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fabian/ProRob/ProRob/install/package_master/share/package_master/hook/ament_prefix_path.sh'
+[0.359s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.359s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.362s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/fabian/ProRob/ProRob/src/package_master_interfaces' with build type 'ament_cmake'
+[0.362s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/fabian/ProRob/ProRob/src/package_master_interfaces'
+[0.362s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.362s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.364s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/fabian/ProRob/ProRob/src/py_srvcli' with build type 'ament_python'
+[0.365s] Level 1:colcon.colcon_core.shell:create_environment_hook('py_srvcli', 'ament_prefix_path')
+[0.365s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fabian/ProRob/ProRob/install/py_srvcli/share/py_srvcli/hook/ament_prefix_path.ps1'
+[0.365s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fabian/ProRob/ProRob/install/py_srvcli/share/py_srvcli/hook/ament_prefix_path.dsv'
+[0.365s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fabian/ProRob/ProRob/install/py_srvcli/share/py_srvcli/hook/ament_prefix_path.sh'
+[0.366s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.366s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.651s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/fabian/ProRob/ProRob/src/package_master'
+[0.652s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.652s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.659s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fabian/ProRob/ProRob/build/package_master_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fabian/ProRob/ProRob/install/py_srvcli:/home/fabian/ProRob/ProRob/install/package_master:/opt/ros/humble /usr/bin/cmake --build /home/fabian/ProRob/ProRob/build/package_master_interfaces -- -j12 -l12
+[1.092s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/fabian/ProRob/ProRob/src/py_srvcli'
+[1.093s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.093s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.269s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fabian/ProRob/ProRob/build/package_master_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fabian/ProRob/ProRob/install/py_srvcli:/home/fabian/ProRob/ProRob/install/package_master:/opt/ros/humble /usr/bin/cmake --build /home/fabian/ProRob/ProRob/build/package_master_interfaces -- -j12 -l12
+[1.284s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fabian/ProRob/ProRob/build/package_master_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fabian/ProRob/ProRob/install/py_srvcli:/home/fabian/ProRob/ProRob/install/package_master:/opt/ros/humble /usr/bin/cmake --install /home/fabian/ProRob/ProRob/build/package_master_interfaces
+[1.367s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(package_master_interfaces)
+[1.368s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fabian/ProRob/ProRob/build/package_master_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fabian/ProRob/ProRob/install/py_srvcli:/home/fabian/ProRob/ProRob/install/package_master:/opt/ros/humble /usr/bin/cmake --install /home/fabian/ProRob/ProRob/build/package_master_interfaces
+[1.371s] Level 1:colcon.colcon_core.environment:checking '/home/fabian/ProRob/ProRob/install/package_master_interfaces' for CMake module files
+[1.371s] Level 1:colcon.colcon_core.environment:checking '/home/fabian/ProRob/ProRob/install/package_master_interfaces' for CMake config files
+[1.372s] Level 1:colcon.colcon_core.shell:create_environment_hook('package_master_interfaces', 'cmake_prefix_path')
+[1.372s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fabian/ProRob/ProRob/install/package_master_interfaces/share/package_master_interfaces/hook/cmake_prefix_path.ps1'
+[1.373s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fabian/ProRob/ProRob/install/package_master_interfaces/share/package_master_interfaces/hook/cmake_prefix_path.dsv'
+[1.373s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fabian/ProRob/ProRob/install/package_master_interfaces/share/package_master_interfaces/hook/cmake_prefix_path.sh'
+[1.374s] Level 1:colcon.colcon_core.environment:checking '/home/fabian/ProRob/ProRob/install/package_master_interfaces/lib'
+[1.375s] Level 1:colcon.colcon_core.shell:create_environment_hook('package_master_interfaces', 'ld_library_path_lib')
+[1.375s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fabian/ProRob/ProRob/install/package_master_interfaces/share/package_master_interfaces/hook/ld_library_path_lib.ps1'
+[1.375s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fabian/ProRob/ProRob/install/package_master_interfaces/share/package_master_interfaces/hook/ld_library_path_lib.dsv'
+[1.376s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fabian/ProRob/ProRob/install/package_master_interfaces/share/package_master_interfaces/hook/ld_library_path_lib.sh'
+[1.376s] Level 1:colcon.colcon_core.environment:checking '/home/fabian/ProRob/ProRob/install/package_master_interfaces/bin'
+[1.376s] Level 1:colcon.colcon_core.environment:checking '/home/fabian/ProRob/ProRob/install/package_master_interfaces/lib/pkgconfig/package_master_interfaces.pc'
+[1.377s] Level 1:colcon.colcon_core.environment:checking '/home/fabian/ProRob/ProRob/install/package_master_interfaces/lib/python3.10/site-packages'
+[1.377s] Level 1:colcon.colcon_core.environment:checking '/home/fabian/ProRob/ProRob/install/package_master_interfaces/bin'
+[1.377s] INFO:colcon.colcon_core.shell:Creating package script '/home/fabian/ProRob/ProRob/install/package_master_interfaces/share/package_master_interfaces/package.ps1'
+[1.378s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fabian/ProRob/ProRob/install/package_master_interfaces/share/package_master_interfaces/package.dsv'
+[1.379s] INFO:colcon.colcon_core.shell:Creating package script '/home/fabian/ProRob/ProRob/install/package_master_interfaces/share/package_master_interfaces/package.sh'
+[1.380s] INFO:colcon.colcon_core.shell:Creating package script '/home/fabian/ProRob/ProRob/install/package_master_interfaces/share/package_master_interfaces/package.bash'
+[1.381s] INFO:colcon.colcon_core.shell:Creating package script '/home/fabian/ProRob/ProRob/install/package_master_interfaces/share/package_master_interfaces/package.zsh'
+[1.382s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fabian/ProRob/ProRob/install/package_master_interfaces/share/colcon-core/packages/package_master_interfaces)
+[1.383s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(package_master_interfaces)
+[1.383s] Level 1:colcon.colcon_core.environment:checking '/home/fabian/ProRob/ProRob/install/package_master_interfaces' for CMake module files
+[1.384s] Level 1:colcon.colcon_core.environment:checking '/home/fabian/ProRob/ProRob/install/package_master_interfaces' for CMake config files
+[1.384s] Level 1:colcon.colcon_core.shell:create_environment_hook('package_master_interfaces', 'cmake_prefix_path')
+[1.384s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fabian/ProRob/ProRob/install/package_master_interfaces/share/package_master_interfaces/hook/cmake_prefix_path.ps1'
+[1.385s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fabian/ProRob/ProRob/install/package_master_interfaces/share/package_master_interfaces/hook/cmake_prefix_path.dsv'
+[1.385s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fabian/ProRob/ProRob/install/package_master_interfaces/share/package_master_interfaces/hook/cmake_prefix_path.sh'
+[1.386s] Level 1:colcon.colcon_core.environment:checking '/home/fabian/ProRob/ProRob/install/package_master_interfaces/lib'
+[1.386s] Level 1:colcon.colcon_core.shell:create_environment_hook('package_master_interfaces', 'ld_library_path_lib')
+[1.387s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fabian/ProRob/ProRob/install/package_master_interfaces/share/package_master_interfaces/hook/ld_library_path_lib.ps1'
+[1.387s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fabian/ProRob/ProRob/install/package_master_interfaces/share/package_master_interfaces/hook/ld_library_path_lib.dsv'
+[1.388s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fabian/ProRob/ProRob/install/package_master_interfaces/share/package_master_interfaces/hook/ld_library_path_lib.sh'
+[1.388s] Level 1:colcon.colcon_core.environment:checking '/home/fabian/ProRob/ProRob/install/package_master_interfaces/bin'
+[1.388s] Level 1:colcon.colcon_core.environment:checking '/home/fabian/ProRob/ProRob/install/package_master_interfaces/lib/pkgconfig/package_master_interfaces.pc'
+[1.388s] Level 1:colcon.colcon_core.environment:checking '/home/fabian/ProRob/ProRob/install/package_master_interfaces/lib/python3.10/site-packages'
+[1.389s] Level 1:colcon.colcon_core.environment:checking '/home/fabian/ProRob/ProRob/install/package_master_interfaces/bin'
+[1.389s] INFO:colcon.colcon_core.shell:Creating package script '/home/fabian/ProRob/ProRob/install/package_master_interfaces/share/package_master_interfaces/package.ps1'
+[1.390s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fabian/ProRob/ProRob/install/package_master_interfaces/share/package_master_interfaces/package.dsv'
+[1.391s] INFO:colcon.colcon_core.shell:Creating package script '/home/fabian/ProRob/ProRob/install/package_master_interfaces/share/package_master_interfaces/package.sh'
+[1.391s] INFO:colcon.colcon_core.shell:Creating package script '/home/fabian/ProRob/ProRob/install/package_master_interfaces/share/package_master_interfaces/package.bash'
+[1.392s] INFO:colcon.colcon_core.shell:Creating package script '/home/fabian/ProRob/ProRob/install/package_master_interfaces/share/package_master_interfaces/package.zsh'
+[1.392s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fabian/ProRob/ProRob/install/package_master_interfaces/share/colcon-core/packages/package_master_interfaces)
+[1.675s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fabian/ProRob/ProRob/src/package_master': PYTHONPATH=/home/fabian/ProRob/ProRob/build/package_master/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/fabian/ProRob/ProRob/install/package_master/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/package_master build --build-base /home/fabian/ProRob/ProRob/build/package_master/build install --record /home/fabian/ProRob/ProRob/build/package_master/install.log --single-version-externally-managed install_data
+[1.703s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fabian/ProRob/ProRob/src/py_srvcli': PYTHONPATH=/home/fabian/ProRob/ProRob/build/py_srvcli/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/fabian/ProRob/ProRob/install/py_srvcli/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/py_srvcli build --build-base /home/fabian/ProRob/ProRob/build/py_srvcli/build install --record /home/fabian/ProRob/ProRob/build/py_srvcli/install.log --single-version-externally-managed install_data
+[2.082s] Level 1:colcon.colcon_core.environment:checking '/home/fabian/ProRob/ProRob/install/package_master' for CMake module files
+[2.082s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fabian/ProRob/ProRob/src/package_master' returned '0': PYTHONPATH=/home/fabian/ProRob/ProRob/build/package_master/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/fabian/ProRob/ProRob/install/package_master/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/package_master build --build-base /home/fabian/ProRob/ProRob/build/package_master/build install --record /home/fabian/ProRob/ProRob/build/package_master/install.log --single-version-externally-managed install_data
+[2.083s] Level 1:colcon.colcon_core.environment:checking '/home/fabian/ProRob/ProRob/install/package_master' for CMake config files
+[2.083s] Level 1:colcon.colcon_core.environment:checking '/home/fabian/ProRob/ProRob/install/package_master/lib'
+[2.084s] Level 1:colcon.colcon_core.environment:checking '/home/fabian/ProRob/ProRob/install/package_master/bin'
+[2.084s] Level 1:colcon.colcon_core.environment:checking '/home/fabian/ProRob/ProRob/install/package_master/lib/pkgconfig/package_master.pc'
+[2.084s] Level 1:colcon.colcon_core.environment:checking '/home/fabian/ProRob/ProRob/install/package_master/lib/python3.10/site-packages'
+[2.084s] Level 1:colcon.colcon_core.shell:create_environment_hook('package_master', 'pythonpath')
+[2.084s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fabian/ProRob/ProRob/install/package_master/share/package_master/hook/pythonpath.ps1'
+[2.085s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fabian/ProRob/ProRob/install/package_master/share/package_master/hook/pythonpath.dsv'
+[2.085s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fabian/ProRob/ProRob/install/package_master/share/package_master/hook/pythonpath.sh'
+[2.086s] Level 1:colcon.colcon_core.environment:checking '/home/fabian/ProRob/ProRob/install/package_master/bin'
+[2.086s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(package_master)
+[2.087s] INFO:colcon.colcon_core.shell:Creating package script '/home/fabian/ProRob/ProRob/install/package_master/share/package_master/package.ps1'
+[2.087s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fabian/ProRob/ProRob/install/package_master/share/package_master/package.dsv'
+[2.088s] INFO:colcon.colcon_core.shell:Creating package script '/home/fabian/ProRob/ProRob/install/package_master/share/package_master/package.sh'
+[2.088s] INFO:colcon.colcon_core.shell:Creating package script '/home/fabian/ProRob/ProRob/install/package_master/share/package_master/package.bash'
+[2.089s] INFO:colcon.colcon_core.shell:Creating package script '/home/fabian/ProRob/ProRob/install/package_master/share/package_master/package.zsh'
+[2.089s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fabian/ProRob/ProRob/install/package_master/share/colcon-core/packages/package_master)
+[2.113s] Level 1:colcon.colcon_core.environment:checking '/home/fabian/ProRob/ProRob/install/py_srvcli' for CMake module files
+[2.114s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fabian/ProRob/ProRob/src/py_srvcli' returned '0': PYTHONPATH=/home/fabian/ProRob/ProRob/build/py_srvcli/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/fabian/ProRob/ProRob/install/py_srvcli/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/py_srvcli build --build-base /home/fabian/ProRob/ProRob/build/py_srvcli/build install --record /home/fabian/ProRob/ProRob/build/py_srvcli/install.log --single-version-externally-managed install_data
+[2.114s] Level 1:colcon.colcon_core.environment:checking '/home/fabian/ProRob/ProRob/install/py_srvcli' for CMake config files
+[2.115s] Level 1:colcon.colcon_core.environment:checking '/home/fabian/ProRob/ProRob/install/py_srvcli/lib'
+[2.115s] Level 1:colcon.colcon_core.environment:checking '/home/fabian/ProRob/ProRob/install/py_srvcli/bin'
+[2.115s] Level 1:colcon.colcon_core.environment:checking '/home/fabian/ProRob/ProRob/install/py_srvcli/lib/pkgconfig/py_srvcli.pc'
+[2.115s] Level 1:colcon.colcon_core.environment:checking '/home/fabian/ProRob/ProRob/install/py_srvcli/lib/python3.10/site-packages'
+[2.115s] Level 1:colcon.colcon_core.shell:create_environment_hook('py_srvcli', 'pythonpath')
+[2.115s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fabian/ProRob/ProRob/install/py_srvcli/share/py_srvcli/hook/pythonpath.ps1'
+[2.116s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fabian/ProRob/ProRob/install/py_srvcli/share/py_srvcli/hook/pythonpath.dsv'
+[2.116s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fabian/ProRob/ProRob/install/py_srvcli/share/py_srvcli/hook/pythonpath.sh'
+[2.117s] Level 1:colcon.colcon_core.environment:checking '/home/fabian/ProRob/ProRob/install/py_srvcli/bin'
+[2.117s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(py_srvcli)
+[2.117s] INFO:colcon.colcon_core.shell:Creating package script '/home/fabian/ProRob/ProRob/install/py_srvcli/share/py_srvcli/package.ps1'
+[2.118s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fabian/ProRob/ProRob/install/py_srvcli/share/py_srvcli/package.dsv'
+[2.118s] INFO:colcon.colcon_core.shell:Creating package script '/home/fabian/ProRob/ProRob/install/py_srvcli/share/py_srvcli/package.sh'
+[2.119s] INFO:colcon.colcon_core.shell:Creating package script '/home/fabian/ProRob/ProRob/install/py_srvcli/share/py_srvcli/package.bash'
+[2.119s] INFO:colcon.colcon_core.shell:Creating package script '/home/fabian/ProRob/ProRob/install/py_srvcli/share/py_srvcli/package.zsh'
+[2.120s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fabian/ProRob/ProRob/install/py_srvcli/share/colcon-core/packages/py_srvcli)
+[2.120s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.120s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.121s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[2.121s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.126s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.126s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.127s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[2.138s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.138s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/fabian/ProRob/ProRob/install/local_setup.ps1'
+[2.139s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/fabian/ProRob/ProRob/install/_local_setup_util_ps1.py'
+[2.141s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/fabian/ProRob/ProRob/install/setup.ps1'
+[2.143s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/fabian/ProRob/ProRob/install/local_setup.sh'
+[2.143s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/fabian/ProRob/ProRob/install/_local_setup_util_sh.py'
+[2.144s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/fabian/ProRob/ProRob/install/setup.sh'
+[2.144s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/fabian/ProRob/ProRob/install/local_setup.bash'
+[2.145s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/fabian/ProRob/ProRob/install/setup.bash'
+[2.146s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/fabian/ProRob/ProRob/install/local_setup.zsh'
+[2.146s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/fabian/ProRob/ProRob/install/setup.zsh'

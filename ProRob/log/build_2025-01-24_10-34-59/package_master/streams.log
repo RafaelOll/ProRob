@@ -1,0 +1,29 @@
+[1.091s] Invoking command in '/home/fabian/ProRob/ProRob/src/package_master': PYTHONPATH=/home/fabian/ProRob/ProRob/build/package_master/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/fabian/ProRob/ProRob/install/package_master/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/package_master build --build-base /home/fabian/ProRob/ProRob/build/package_master/build install --record /home/fabian/ProRob/ProRob/build/package_master/install.log --single-version-externally-managed install_data
+[1.352s] running egg_info
+[1.357s] writing ../../build/package_master/package_master.egg-info/PKG-INFO
+[1.358s] writing dependency_links to ../../build/package_master/package_master.egg-info/dependency_links.txt
+[1.358s] writing entry points to ../../build/package_master/package_master.egg-info/entry_points.txt
+[1.358s] writing requirements to ../../build/package_master/package_master.egg-info/requires.txt
+[1.358s] writing top-level names to ../../build/package_master/package_master.egg-info/top_level.txt
+[1.360s] reading manifest file '../../build/package_master/package_master.egg-info/SOURCES.txt'
+[1.360s] writing manifest file '../../build/package_master/package_master.egg-info/SOURCES.txt'
+[1.361s] running build
+[1.361s] running build_py
+[1.361s] copying package_master/master_node_drone.py -> /home/fabian/ProRob/ProRob/build/package_master/build/lib/package_master
+[1.361s] running install
+[1.362s] running install_lib
+[1.362s] copying /home/fabian/ProRob/ProRob/build/package_master/build/lib/package_master/master_node_drone.py -> /home/fabian/ProRob/ProRob/install/package_master/lib/python3.10/site-packages/package_master
+[1.363s] byte-compiling /home/fabian/ProRob/ProRob/install/package_master/lib/python3.10/site-packages/package_master/master_node_drone.py to master_node_drone.cpython-310.pyc
+[1.364s] running install_data
+[1.365s] running install_egg_info
+[1.366s] removing '/home/fabian/ProRob/ProRob/install/package_master/lib/python3.10/site-packages/package_master-0.0.0-py3.10.egg-info' (and everything under it)
+[1.366s] Copying ../../build/package_master/package_master.egg-info to /home/fabian/ProRob/ProRob/install/package_master/lib/python3.10/site-packages/package_master-0.0.0-py3.10.egg-info
+[1.367s] running install_scripts
+[1.385s] Installing client script to /home/fabian/ProRob/ProRob/install/package_master/lib/package_master
+[1.385s] Installing client_drone script to /home/fabian/ProRob/ProRob/install/package_master/lib/package_master
+[1.385s] Installing client_tb script to /home/fabian/ProRob/ProRob/install/package_master/lib/package_master
+[1.385s] Installing service_drone script to /home/fabian/ProRob/ProRob/install/package_master/lib/package_master
+[1.385s] Installing service_tb script to /home/fabian/ProRob/ProRob/install/package_master/lib/package_master
+[1.386s] Installing service_test script to /home/fabian/ProRob/ProRob/install/package_master/lib/package_master
+[1.386s] writing list of installed files to '/home/fabian/ProRob/ProRob/build/package_master/install.log'
+[1.432s] Invoked command in '/home/fabian/ProRob/ProRob/src/package_master' returned '0': PYTHONPATH=/home/fabian/ProRob/ProRob/build/package_master/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/fabian/ProRob/ProRob/install/package_master/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/package_master build --build-base /home/fabian/ProRob/ProRob/build/package_master/build install --record /home/fabian/ProRob/ProRob/build/package_master/install.log --single-version-externally-managed install_data

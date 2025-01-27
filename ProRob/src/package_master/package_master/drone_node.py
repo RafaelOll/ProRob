@@ -3,14 +3,20 @@ from rclpy.node import Node
 from example_interfaces.srv import SetBool
 from package_master_interfaces.srv import RobotPositions, SendPositions
 
+import time
 import numpy as np
 import os
+import sys
+
+collision_avoidance_path = os.path.expanduser("~/ProRob")
+sys.path.append(collision_avoidance_path)
 
 from collision_avoidance import (construct_sequences, 
                                  run_sequence, 
                                  land, 
                                  start_states_log,
-                                 take_off)
+                                 take_off, 
+                                 light_check)
 
 # if the following imports don't work, make sure, ~/ProRob/crazyflie-lib-python exists,
 # navigate to the folder in the terminal and run "pip install .". This will install 
@@ -22,12 +28,12 @@ from cflib.crazyflie.swarm import Swarm
 
 uris = [
     'radio://0/80/2M/8',
-    'radio://0/80/2M/2',
-    #'radio://0/80/2M/3'
+    'radio://0/80/2M/3',
+    'radio://0/80/2M/A'
 ]
 
 cf_log_path = os.path.expanduser("~/ProRob/cf_log.txt")
-
+sys.path.append(cf_log_path)
 
 
 class TrajectoryCalculator():
@@ -36,7 +42,7 @@ class TrajectoryCalculator():
         - T         total duration of flights
         - epsilon   radius of clearance around a drone
         """
-        self.N_drones = 3
+        self.N_drones = len(uris)
         self.r_i = np.zeros(shape=(self.N_drones, 2))
         self.r_f = np.zeros(shape=(self.N_drones, 2))
         self.T = T
@@ -45,10 +51,12 @@ class TrajectoryCalculator():
     def set_final_position(self, final_position_dict):
         for i in range(self.N_drones):
             self.r_f[i] = final_position_dict[f"tb{i+1}"][:2]       # only the (x, y) positions are needed for the trajectory planning => [:2]
+        print(f"r_f = {self.r_f}")
 
     def set_initial_position(self, initial_position_dict):
         for i in range(self.N_drones):
             self.r_i[i] = initial_position_dict[f"drone{i+1}"][:2]
+        print(f"r_i = {self.r_i}")
 
     def calculate_trajectories(self):
         """calculates trajectories for three drones such that they avoid collisions
@@ -56,10 +64,33 @@ class TrajectoryCalculator():
         - seq_args      dict with the sequences for the drones. 
                         Can directly be given to a parallel_safe for running a sequence"""
         sequences = construct_sequences(self.r_i, self.r_f, self.T, self.epsilon)
+        
+
+
+
+        u = 0.5
+        dt = 3
+        sequence0 = [
+            (u, 0, 0, dt),              # dx, dy, dz, dt
+            (-u, 0, 0, dt)
+        ]
+
+        sequence1 = [
+            (0, 0, 0, dt),
+            (0, 0, 0, dt)
+        ]
+
+        sequence2 = [
+            (-u, 0, 0, dt),
+            (u, 0, 0, dt)
+        ]
+
+        #sequences = [sequence0, sequence1, sequence2]
+
         seq_args = {
             uris[0]: [sequences[0]],
             uris[1]: [sequences[1]],
-            uris[2]: [sequences[2]]
+#            uris[2]: [sequences[2]]
         }
         return seq_args
 
@@ -72,6 +103,8 @@ class SendPosService(Node):
         self.destroy_after_response = False
         self.trajectory_calculator = trajectory_calculator
 
+        print("Initialize logging")
+        open("cf_log.txt", "w").close()
         swarm.parallel_safe(start_states_log)
 
 
@@ -82,7 +115,7 @@ class SendPosService(Node):
         correspond in that case to the ones that were written during the last run and are
         therefore meaningless."""
 
-        data = np.genfromtxt(cf_log_path, dtype=None, encoding=None)
+        data = np.genfromtxt("cf_log.txt", dtype=None, encoding=None)
         
         # get the positions from the log file
         #r = np.zeros(shape=(len(uris), 2))
@@ -173,12 +206,15 @@ class GetPosService(Node):
             self.trajectory_calculator.set_final_position(final_position_dict)
             seq_args = self.trajectory_calculator.calculate_trajectories()
 
+            print(seq_args)
             # follow the trajectories to the destination
             self.swarm.parallel_safe(run_sequence, args_dict=seq_args)        
 
+            print("landing")
             # land
             self.swarm.parallel_safe(land)
-            
+            print("landed")
+
             response.ack = True # to change send true not when you received the coordinates but all the drones land.
         
         except:
@@ -192,7 +228,7 @@ class GetPosService(Node):
 
 
 def main(args=None):
-    trajectory_calculator = TrajectoryCalculator(T=10, epsilon=0.5)
+    trajectory_calculator = TrajectoryCalculator(T=10, epsilon=0.25)
 
     rclpy.init(args=args)
 
@@ -200,8 +236,10 @@ def main(args=None):
     factory = CachedCfFactory(rw_cache='./cache')
 
     with Swarm(uris, factory) as swarm:         # for this line to work, a crazyradio dongle has to be attached to the computer
+        print("Swarm created")
         swarm.reset_estimators()
-
+        print("estimators reset")
+        
         # Lancer SendPosService
         send_pos_service = SendPosService(swarm, trajectory_calculator)
         while rclpy.ok():
@@ -211,6 +249,7 @@ def main(args=None):
                 break
         print("stage 1 done")
 
+        
         #Lancer IsReadyService après SendPosService
         node = TakeOffService(swarm)
         while rclpy.ok():
@@ -220,7 +259,9 @@ def main(args=None):
                 node.destroy_node()
                 break
         print("stage 2 done")
-
+        time.sleep(2)
+        
+        
         get_pos_service = GetPosService(swarm, trajectory_calculator)
         while rclpy.ok():
             rclpy.spin_once(get_pos_service)
@@ -229,9 +270,11 @@ def main(args=None):
                 get_pos_service.destroy_node()
                 
                 break
+        #swarm.parallel_safe(land)
         print("stage 3 done")
 
+        
         rclpy.shutdown()
 
 if __name__ == '__main__':
-    main()
+    main() 
