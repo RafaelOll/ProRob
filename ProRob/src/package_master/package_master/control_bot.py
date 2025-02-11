@@ -36,14 +36,14 @@ class TurtleController(Node):
             topic_publisher = f"/robot{i}/cmd_vel"
             topic_subscriber = f'/robot{i}/odom'
             
-            self.publisher_dict[i] = self.create_publisher(Twist, topic_publisher, 1)
+        self.publisher_dict[0] = self.create_publisher(Twist, '/robot0/cmd_vel', 10)
             
-            self.subscriber_dict[i] = self.create_subscription(
-                Odometry, 
-                topic_subscriber,
-                lambda msg: self.test_robot2(msg, i),
-                1
-            )
+        self.subscriber_dict[0] = self.create_subscription(
+            Odometry, 
+            "/robot0/odom",
+            lambda msg: self.move_turtle(msg, 0),
+            10
+        )
         
         #self.publisher_ = self.create_publisher(Twist, '/robot1/cmd_vel', 1)
 
@@ -62,16 +62,17 @@ class TurtleController(Node):
 #            1
 #        )
 
-    def test_robot2(self, msg, id):
-        self.get_logger().info(str(id))
+    def test_robot2(self, msg, str_id):
+        self.get_logger().info(str_id)
 
     def move_turtle(self, turtle_pose : Odometry, robot_id):
-        ANGLE_THRESHOLD_HIGH = 0.5
+        ANGLE_THRESHOLD_HIGH = 0.4
         ANGLE_THRESHOLD_LOW = 0.2
-        k_rot = 1
-        rot_min = 0 # 0.5
-        DST_THRESHOLD = 0.05
-        k_speed = 0.1 # 0.5
+        k_rot = 2
+        rot_min = 0.1 # 0.5
+        DST_THRESHOLD = 0.10
+        k_speed = 0.5 # 0.5
+        MAX_SPEED = 0.35
         
         pose = turtle_pose.pose.pose
         curr_theta = pose.orientation.z*pi
@@ -108,13 +109,13 @@ class TurtleController(Node):
             if abs(r) < ANGLE_THRESHOLD_LOW:
                 self.turning = False    
         else:
-            delta.linear.x = k_speed*min(d, 0.4)
+            delta.linear.x = k_speed*min(d, MAX_SPEED)
             d = curr_pos.to(curr_target).length() # Update distance to travel left
         
             
         self.publisher_dict[robot_id].publish(delta)
         
-    
+
     def get_angle(self, theta, pos1, pos2):
         dir = pos1.to(pos2)
         theta_turn = atan2(dir.y, dir.x) - theta
@@ -128,12 +129,14 @@ class TurtleController(Node):
 def main(args=None):
     rclpy.init(args=args)
     
-    robot_count = 2
+    robot_count = 1
     
     dict_wp = {}
-    dict_wp[0] = [Vector2(2,0.0)]
-    dict_wp[1] = [Vector2(1,-1)]
-    dict_wp[2] = [Vector2(2,0)]
+    dict_wp[0] = [Vector2(0,-1.25)]
+    #dict_wp[0] = [Vector2(1.2,0), Vector2(1.5,-0.7)]
+    #dict_wp[0] = [Vector2(1.2,0), Vector2(1.5,-0.7)]
+    
+    #dict_wp[1] = [Vector2(0,0)] #[Vector2(0.2,-1), Vector2(0.8,0.5)]
     
     node = TurtleController(dict_wp, robot_count)
     try:
